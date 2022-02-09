@@ -19,7 +19,7 @@
     
     
       
-        <title>Configuration innodb file format - Percona Monitoring and Management</title>
+        <title>MySQL InnoDB file format in use - Percona Monitoring and Management</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#mysql-innodb-file-format-in-use" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuration innodb file format
+              MySQL InnoDB file format in use
             
           </span>
         </div>
@@ -2573,6 +2578,53 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule" class="md-nav__link">
+    Rule
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution" class="md-nav__link">
+    Resolution
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -2583,16 +2635,26 @@
 </a>
 
 
-  <h1>Configuration innodb file format</h1>
-
-
+<h1 id="mysql-innodb-file-format-in-use">MySQL InnoDB file format in use<a class="headerlink" href="#mysql-innodb-file-format-in-use" title="Permanent link">&para;</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p>Before MySQL version 8 InnoDB had two file formats Antelope and Barracuda. Barracuda is the preferred file format.
+From MySQL 8 The following InnoDB file format variables were removed:
+- Innodb_file_format
+- Innodb_file_format_check
+- Innodb_file_format_max
+- innodb_large_prefix</p>
+<p>File format variables were necessary for creating tables compatible with earlier versions of InnoDB in MySQL 5.1. Now that MySQL 5.1 has reached the end of its product lifecycle, these options are no longer required.</p>
+<h2 id="rule">Rule<a class="headerlink" href="#rule" title="Permanent link">&para;</a></h2>
+<p><code>SELECT * from performance_schema.global_variables where VARIABLE_NAME in ('innodb_file_format','innodb_file_format_max','innodb_data_file_path');</code></p>
+<h2 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Permanent link">&para;</a></h2>
+<p>Barracuda is the recommended file format, support for Antelope is removed from MySQL 8.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2021-11-29
+      2022-02-09
     
   </small>
 </div>
