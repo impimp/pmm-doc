@@ -19,7 +19,7 @@
     
     
       
-        <title>The advisor checks if InnoDB flush method is set correctly - Percona Monitoring and Management</title>
+        <title>Checks if InnoDB flush method is set correctly - Percona Monitoring and Management</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-advisor-checks-if-innodb-flush-method-is-set-correctly" class="md-skip">
+        <a href="#checks-if-innodb-flush-method-is-set-correctly" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The advisor checks if InnoDB flush method is set correctly
+              Checks if InnoDB flush method is set correctly
             
           </span>
         </div>
@@ -2635,23 +2635,23 @@
 </a>
 
 
-<h1 id="the-advisor-checks-if-innodb-flush-method-is-set-correctly">The advisor checks if InnoDB flush method is set correctly<a class="headerlink" href="#the-advisor-checks-if-innodb-flush-method-is-set-correctly" title="Permanent link">&para;</a></h1>
+<h1 id="checks-if-innodb-flush-method-is-set-correctly">Checks if InnoDB flush method is set correctly<a class="headerlink" href="#checks-if-innodb-flush-method-is-set-correctly" title="Permanent link">&para;</a></h1>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p>When dirty pages are flushed to disk they are done so using the type of IO specified using <code>innodb_flush_method</code>:
+<p>Dirty pages are flushed to disk using the type of IO specified using <code>innodb_flush_method</code>:
 - The default flush method (NULL) opens redo logs and data files using buffered IO and calls fsync() to flush data to disk when necessary for ACID compliance.
 - When set to <code>O_DSYNC</code>, InnoDB will flush file data and metadata, and uses buffered IO for data files.
 - When set to <code>O_DIRECT</code>, InnoDB opens redo log files with buffered IO and uses direct (unbuffered synchronous) IO on data files.</p>
 <h2 id="rule">Rule<a class="headerlink" href="#rule" title="Permanent link">&para;</a></h2>
 <p><code>SELECT * from performance_schema.global_variables where VARIABLE_NAME in ('innodb_flush_method');</code></p>
 <h2 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Permanent link">&para;</a></h2>
-<p>In most of the cases <code>O_DIRECT</code> is the recommended flush method.</p>
+<p>In most cases <code>O_DIRECT</code> is the recommended flush method.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-02-09
+      2022-02-11
     
   </small>
 </div>
