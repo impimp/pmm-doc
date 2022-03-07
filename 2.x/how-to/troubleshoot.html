@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://pmm-doc.onrender.com/2.x/how-to/troubleshoot.html">
       
       <link rel="icon" href="../_images/percona-favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
       
@@ -939,6 +939,13 @@
           <li class="md-nav__item">
   <a href="#passwords" class="md-nav__link">
     Passwords
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-change" class="md-nav__link">
+    Password change
   </a>
   
 </li>
@@ -2820,6 +2827,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#password-change" class="md-nav__link">
+    Password change
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2972,6 +2986,9 @@
 <p>will give:</p>
 <div class="highlight"><pre><span></span><code>&quot;s3cR%23tpa%24%24worD&quot;
 </code></pre></div>
+<h3 id="password-change">Password change<a class="headerlink" href="#password-change" title="Permanent link">&para;</a></h3>
+<p>When adding clients to the PMM server, you use the <code>admin</code> user. However, if you change the password for the admin user from the PMM UI, then the clients will not be able to access PMM due to authentication issues. Also, due to multiple unsuccessful login attempts, Grafana will lock out the admin user.</p>
+<p>In such a scenario, use <a href="../../details/api.md#api-keys-and-authentication">API key</a> for authentication. You can use API keys as a replacement for basic authentication.</p>
 <h2 id="integrated-alerting">Integrated Alerting<a class="headerlink" href="#integrated-alerting" title="Permanent link">&para;</a></h2>
 <h3 id="no-integrated-alerting-icon">No <i class="uil uil-bell"></i> Integrated Alerting icon<a class="headerlink" href="#no-integrated-alerting-icon" title="Permanent link">&para;</a></h3>
 <p>You are not logged in as a privileged user. You need either Admin or Editor roles to work with Integrated Alerting.</p>
@@ -3042,7 +3059,7 @@
   <small>
     
       Last update:
-      2021-08-27
+      2022-03-04
     
   </small>
 </div>
@@ -3118,7 +3135,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js", "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5413a266.min.js"></script>
+      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
       
         <script src="../js/version-select.js"></script>
       
