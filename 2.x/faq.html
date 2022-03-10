@@ -2194,13 +2194,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#how-to-use-a-non-default-listen-port-for-pmm-admin" class="md-nav__link">
-    How to use a non-default listen-port for pmm-admin?
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2877,13 +2870,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#how-to-use-a-non-default-listen-port-for-pmm-admin" class="md-nav__link">
-    How to use a non-default listen-port for pmm-admin?
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3070,14 +3056,7 @@ docker <span class="nb">exec</span> -t pmm-server bash -c  <span class="s2">&qu
 </ul>
 <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -t pmm-server bash -c <span class="s1">&#39;grafana-cli --homepath /usr/share/grafana --configOverrides cfg:default.paths.data=/srv/grafana admin reset-admin-password newpass&#39;</span>
 </code></pre></div>
-<h2 id="how-to-use-a-non-default-listen-port-for-pmm-admin">How to use a non-default listen-port for pmm-admin?<a class="headerlink" href="#how-to-use-a-non-default-listen-port-for-pmm-admin" title="Permanent link">&para;</a></h2>
-<p>If you configure the PMM agent to use a non-default listen-port, for pmm-admin to communicate with the agent, use the global flag <code>--pmm-agent-listen-port=LISTEN_PORT</code>.</p>
-<div class="highlight"><pre><span></span><code>--pmm-agent-listen-port<span class="o">=</span>LISTEN_PORT
-</code></pre></div>
-<p>Example: To use the listen-port 8000</p>
-<p><div class="highlight"><pre><span></span><code>pmm-admin --pmm-agent-listen-port<span class="o">=</span><span class="m">8000</span> add postgresql --username<span class="o">=</span>pmm-agent --password<span class="o">=</span>pmm-agent-password --query-source<span class="o">=</span>pgstatmonitor nameofpostgres
-</code></pre></div>
-If you are using OVF/AMI, you can change the default password through SSH by using the following command:</p>
+<p>If you are using OVF/AMI, you can change the default password through SSH by using the following command:</p>
 <div class="highlight"><pre><span></span><code>change-admin-password &lt;new_password&gt;
 </code></pre></div>
 
