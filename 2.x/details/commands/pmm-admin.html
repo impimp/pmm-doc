@@ -2074,13 +2074,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pmm-admin-add-pmm-agent-listen-portlisten_port" class="md-nav__link">
-    pmm-admin add --pmm-agent-listen-port=LISTEN_PORT
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#pmm-admin-remove" class="md-nav__link">
     pmm-admin remove
   </a>
@@ -2955,13 +2948,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pmm-admin-add-pmm-agent-listen-portlisten_port" class="md-nav__link">
-    pmm-admin add --pmm-agent-listen-port=LISTEN_PORT
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#pmm-admin-remove" class="md-nav__link">
     pmm-admin remove
   </a>
@@ -3140,7 +3126,6 @@
 <p><code>pmm-admin config [FLAGS] --server-url=server-url</code></p>
 <p><code>pmm-admin add DATABASE [FLAGS] [NAME] [ADDRESS]</code></p>
 <p>DATABASE:= [<a href="#mongodb">MongoDB</a> | <a href="#mysql">MySQL</a> | <a href="#postgresql">PostgreSQL</a> | <a href="#proxysql">ProxySQL</a>]</p>
-<p><code>pmm-admin add --pmm-agent-listen-port=LISTEN_PORT DATABASE [FLAGS] [NAME] [ADDRESS]</code></p>
 <p><code>pmm-admin add external [FLAGS] [NAME] [ADDRESS]</code> (CAUTION: Technical preview feature)</p>
 <p><code>pmm-admin add haproxy [FLAGS] [NAME]</code></p>
 <p><code>pmm-admin add external [FLAGS] [NAME] [ADDRESS]</code></p>
@@ -3270,18 +3255,6 @@
 </dl>
 </dd>
 </dl>
-<h4 id="pmm-admin-add-pmm-agent-listen-portlisten_port"><code>pmm-admin add --pmm-agent-listen-port=LISTEN_PORT</code><a class="headerlink" href="#pmm-admin-add-pmm-agent-listen-portlisten_port" title="Permanent link">&para;</a></h4>
-<dl>
-<dt><code>pmm-admin add --pmm-agent-listen-port=LISTEN_PORT DATABASE [FLAGS] [NAME] [ADDRESS]</code></dt>
-<dd>
-<p>Configure the PMM agent with a listen port.</p>
-<dl>
-<dt><code>--pmm-agent-listen-port=LISTEN_PORT</code></dt>
-<dd>The PMM agent listen port.</dd>
-</dl>
-</dd>
-</dl>
-<p>DATABASE:= [<a href="#mongodb">MongoDB</a> | <a href="#mysql">MySQL</a> | <a href="#postgresql">PostgreSQL</a> | <a href="#proxysql">ProxySQL</a>]</p>
 <h4 id="pmm-admin-remove"><code>pmm-admin remove</code><a class="headerlink" href="#pmm-admin-remove" title="Permanent link">&para;</a></h4>
 <dl>
 <dt><code>pmm-admin remove [FLAGS] service-type [service-name]</code></dt>
@@ -3409,19 +3382,19 @@
 <div class="highlight"><pre><span></span><code>FLAGS:
 
 `--enable-all-collectors`
-:  Enable all collectors
+:  Enable all collectors.
 
 `--disable-collectors`
-:  Comma-separated list of collector names to exclude from exporter
+:  Comma-separated list of collector names to exclude from exporter.
 
 `--max-collections-limit=-1`
 :  Disable collstats, dbstats, topmetrics and indexstats if there are more than &lt;n&gt; collections. 0: No limit. Default is -1, PMM automatically sets this value.
 
-    !!! caution &quot;&quot;
-        A very high limit of `max-collections-limit` could impact the CPU and Memory usage. Check `--stats-collections` to limit the scope of collections and DB&#39;s metrics to be fetched.
+!!! caution &quot;&quot;
+    A very high limit of `max-collections-limit` could impact the CPU and Memory usage. Check `--stats-collections` to limit the scope of collections and DB&#39;s metrics to be fetched.
 
 `--stats-collections=db1,db2.col1`
-:  Collections for collstats &amp; indexstats
+:  Collections for collstats &amp; indexstats.
 </code></pre></div>
 <h6 id="enable-all-collectors">Enable all collectors<a class="headerlink" href="#enable-all-collectors" title="Permanent link">&para;</a></h6>
 <p>To enable all collectors, pass the parameter <code>--enable-all-collectors</code> in the <code>pmm-admin add mongodb</code> command.
@@ -3852,7 +3825,7 @@ Agents:
   <small>
     
       Last update:
-      2022-03-10
+      2022-03-14
     
   </small>
 </div>
