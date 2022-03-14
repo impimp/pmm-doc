@@ -3380,11 +3380,12 @@
 <h5 id="advanced-options">Advanced Options<a class="headerlink" href="#advanced-options" title="Permanent link">&para;</a></h5>
 <p>PMM starts the MongoDB exporter by default only with <code>diagnosticdata</code> and <code>replicasetstatus</code> collectors enabled.</p>
 <div class="highlight"><pre><span></span><code>FLAGS:
-</code></pre></div>
-<p><code>--enable-all-collectors</code>
-    : Enable all collectors.</p>
-<p><code>--disable-collectors</code></p>
-<div class="highlight"><pre><span></span><code>:  Comma-separated list of collector names to exclude from exporter.
+
+`--enable-all-collectors`
+: Enable all collectors.
+
+`--disable-collectors`
+: Comma-separated list of collector names to exclude from exporter.
 </code></pre></div>
 <p><code>--max-collections-limit=-1</code></p>
 <div class="highlight"><pre><span></span><code>:  Disable collstats, dbstats, topmetrics and indexstats if there are more than &lt;n&gt; collections. 0: No limit. Default is -1, PMM automatically sets this value.
