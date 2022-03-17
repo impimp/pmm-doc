@@ -2063,6 +2063,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     Troubleshooting
   </a>
@@ -2684,6 +2691,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     Troubleshooting
   </a>
@@ -2764,6 +2778,14 @@
 </tr>
 </tbody>
 </table>
+<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
+<p>You can start the PMM server by using the environment variable <code>-envflag.enable</code> to tune VictoriaMetrics.</p>
+<p>The environment variable prefix can be set via the <code>-envflag.prefix</code> flag. </p>
+<p><code>-envflag.prefix=VM_</code>, the environment variable must be prepended with <code>VM_</code>.</p>
+<p>Example</p>
+<div class="highlight"><pre><span></span><code>-e VM_httpAuth_username=admin 
+-e VM_httpAuth_password=admin
+</code></pre></div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p>To troubleshoot issues, see the VictoriaMetrics <a href="https://victoriametrics.github.io/#troubleshooting">troubleshooting documentation</a>.</p>
 <p>You can also contact the VictoriaMetrics team via:</p>
@@ -2779,7 +2801,7 @@
   <small>
     
       Last update:
-      2021-07-29
+      2022-03-17
     
   </small>
 </div>
