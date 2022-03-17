@@ -2786,7 +2786,7 @@
 </ul>
 <p><strong>Example</strong></p>
 <p>To set downsampling, use the <code>downsampling.period</code> parameter as follows:</p>
-<div class="highlight"><pre><span></span><code>-e VM_downsampling.period=20d:10m,120d:2h
+<div class="highlight"><pre><span></span><code>-e VM_downsampling_period=20d:10m,120d:2h
 </code></pre></div>
 <p>This instructs VictoriaMetrics to <a href="https://docs.victoriametrics.com/#deduplication">deduplicate</a> samples older than 20 days with 10 mins intervals and samples older than 120 days with two-hour intervals.</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
