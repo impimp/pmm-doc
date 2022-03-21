@@ -2779,11 +2779,8 @@
 </tbody>
 </table>
 <h2 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
-<p>PMM sets the following flags that allow users to set all other <a href="https://docs.victoriametrics.com/#list-of-command-line-flags">VictoriaMetrics parameters</a> as environment variables:</p>
-<ul>
-<li><code>-envflag.enable</code>  </li>
-<li><code>-envflag.prefix=VM_</code> - The environment variable must be prepended with <code>VM_</code>.</li>
-</ul>
+<p>PMM predefines certain flags that allow users to set all other <a href="https://docs.victoriametrics.com/#list-of-command-line-flags">VictoriaMetrics parameters</a> as environment variables:</p>
+<p>The environment variable must be prepended with <code>VM_</code>.</p>
 <p><strong>Example</strong></p>
 <p>To set downsampling, use the <code>downsampling.period</code> parameter as follows:</p>
 <div class="highlight"><pre><span></span><code>-e VM_downsampling_period=20d:10m,120d:2h
@@ -2804,7 +2801,7 @@
   <small>
     
       Last update:
-      2022-03-17
+      2022-03-21
     
   </small>
 </div>
