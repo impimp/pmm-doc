@@ -3088,49 +3088,49 @@
 <p>All checks in the first phase (and most of the planned ones) are self-contained. This means that extracted data is processed on the PMM side and not sent back to the SaaS.</p>
 <p>On the other hand, checks results and other metadata can be sent to SaaS to implement a history feature if the user opted-in and is entitled.</p>
 <p>For example, below is a single check that returns the static result:</p>
-<div class="highlight"><pre><span></span><code>---
-checks:
-    - version: 1
-      name: example
-      summary: Example check
-      description: This check is just an example.
-      tiers: [anonymous, registered]
-      type: MONGODB_BUILDINFO
-      script: |
-        def check(docs):
-            # for compatibility with PMM Server &lt; 2.12
-            context = {
-                &quot;format_version_num&quot;: format_version_num,
-                &quot;parse_version&quot;: parse_version,
-            }
-            return check_context(docs, context)
+<div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
+<span class="nt">checks</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
+<span class="w">    </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Example check</span><span class="w"></span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This check is just an example.</span><span class="w"></span>
+<span class="w">    </span><span class="nt">tiers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">anonymous</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">registered</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MONGODB_BUILDINFO</span><span class="w"></span>
+<span class="w">    </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">      </span><span class="no">def check(docs):</span><span class="w"></span>
+<span class="w">          </span><span class="no"># for compatibility with PMM Server &lt; 2.12</span><span class="w"></span>
+<span class="w">          </span><span class="no">context = {</span><span class="w"></span>
+<span class="w">              </span><span class="no">&quot;format_version_num&quot;: format_version_num,</span><span class="w"></span>
+<span class="w">              </span><span class="no">&quot;parse_version&quot;: parse_version,</span><span class="w"></span>
+<span class="w">          </span><span class="no">}</span><span class="w"></span>
+<span class="w">          </span><span class="no">return check_context(docs, context)</span><span class="w"></span>
 
 
-        def check_context(docs, context):
-            # `docs` is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.
-            # `context` is a dict with additional functions.
-            #
-            # Global `print` and `fail` functions are available.
-            #
-            # `check_context` function is expected to return a list of dicts that are then converted to alerts;
-            # in particular, that list can be empty.
-            # Any other value (for example, string) is treated as script execution failure
-            # (Starlark does not support Python exceptions);
-            # it is recommended to use global function `fail` for that instead.
+<span class="w">      </span><span class="no">def check_context(docs, context):</span><span class="w"></span>
+<span class="w">          </span><span class="no"># `docs` is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.</span><span class="w"></span>
+<span class="w">          </span><span class="no"># `context` is a dict with additional functions.</span><span class="w"></span>
+<span class="w">          </span><span class="no">#</span><span class="w"></span>
+<span class="w">          </span><span class="no"># Global `print` and `fail` functions are available.</span><span class="w"></span>
+<span class="w">          </span><span class="no">#</span><span class="w"></span>
+<span class="w">          </span><span class="no"># `check_context` function is expected to return a list of dicts that are then converted to alerts;</span><span class="w"></span>
+<span class="w">          </span><span class="no"># in particular, that list can be empty.</span><span class="w"></span>
+<span class="w">          </span><span class="no"># Any other value (for example, string) is treated as script execution failure</span><span class="w"></span>
+<span class="w">          </span><span class="no"># (Starlark does not support Python exceptions);</span><span class="w"></span>
+<span class="w">          </span><span class="no"># it is recommended to use global function `fail` for that instead.</span><span class="w"></span>
 
-            format_version_num = context.get(&quot;format_version_num&quot;, fail)
-            parse_version = context.get(&quot;parse_version&quot;, fail)
+<span class="w">          </span><span class="no">format_version_num = context.get(&quot;format_version_num&quot;, fail)</span><span class="w"></span>
+<span class="w">          </span><span class="no">parse_version = context.get(&quot;parse_version&quot;, fail)</span><span class="w"></span>
 
-            print(&quot;first doc =&quot;, repr(docs[0]))
+<span class="w">          </span><span class="no">print(&quot;first doc =&quot;, repr(docs[0]))</span><span class="w"></span>
 
-            return [{
-                &quot;summary&quot;: &quot;Example summary&quot;,
-                &quot;description&quot;: &quot;Example description&quot;,
-                &quot;severity&quot;: &quot;warning&quot;,
-                &quot;labels&quot;: {
-                    &quot;version&quot;: format_version_num(10203),
-                }
-            }]
+<span class="w">          </span><span class="no">return [{</span><span class="w"></span>
+<span class="w">              </span><span class="no">&quot;summary&quot;: &quot;Example summary&quot;,</span><span class="w"></span>
+<span class="w">              </span><span class="no">&quot;description&quot;: &quot;Example description&quot;,</span><span class="w"></span>
+<span class="w">              </span><span class="no">&quot;severity&quot;: &quot;warning&quot;,</span><span class="w"></span>
+<span class="w">              </span><span class="no">&quot;labels&quot;: {</span><span class="w"></span>
+<span class="w">                  </span><span class="no">&quot;version&quot;: format_version_num(10203),</span><span class="w"></span>
+<span class="w">              </span><span class="no">}</span><span class="w"></span>
+<span class="w">          </span><span class="no">}]</span><span class="w"></span>
 </code></pre></div>
 <p>Here is a much more realistic example:</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
@@ -3251,25 +3251,43 @@ checks:
 <tr>
 <th>Format</th>
 <th>UI</th>
-<th align="center"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>emergency</td>
 <td></td>
+</tr>
+<tr>
+<td>alert</td>
 <td></td>
+</tr>
+<tr>
+<td>critical</td>
+<td></td>
+</tr>
+<tr>
+<td>error</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>warning</td>
+<td>Major</td>
+</tr>
+<tr>
+<td>notice</td>
+<td>Trivial</td>
+</tr>
+<tr>
+<td>info</td>
+<td></td>
+</tr>
+<tr>
+<td>debug</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p>|emergency<br />
-|alert||
-|critical|
-|error| Critical
-|warning| Major|
-|notice|Trivial|
-|info |
-| debug |</p>
 <h2 id="backend">Backend<a class="headerlink" href="#backend" title="Permanent link">&para;</a></h2>
 <p><div class="lightgallery"><a data-sub-html="" href="../../../_images/BackendSTT.png"><img alt="" src="../../../_images/BackendSTT.png" /></a></div></p>
 <ol>
@@ -3283,8 +3301,8 @@ checks:
 <li>Currently, Prometheus is not involved.</li>
 </ol>
 <h2 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html="" href="../../../_images/FrontEndSTT.png"><img alt="" src="../../../_images/FrontEndSTT.png" />
-Our UI in Grafana uses Alertmanager API v2 to get information about failed security checks.</a></div></p>
+<p><div class="lightgallery"><a data-sub-html="" href="../../../_images/FrontEndSTT.png"><img alt="" src="../../../_images/FrontEndSTT.png" /></a></div></p>
+<p>Our UI in Grafana uses Alertmanager API v2 to get information about failed security checks.</p>
 <h2 id="develop-custom-checks">Develop custom checks<a class="headerlink" href="#develop-custom-checks" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
