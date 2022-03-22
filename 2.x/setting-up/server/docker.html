@@ -2887,21 +2887,6 @@ percona/pmm-server:2
 </code></pre></div>
 </li>
 <li>
-<p>Change the password for the default <code>admin</code> user.</p>
-<ul>
-<li>For PMM versions 2.27.0 and later:</li>
-</ul>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -t pmm-server change-admin-password &lt;new_password&gt;
-</code></pre></div>
-<ul>
-<li>
-<p>For PMM versions prior to 2.27.0:</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -t pmm-server bash -c <span class="s1">&#39;grafana-cli --homepath /usr/share/grafana --configOverrides cfg:default.paths.data=/srv/grafana admin reset-admin-password newpass&#39;</span>
-</code></pre></div>
-</li>
-</ul>
-</li>
-<li>
 <p>Visit <code>https://localhost:443</code> to see the PMM user interface in a web browser. (If you are accessing the docker host remotely, replace <code>localhost</code> with the IP or server name of the host.)</p>
 </li>
 </ol>
@@ -3163,10 +3148,6 @@ docker run --rm --volumes-from pmm-data -it percona/pmm-server:2 chown -R postgr
 <td><code>PMM_TRACE</code></td>
 <td>Enables a more verbose log level including trace-back information.</td>
 </tr>
-<tr>
-<td><code>PMM_PUBLIC_ADDRESS</code></td>
-<td>External IP address or the DNS name on which PMM server is running.</td>
-</tr>
 </tbody>
 </table>
 <h3 id="ignored-variables">Ignored variables<a class="headerlink" href="#ignored-variables" title="Permanent link">&para;</a></h3>
@@ -3262,7 +3243,7 @@ percona/pmm-server:2.26.0
   <small>
     
       Last update:
-      2022-03-22
+      2022-02-04
     
   </small>
 </div>
