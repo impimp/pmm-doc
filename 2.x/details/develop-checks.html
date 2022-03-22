@@ -19,7 +19,7 @@
     
     
       
-        <title>Develop Security Checks - Percona Monitoring and Management</title>
+        <title>Developing security checks - Percona Monitoring and Management</title>
       
     
     
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Develop Security Checks
+              Developing security checks
             
           </span>
         </div>
@@ -879,12 +879,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -939,335 +941,87 @@
               
   
   
-  
     
-    <li class="md-nav__item md-nav__item--nested">
+  
+  
+    <li class="md-nav__item md-nav__item--active">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
-      
-      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
         
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="checks/index.html">Security checks</a>
-          
-            <label for="__nav_5_3">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
       
-      <nav class="md-nav" aria-label="Security checks" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_3">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Developing security checks
           <span class="md-nav__icon md-icon"></span>
-          Security checks
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/develop-checks.html" class="md-nav__link">
+      
+      <a href="develop-checks.html" class="md-nav__link md-nav__link--active">
         Developing security checks
       </a>
-    </li>
-  
+      
+        
 
-            
-          
-            
-              
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
+        <li class="md-nav__item">
+  <a href="#check-components" class="md-nav__link">
+    Check components
+  </a>
+  
+</li>
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2" type="checkbox" id="__nav_5_3_2" >
+        <li class="md-nav__item">
+  <a href="#check-fields" class="md-nav__link">
+    Check fields
+  </a>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    Backend
+  </a>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    Frontend
+  </a>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#develop-custom-checks" class="md-nav__link">
+    Develop custom checks
+  </a>
+  
+</li>
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="checks/platform-mysql-binaries-32-bit.html">MySQL checks</a>
-          
-            <label for="__nav_5_3_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <li class="md-nav__item">
+  <a href="#sumbit-feedback" class="md-nav__link">
+    Sumbit feedback
+  </a>
+  
+</li>
       
-      <nav class="md-nav" aria-label="MySQL checks" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          MySQL checks
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
+    </ul>
   
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/security-anonymous-user.html" class="md-nav__link">
-        Anonymous users
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/security-non-root-accounts-super-privileges.html" class="md-nav__link">
-        Non-root accounts with SUPER privileges
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/security-user-not-using-ssl-protocol.html" class="md-nav__link">
-        User not using SSL protocol to connect
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/security-user-with-open-to-the-word-scope.html" class="md-nav__link">
-        User with open to the word scope
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/security-user-without-password.html" class="md-nav__link">
-        There are users without passwords
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/root-account-can-login-remotely.html" class="md-nav__link">
-        Root account can log in remotely
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
+</nav>
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_3" type="checkbox" id="__nav_5_3_3" >
-      
-      
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="checks/mongodb-log-messages.html">MongoDB checks</a>
-          
-            <label for="__nav_5_3_3">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="MongoDB checks" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_3_3">
-          <span class="md-nav__icon md-icon"></span>
-          MongoDB checks
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/mongodb-profiler-check.html" class="md-nav__link">
-        MongoDB Profiling level set to high
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/mongodb-read-tickets.html" class="md-nav__link">
-        MongoDB read ticket is more than 128
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/mongodb-write-tickets.html" class="md-nav__link">
-        MongoDB write ticket is more than 128
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/mongodb-scram-sha-256.html" class="md-nav__link">
-        MongoDB not using the default SHA-256 hashing function
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_4" type="checkbox" id="__nav_5_3_4" >
-      
-      
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="checks/performance-pg-archiver-failing.html">PostgreSQL checks</a>
-          
-            <label for="__nav_5_3_4">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="PostgreSQL checks" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_3_4">
-          <span class="md-nav__icon md-icon"></span>
-          PostgreSQL checks
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/performance-pg-low-cache-hit-ratio.html" class="md-nav__link">
-        PostgreSQL Cache Hit Ratio
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checks/performance-pg-stale-replication-slot.html" class="md-nav__link">
-        PostgreSQL stale replication slot
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3294,6 +3048,41 @@ supervisorctl tail -f pmm-managed
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="interface.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: UI components" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              UI components
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="dashboards/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Dashboards" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Dashboards
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
