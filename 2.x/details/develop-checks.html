@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://pmm-doc.onrender.com/2.x/details/develop-checks.html">
       
       <link rel="icon" href="../_images/percona-favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.6">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.9d5733d3.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#develop-advisors" class="md-skip">
+        <a href="#develop-security-checks" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
         <a href="https://github.com/percona/pmm-doc/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     percona/pmm-doc
@@ -202,7 +202,7 @@
       <a href="https://github.com/percona/pmm-doc/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     percona/pmm-doc
@@ -977,29 +977,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#advisor-components" class="md-nav__link">
-    Advisor components
+  <a href="#check-components" class="md-nav__link">
+    Check components
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#advisor-fields" class="md-nav__link">
-    Advisor fields
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advisor-types" class="md-nav__link">
-    Advisor types
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advisor-severites" class="md-nav__link">
-    Advisor severites
+  <a href="#check-fields" class="md-nav__link">
+    Check fields
   </a>
   
 </li>
@@ -1021,6 +1007,13 @@
         <li class="md-nav__item">
   <a href="#develop-custom-checks" class="md-nav__link">
     Develop custom checks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumbit-feedback" class="md-nav__link">
+    Sumbit feedback
   </a>
   
 </li>
@@ -2698,29 +2691,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#advisor-components" class="md-nav__link">
-    Advisor components
+  <a href="#check-components" class="md-nav__link">
+    Check components
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#advisor-fields" class="md-nav__link">
-    Advisor fields
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advisor-types" class="md-nav__link">
-    Advisor types
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advisor-severites" class="md-nav__link">
-    Advisor severites
+  <a href="#check-fields" class="md-nav__link">
+    Check fields
   </a>
   
 </li>
@@ -2746,6 +2725,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sumbit-feedback" class="md-nav__link">
+    Sumbit feedback
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2764,24 +2750,24 @@
 
 
 
-<h1 id="develop-advisors">Develop Advisors<a class="headerlink" href="#develop-advisors" title="Permanent link">&para;</a></h1>
-<p>PMM Advisors offer a set of checks that can detect common security threats, performance degradation, data loss and data corruption.</p>
-<p>As a developer, you can create custom advisors to cover additional use cases that are relevant to your specific database infrastructure.</p>
-<h2 id="advisor-components">Advisor components<a class="headerlink" href="#advisor-components" title="Permanent link">&para;</a></h2>
-<p>An advisor is a combination of:</p>
+<h1 id="develop-security-checks">Develop Security Checks<a class="headerlink" href="#develop-security-checks" title="Permanent link">&para;</a></h1>
+<p>The Security Threat Tool in PMM offers a set of checks that can detect common security threats, performance degradation, data loss and data corruption.</p>
+<p>As a developer, you can create custom checks to cover additional use cases that are relevant to your specific database infrastructure.</p>
+<h2 id="check-components">Check components<a class="headerlink" href="#check-components" title="Permanent link">&para;</a></h2>
+<p>A check is a combination of:</p>
 <ul>
 <li>SQL query or MongoDB query document for extracting data from the database.</li>
-<li>Python script for converting extracted data into advisor results. This is actually a <a href="https://github.com/google/starlark-go">Starlark</a> script – a Python dialect that adds more imperative features from the Python. Script&rsquo;s execution environment is sandboxed; no I/O can be done from it.</li>
+<li>Python script for converting extracted data into check results. This is actually a <a href="https://github.com/google/starlark-go">Starlark</a> script – a Python dialect that adds more imperative features from the Python. Script&rsquo;s execution environment is sandboxed; no I/O can be done from it.</li>
 </ul>
-<p>All advisors in the first phase (and most of the planned ones) are self-contained. This means that extracted data is processed on the PMM side and not sent back to the SaaS.</p>
-<p>On the other hand, advisors results and other metadata can be sent to SaaS to implement a history feature if the user opted-in and is entitled.</p>
-<p>For example, below is a single advisor that returns the static result:</p>
+<p>All checks in the first phase (and most of the planned ones) are self-contained. This means that extracted data is processed on the PMM side and not sent back to the SaaS.</p>
+<p>On the other hand, checks results and other metadata can be sent to SaaS to implement a history feature if the user opted-in and is entitled.</p>
+<p>For example, below is a single check that returns the static result:</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
 <span class="nt">checks</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
-<span class="w">    </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Example advisor</span><span class="w"></span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This advisor is just an example.</span><span class="w"></span>
+<span class="w">    </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Example check</span><span class="w"></span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This check is just an example.</span><span class="w"></span>
 <span class="w">    </span><span class="nt">tiers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">anonymous</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">registered</span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MONGODB_BUILDINFO</span><span class="w"></span>
 <span class="w">    </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
@@ -2826,7 +2812,7 @@
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongodb_version</span><span class="w"></span>
 <span class="w">    </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MongoDB Version</span><span class="w"></span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This advisor returns warnings if MongoDB/PSMDB version is not the latest one.</span><span class="w"></span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This check returns warnings if MongoDB/PSMDB version is not the latest one.</span><span class="w"></span>
 <span class="w">    </span><span class="nt">tiers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">anonymous</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">registered</span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MONGODB_BUILDINFO</span><span class="w"></span>
 <span class="w">    </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
@@ -2868,7 +2854,7 @@
 <span class="w">          </span><span class="no"># it is recommended to use global function `fail` for that instead.</span><span class="w"></span>
 
 <span class="w">          </span><span class="no">&quot;&quot;&quot;</span><span class="w"></span>
-<span class="w">          </span><span class="no">This advisor returns warnings if MongoDB/PSMDB version is not the latest one.</span><span class="w"></span>
+<span class="w">          </span><span class="no">This check returns warnings if MongoDB/PSMDB version is not the latest one.</span><span class="w"></span>
 <span class="w">          </span><span class="no">&quot;&quot;&quot;</span><span class="w"></span>
 
 <span class="w">          </span><span class="no">format_version_num = context.get(&quot;format_version_num&quot;, fail)</span><span class="w"></span>
@@ -2920,35 +2906,20 @@
 
 <span class="w">              </span><span class="no">return results</span><span class="w"></span>
 </code></pre></div>
-<h2 id="advisor-fields">Advisor fields<a class="headerlink" href="#advisor-fields" title="Permanent link">&para;</a></h2>
+<h2 id="check-fields">Check fields<a class="headerlink" href="#check-fields" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Version</strong> (integer, required) defines what other advisor properties are expected, what types are supported, what is expected from the script and what it can expect from the execution environment, etc.</li>
+<li><strong>Version</strong> (integer, required) defines what other check properties are expected, what types are supported, what is expected from the script and what it can expect from the execution environment, etc.</li>
 <li><strong>Name</strong> (string, required) defined machine-readable name (ID).</li>
 <li><strong>Summary</strong> (string, required) defines short human-readable summary.</li>
 <li><strong>Description</strong> (string, required) defines long human-readable description.</li>
-<li><strong>Type</strong> (string/enum, required) defines the query type and the PMM Service type for which the advisor runs. You can find the list of available types in the table below. </li>
+<li><strong>Type</strong> (string/enum, required) defines PMM Service type for which check is performed and query type.</li>
 <li><strong>Query</strong> (string, optional) contains a SQL query or MongoDB query document (as a string with proper quoting) which is executed on the PMM Client side. It may be absent if type defines the whole query by itself.</li>
-<li><strong>Script</strong> (string, required) contains a small Python program that processes query results, and returns advisor results. It is executed on the PMM Server side.</li>
+<li><strong>Script</strong> (string, required) contains a small Python program that processes query results, and returns check results. It is executed on the PMM Server side.</li>
 </ul>
-<p>Advisor script assumes that there is a function with a fixed name <em>check</em> that accepts a <em>list</em> of <em>dicts</em> containing returned rows for SQL databases and documents for MongoDB. It returns zero, one, or several check results that are then converted to alerts.</p>
+<p>Check script assumes that there is a function with a fixed name <em>check</em> that accepts a <em>list</em> of <em>dicts</em> containing returned rows for SQL databases and documents for MongoDB. It returns zero, one, or several check results that are then converted to alerts.</p>
 <p>Another function that should be implemented is <strong>check_context</strong>. PMM 2.12.0 and earlier use <strong>context</strong>, while newer versions use <strong>check_context</strong>. Both have the same meaning.</p>
-<p>The single query means that, currently, you cannot implement some advanced advisors that would require several queries (and can&rsquo;t be implemented using SQL UNION).</p>
-<h2 id="advisor-types">Advisor types<a class="headerlink" href="#advisor-types" title="Permanent link">&para;</a></h2>
-<p>Use one of the following advisors types to define your query type and the PMM Service type for which your advisor check will runs:
-| Advisor type    | description       |  &ldquo;query&rdquo; required (must be empty if no) | Documentation|
-| ---------       | --------          |---------                                | -------- |
-| MYSQL_SHOW |     Executes &lsquo;SHOW …&rsquo; clause against MySQL database.      |Yes | |
-| MYSQL_SELECT    |     Executes &lsquo;SELECT …&rsquo; clause against MySQL database.       |Yes| |
-| POSTGRESQL_SHOW     |    Executes &lsquo;SHOW ALL&rsquo; command against PosgreSQL database.        | No| |
-| POSTGRESQL_SELECT      | Executes &lsquo;SELECT …&rsquo; clause against PosgreSQL database.    | Yes| |
-| MONGODB_GETPARAMETER     | Executes db.adminCommand( { getParameter: &ldquo;*&rdquo; } ) against MongoDB&rsquo;s &ldquo;admin&rdquo; database.    | No |<a href="https://docs.mongodb.com/manual/reference/command/getParameter/">getParameter</a>|
-|
-| MONGODB_BUILDINFO    | Executes db.adminCommand( { buildInfo:  1 } ) against MongoDB&rsquo;s &ldquo;admin&rdquo; database.    | No | <a href="https://docs.mongodb.com/manual/reference/command/buildInfo/">buildInfo</a>| 
-| MONGODB_GETCMDLINEOPTS          |    Executes db.adminCommand( { getCmdLineOpts: 1 } ) against MongoDB&rsquo;s &ldquo;admin&rdquo; database.      | No | <a href="https://docs.mongodb.com/manual/reference/command/getCmdLineOpts/">getCmdLineOpts</a>|
-| MONGODB_REPLSETGETSTATUS     |   Executes db.adminCommand( { replSetGetStatus: 1 } ) against MongoDB&rsquo;s &ldquo;admin&rdquo; database.       | No | <a href="https://docs.mongodb.com/manual/reference/command/replSetGetStatus/">replSetGetStatus</a>| 
-| MONGODB_GETDIAGNOSTICDATA |Executes db.adminCommand( { getDiagnosticData: 1 } ) against MongoDB&rsquo;s &ldquo;admin&rdquo; database.   | No | <a href="https://docs.mongodb.com/manual/administration/analyzing-mongodb-performance/#full-time-diagnostic-data-capture">MongoDB Performance</a>|</p>
-<h2 id="advisor-severites">Advisor severites<a class="headerlink" href="#advisor-severites" title="Permanent link">&para;</a></h2>
-<p>Advisor format and the current STT UI use different terminology for severities. Here is how different formats show up on the UI:</p>
+<p>The single query means that currently you cannot implement some advanced checks that would require several queries (and can&rsquo;t be implemented using SQL UNION).</p>
+<p>Checks format and the current STT UI use different terminology for severities. Here is how different formats show up on the UI:</p>
 <table>
 <thead>
 <tr>
@@ -3056,9 +3027,7 @@ docker exec -it pmm-server bash
 # print and watch the logs
 supervisorctl tail -f pmm-managed
 </code></pre></div>
-<h1 id="advisor-examples">Advisor examples<a class="headerlink" href="#advisor-examples" title="Permanent link">&para;</a></h1>
-<p>You can find working examples of the build-in checks on [Percona Github] (https://github.com/percona-platform/checked/tree/main/data/checks)</p>
-<h2 id="submit-feedback">Submit feedback<a class="headerlink" href="#submit-feedback" title="Permanent link">&para;</a></h2>
+<h2 id="sumbit-feedback">Sumbit feedback<a class="headerlink" href="#sumbit-feedback" title="Permanent link">&para;</a></h2>
 <p>We welcome your feedback on the current process for developing and debugging checks. Send us your comments over <a href="https://percona.slack.com">Slack</a> or post a question on the <a href="https://forums.percona.com/">Percona Forums</a>.</p>
 
   <hr>
@@ -3066,7 +3035,7 @@ supervisorctl tail -f pmm-managed
   <small>
     
       Last update:
-      2022-03-22
+      2022-03-08
     
   </small>
 </div>
@@ -3139,10 +3108,10 @@ supervisorctl tail -f pmm-managed
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js", "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.5e67fbfe.min.js", "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
+      <script src="../assets/javascripts/bundle.e87a5f81.min.js"></script>
       
         <script src="../js/version-select.js"></script>
       
