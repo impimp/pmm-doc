@@ -56,6 +56,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pmm-doc.onrender.com/2.x/details/advisors/checks/binlog-row-image.html</loc>
+         <lastmod>2022-03-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pmm-doc.onrender.com/2.x/details/advisors/checks/configuration-check-general-log.html</loc>
          <lastmod>2022-03-25</lastmod>
          <changefreq>daily</changefreq>
