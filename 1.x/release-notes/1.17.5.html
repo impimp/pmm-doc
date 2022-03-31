@@ -17,7 +17,7 @@
     
     
       
-        <title>Percona Monitoring and Management 1.0.6 - Percona Monitoring and Management</title>
+        <title>Percona Monitoring and Management 1.17.5 - Percona Monitoring and Management</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#upgrading" class="md-skip">
+        <a href="#bugs-fixed" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Percona Monitoring and Management 1.0.6
+              Percona Monitoring and Management 1.17.5
             
           </span>
         </div>
@@ -1386,11 +1386,48 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="1.17.5.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Percona Monitoring and Management 1.17.5
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="1.17.5.html" class="md-nav__link md-nav__link--active">
         Percona Monitoring and Management 1.17.5
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bugs-fixed" class="md-nav__link">
+    Bugs Fixed
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1960,55 +1997,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Percona Monitoring and Management 1.0.6
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="1.0.6.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="1.0.6.html" class="md-nav__link">
         Percona Monitoring and Management 1.0.6
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#upgrading" class="md-nav__link">
-    Upgrading
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changes" class="md-nav__link">
-    Changes
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2356,15 +2349,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#upgrading" class="md-nav__link">
-    Upgrading
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changes" class="md-nav__link">
-    Changes
+  <a href="#bugs-fixed" class="md-nav__link">
+    Bugs Fixed
   </a>
   
 </li>
@@ -2381,105 +2367,31 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/percona/pmm-doc/edit/1.x/docs/release-notes/1.0.6.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/percona/pmm-doc/edit/1.x/docs/release-notes/1.17.5.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="percona-monitoring-and-management-106"><a class="toclink" href="#percona-monitoring-and-management-106">Percona Monitoring and Management 1.0.6</a></h1>
+<h1 id="percona-monitoring-and-management-1175"><a class="toclink" href="#percona-monitoring-and-management-1175">Percona Monitoring and Management 1.17.5</a></h1>
 <ul>
 <li>
 <p><strong>Date</strong></p>
-<p>November 15, 2016</p>
+<p>April 2, 2022</p>
 </li>
 <li>
-<p><strong>PMM Server</strong></p>
-<p><a href="https://hub.docker.com/r/percona/pmm-server/">https://hub.docker.com/r/percona/pmm-server/</a></p>
-</li>
-<li>
-<p><strong>PMM Client</strong></p>
-<p><a href="https://www.percona.com/downloads/pmm-client/">https://www.percona.com/downloads/pmm-client/</a></p>
+<p><strong>Installation</strong></p>
+<p><a href="../deploy/index.html">Installing Percona Monitoring and Management</a></p>
 </li>
 </ul>
-<h2 id="upgrading"><a class="toclink" href="#upgrading">Upgrading</a></h2>
-<ol>
-<li>
-<p>Stop and remove the <code>pmm-server</code> container:</p>
-<div class="highlight"><pre><span></span><code>docker stop pmm-server &amp;&amp; docker rm pmm-server
-</code></pre></div>
-</li>
-<li>
-<p>Create the <code>pmm-server</code> container with the new version tag:</p>
-<div class="highlight"><pre><span></span><code>docker run -d \
-  -p 80:80 \
-  --volumes-from pmm-data \
-  --name pmm-server \
-  --restart always \
-  percona/pmm-server:1.0.6
-</code></pre></div>
-</li>
-<li>
-<p>Install new PMM Client version on all hosts that you are monitoring. If you previously installed using Percona repositories, you can upgrade the package as follows:</p>
+<p><a href="https://www.percona.com/doc/percona-monitoring-and-management/">Percona Monitoring and Management (PMM)</a> is a free and open-source platform for managing and monitoring MySQL, MongoDB, and PostgreSQL performance.</p>
+<h2 id="bugs-fixed"><a class="toclink" href="#bugs-fixed">Bugs Fixed</a></h2>
 <ul>
-<li>
-<p>For Debian-based distributions:</p>
-<div class="highlight"><pre><span></span><code>sudo apt-get install --only-upgrade pmm-client
-</code></pre></div>
-</li>
-<li>
-<p>For Red Hat Enterprise Linux derivatives:</p>
-<div class="highlight"><pre><span></span><code>sudo yum update pmm-client
-</code></pre></div>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="changes"><a class="toclink" href="#changes">Changes</a></h2>
-<p><strong>New in PMM Server:</strong></p>
-<ul>
-<li>Prometheus 1.2.2</li>
-<li>Made external static files local for PMM home page</li>
-<li>
-<p>Metrics Monitor improvements:</p>
-<ul>
-<li>Added <em>Amazon RDS OS Metrics</em> dashboard and CloudWatch data source.</li>
-<li>Added the PMM Server host to metrics monitoring.</li>
-<li>Refactored MongoDB dashboards.</li>
-<li>Added <em>File Descriptors</em> graph to <strong>System Overview</strong> dashboard.</li>
-<li>Added <em>Mountpoint Usage</em> graph to <strong>Disk Space</strong> dashboard.</li>
-</ul>
-</li>
-<li>
-<p>Query Analytics improvements:</p>
-<ul>
-<li>QAN data is now purged correctly.</li>
-<li>QAN data retention is made configurable with <code>QUERIES_RETENTION</code> option. Default is 8 days.</li>
-</ul>
-</li>
-<li>
-<p>Various small fixes to Query Analytics.</p>
-</li>
-</ul>
-<p><strong>New in PMM Client:</strong></p>
-<ul>
-<li>
-<p>Fixes for <code>mysql:queries</code> service using Performance Schema as query source:</p>
-<ul>
-<li>Fixed crash when <code>DIGEST_TEXT</code> is <code>NULL</code>.</li>
-<li>Removed iteration over all query digests on startup.</li>
-<li>Added sending of query examples to QAN if available (depends on the workload).</li>
-</ul>
-</li>
-<li>
-<p>Added query source information for <code>mysql:queries</code> service in <code>pmm-admin list</code> output.</p>
-</li>
-<li>Added <code>purge</code> command to purge metrics data on the server.</li>
-<li>Updated <code>mongodb_exporter</code> with RocksDB support and various fixes.</li>
-<li>Removed <code>--nodetype</code> and <code>--replset</code> flags for <code>mongodb:metrics</code>. The <code>--cluster</code> flag is now optional. It is recommended to re-add <code>mongodb:metrics</code> service and purge existing MongoDB metrics using the <code>purge</code> command.</li>
-<li>Enabled monitoring of file descriptors (requires re-adding <code>linux:metrics</code> service).</li>
-<li>Improved full uninstallation when PMM Server is unreachable.</li>
-<li>Added time drift check between server and client to pmm-admin check-network output.</li>
+<li><a href="https://jira.percona.com/browse/PMM-9461">PMM-9461</a> : Multiple CentOS vulnerabilities in PMM1</li>
+<li><a href="https://jira.percona.com/browse/PMM-9423">PMM-9423</a> : Upgrade nginx for PMM 1.X due to vulnerability              </li>
+<li><a href="https://jira.percona.com/browse/PMM-9651">PMM-9651</a> : Some packages weren&rsquo;t updated</li>
+<li><a href="https://jira.percona.com/browse/PMM-6268">PMM-6268</a> : Sensitive information exposure through logs in npm-registry-fetch</li>
+<li><a href="https://jira.percona.com/browse/PMM-9619">PMM-9619</a> : Wrong version on Add Instance and QAN pages </li>
 </ul>
 
   <hr>
@@ -2487,7 +2399,7 @@
   <small>
     
       Last update:
-      2021-01-11
+      2022-03-31
     
   </small>
 </div>
@@ -2504,7 +2416,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="1.0.7.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Percona Monitoring and Management 1.0.7" rel="prev">
+        <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Percona Monitoring and Management Release Notes" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2513,20 +2425,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Percona Monitoring and Management 1.0.7
+              Percona Monitoring and Management Release Notes
             </div>
           </div>
         </a>
       
       
         
-        <a href="1.0.5.html" class="md-footer__link md-footer__link--next" aria-label="Next: Percona Monitoring and Management 1.0.5" rel="next">
+        <a href="1.17.4.html" class="md-footer__link md-footer__link--next" aria-label="Next: Percona Monitoring and Management 1.17.4" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Percona Monitoring and Management 1.0.5
+              Percona Monitoring and Management 1.17.4
             </div>
           </div>
           <div class="md-footer__button md-icon">
