@@ -2978,7 +2978,7 @@
 <p>The recommended value is below 300.</p>
 <p>Even if there are currently fewer connections than the <strong>max_connections</strong> value configured, the recommendation is to put a hard limit. </p>
 <p>Connection spikes and new applications will eventually move the number of connections higher than an acceptable threshold. </p>
-<p>a significant number of connections is required, a pooling solution should be used.</p>
+<p>If a significant number of connections is required, a pooling solution should be used.</p>
 <p>This limitation comes from the fact that PostgreSQL maintains snapshots for each connection. Each new transaction will have to perform operations on the snapshots, and the more connections (and thus snapshots) there are, the higher the impact on TPS. </p>
 <h2 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Permanent link">&para;</a></h2>
 <p>Review the number of connections that applications require at peak. </p>
@@ -2992,7 +2992,7 @@
   <small>
     
       Last update:
-      2022-03-23
+      2022-04-04
     
   </small>
 </div>
