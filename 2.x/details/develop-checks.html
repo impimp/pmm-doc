@@ -3018,6 +3018,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#no-query-parameter-for-mongodb" class="md-nav__link">
+    No query parameter for MongoDB
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3093,22 +3100,22 @@
 </ul>
 <p>All checks are self-contained in the first phase, as well as in most of the planned phases.</p>
 <p>This means that extracted data is processed on the PMM side and not sent back to the SaaS.</p>
-<p>However, if you have the right entitlements, you can send check results and other metadata to SaaS for implementing a History feature.</p>
+<p>However, if you have the right entitlements, you can send check results and other metadata to SaaS for implementing a History feature. </p>
 <h2 id="backend">Backend<a class="headerlink" href="#backend" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html="" href="../_images/BackendSTT.png"><img alt="" src="../_images/BackendSTT.png" /></a></div></p>
+<p><div class="lightgallery"><a data-sub-html="" href="../_images/BackendChecks.png"><img alt="" src="../_images/BackendChecks.png" /></a></div></p>
 <ol>
 <li>pmm-managed checks that the installation is opted-in for checks.</li>
 <li>pmm-managed downloads checks file from SaaS.</li>
 <li>pmm-managed verifies file signatures using a list of hard-coded public keys. At least one signature should be correct.</li>
 <li>pmm-managed sends queries to pmm-agent and gathers results.</li>
 <li>pmm-managed executes check scripts that produce alert information.</li>
-<li>pmm-managed sends alerts to Alertmanager.</li>
+<li>pmm-managed sends alerts to Alert Manager.</li>
 <li>Due to Alertmanager design, pmm-managed has to send and re-send alerts to it much more often than the frequency with which checks are executed. This expected behaviour is not important for using checks but is important for understanding how checks work.</li>
 <li>Currently, Prometheus is not involved.</li>
 </ol>
 <h2 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html="" href="../_images/FrontEndSTT.png"><img alt="" src="../_images/FrontEndSTT.png" /></a></div></p>
-<p>Our UI in Grafana uses Alertmanager API v2 to get information about failed checks.</p>
+<p><div class="lightgallery"><a data-sub-html="" href="../_images/FrontEndChecks.png"><img alt="" src="../_images/FrontEndChecks.png" /></a></div></p>
+<p>Our UI in Grafana uses Alert Manager API v2 to get information about failed checks.</p>
 <h2 id="check-fields">Check fields<a class="headerlink" href="#check-fields" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Version</strong> (integer, required): defines what other properties are expected, what types are supported, what is expected from the script and what it can expect from the execution environment, etc.</li>
@@ -3116,33 +3123,37 @@
 <li><strong>Summary</strong> (string, required): defines short human-readable description.</li>
 <li><strong>Description</strong> (string, required): defines long human-readable description.</li>
 <li><strong>Type</strong> (string/enum, required): defines the query type and the PMM Service type for which the advisor runs. Check the list of available types in the table below.</li>
-<li><strong>Query</strong> (string, optional): contains a SQL query or MongoDB query document (as a string with proper quoting) which is executed on the PMM Client side. It may be absent if type defines the whole query by itself.</li>
-<li><strong>Script</strong> (string, required): contains a small Python program that processes query results, and returns advisor results. It is executed on the PMM Server side.</li>
+<li>
+<p><strong>Query</strong> (string, optional): contains an SQL query as a string with proper quoting. The query for Security Checks (developed for PMM 2.26 and older) can also contain a MongoDB query document. Advisor checks for PMM 2.27 and later do not yet support a query parameter for MongoDB. </p>
+<p>The query is executed on the PMM Client side and can be absent if the type defines the whole query by itself.<br />
+or 
+- <strong>Script</strong> (string, required): contains a small Python program that processes query results, and returns check results. It is executed on the PMM Server side.</p>
+</li>
 </ul>
 <h2 id="checks-script">Checks script<a class="headerlink" href="#checks-script" title="Permanent link">&para;</a></h2>
 <p>The check script assumes that there is a function with a fixed name <em>check</em> that accepts a <em>list</em> of <em>docs</em> containing returned rows for SQL databases and documents for MongoDB. It returns zero, one, or several check results that are then converted to alerts.</p>
 <p>PMM 2.12.0 and earlier use <strong>context</strong>, while newer versions use <strong>check_context</strong>. Both have the same meaning.</p>
 <h2 id="check-severities">Check severities<a class="headerlink" href="#check-severities" title="Permanent link">&para;</a></h2>
-<p>Checks format and the current PMM UI use different terminology for severities. Here is how different formats show up on the UI:</p>
+<p>The severity specified in the format of the checks is displayed differently on the UI:</p>
 <table>
 <thead>
 <tr>
-<th>Format</th>
-<th>UI</th>
+<th>Check severity</th>
+<th>UI correspondence</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>emergency</td>
-<td></td>
+<td>-</td>
 </tr>
 <tr>
 <td>alert</td>
-<td></td>
+<td>-</td>
 </tr>
 <tr>
 <td>critical</td>
-<td></td>
+<td>-</td>
 </tr>
 <tr>
 <td>error</td>
@@ -3158,11 +3169,11 @@
 </tr>
 <tr>
 <td>info</td>
-<td></td>
+<td>-</td>
 </tr>
 <tr>
 <td>debug</td>
-<td></td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
@@ -3301,6 +3312,7 @@ supervisorctl tail -f pmm-managed
 <p>Starting with the 2.27 release, checks are grouped into a set of Advisors, according to the functionality and recommendations they provide.</p>
 <p>To reflect these changes, the old <strong>Security Threat Tool</strong> option has been renamed to <strong>Advisors</strong> and the checks use a slightly different format.</p>
 <h3 id="check-format">Check format<a class="headerlink" href="#check-format" title="Permanent link">&para;</a></h3>
+<p>Advisors checks use a slightly different format than security checks developed for PMM 2.26 and later. </p>
 <p>To create advisor checks for PMM 2.27 and later, use the following format:</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
 <span class="nt">checks</span><span class="p">:</span><span class="w"></span>
@@ -3328,6 +3340,9 @@ supervisorctl tail -f pmm-managed
 </code></pre></div>
 <h3 id="function-signature">Function signature<a class="headerlink" href="#function-signature" title="Permanent link">&para;</a></h3>
 <p>The function signature for PMM 2.27 and later can be <strong>check_context</strong> (docs, context), where docs are lists of docs (one list of dicts for each query). </p>
+<h3 id="no-query-parameter-for-mongodb">No query parameter for MongoDB<a class="headerlink" href="#no-query-parameter-for-mongodb" title="Permanent link">&para;</a></h3>
+<p>The query for Security Checks (developed for PMM 2.26 and older) can also contain a MongoDB query document.
+ Advisor checks for PMM 2.27 and later do not yet support a query parameter for MongoDB.</p>
 <h2 id="particularities-of-security-checks-for-pmm-226-and-older">Particularities of security checks for PMM 2.26 and older)<a class="headerlink" href="#particularities-of-security-checks-for-pmm-226-and-older" title="Permanent link">&para;</a></h2>
 <h3 id="format">Format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h3>
 <p>The example below shows the format for a single check that returns the static result:</p>
