@@ -19,7 +19,7 @@
     
     
       
-        <title>Developing security checks - Percona Monitoring and Management</title>
+        <title>Develop Security Checks - Percona Monitoring and Management</title>
       
     
     
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Developing security checks
+              Develop Security Checks
             
           </span>
         </div>
@@ -879,14 +879,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
@@ -941,87 +939,335 @@
               
   
   
+  
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
+    <li class="md-nav__item md-nav__item--nested">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
       
       
         
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="checks/index.html">Security checks</a>
+          
+            <label for="__nav_5_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Developing security checks
+      <nav class="md-nav" aria-label="Security checks" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
+          Security checks
         </label>
-      
-      <a href="develop-checks.html" class="md-nav__link md-nav__link--active">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/develop-checks.html" class="md-nav__link">
         Developing security checks
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+            
+          
+            
+              
   
   
   
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <li class="md-nav__item md-nav__item--nested">
       
-        <li class="md-nav__item">
-  <a href="#check-components" class="md-nav__link">
-    Check components
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#check-fields" class="md-nav__link">
-    Check fields
-  </a>
-  
-</li>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2" type="checkbox" id="__nav_5_3_2" >
       
-        <li class="md-nav__item">
-  <a href="#backend" class="md-nav__link">
-    Backend
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#frontend" class="md-nav__link">
-    Frontend
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#develop-custom-checks" class="md-nav__link">
-    Develop custom checks
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#sumbit-feedback" class="md-nav__link">
-    Sumbit feedback
-  </a>
-  
-</li>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="checks/platform-mysql-binaries-32-bit.html">MySQL checks</a>
+          
+            <label for="__nav_5_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
-    </ul>
+      <nav class="md-nav" aria-label="MySQL checks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          MySQL checks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
   
-</nav>
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/security-anonymous-user.html" class="md-nav__link">
+        Anonymous users
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/security-non-root-accounts-super-privileges.html" class="md-nav__link">
+        Non-root accounts with SUPER privileges
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/security-user-not-using-ssl-protocol.html" class="md-nav__link">
+        User not using SSL protocol to connect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/security-user-with-open-to-the-word-scope.html" class="md-nav__link">
+        User with open to the word scope
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/security-user-without-password.html" class="md-nav__link">
+        There are users without passwords
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/root-account-can-login-remotely.html" class="md-nav__link">
+        Root account can log in remotely
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
       
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_3" type="checkbox" id="__nav_5_3_3" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="checks/mongodb-log-messages.html">MongoDB checks</a>
+          
+            <label for="__nav_5_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="MongoDB checks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          MongoDB checks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/mongodb-profiler-check.html" class="md-nav__link">
+        MongoDB Profiling level set to high
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/mongodb-read-tickets.html" class="md-nav__link">
+        MongoDB read ticket is more than 128
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/mongodb-write-tickets.html" class="md-nav__link">
+        MongoDB write ticket is more than 128
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/mongodb-scram-sha-256.html" class="md-nav__link">
+        MongoDB not using the default SHA-256 hashing function
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_4" type="checkbox" id="__nav_5_3_4" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="checks/performance-pg-archiver-failing.html">PostgreSQL checks</a>
+          
+            <label for="__nav_5_3_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="PostgreSQL checks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          PostgreSQL checks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/performance-pg-low-cache-hit-ratio.html" class="md-nav__link">
+        PostgreSQL Cache Hit Ratio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checks/performance-pg-stale-replication-slot.html" class="md-nav__link">
+        PostgreSQL stale replication slot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2729,13 +2975,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#sumbit-feedback" class="md-nav__link">
-    Sumbit feedback
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2766,7 +3005,11 @@
 <p>All checks in the first phase (and most of the planned ones) are self-contained. This means that extracted data is processed on the PMM side and not sent back to the SaaS.</p>
 <p>On the other hand, checks results and other metadata can be sent to SaaS to implement a history feature if the user opted-in and is entitled.</p>
 <p>For example, below is a single check that returns the static result:</p>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
+<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Tab 1</label><div class="tabbed-content">
+<p><p> </p>
+</div>
+</div>
+<p><div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
 <span class="nt">checks</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
@@ -2810,106 +3053,120 @@
 <span class="w">              </span><span class="no">}</span><span class="w"></span>
 <span class="w">          </span><span class="no">}]</span><span class="w"></span>
 </code></pre></div>
-<p>Here is a much more realistic example:</p>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
-<span class="nt">checks</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongodb_version</span><span class="w"></span>
-<span class="w">    </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MongoDB Version</span><span class="w"></span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This check returns warnings if MongoDB/PSMDB version is not the latest one.</span><span class="w"></span>
-<span class="w">    </span><span class="nt">tiers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">anonymous</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">registered</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MONGODB_BUILDINFO</span><span class="w"></span>
-<span class="w">    </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">      </span><span class="no">LATEST_VERSIONS = {</span><span class="w"></span>
-<span class="w">          </span><span class="no">&quot;mongodb&quot;: {</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;3.6&quot;: 30620,  # https://docs.mongodb.com/manual/release-notes/3.6/</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;4.0&quot;: 40020,  # https://docs.mongodb.com/manual/release-notes/4.0/</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;4.2&quot;: 40210,  # https://docs.mongodb.com/manual/release-notes/4.2/</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;4.4&quot;: 40401,  # https://docs.mongodb.com/manual/release-notes/4.4/</span><span class="w"></span>
-<span class="w">          </span><span class="no">},</span><span class="w"></span>
-<span class="w">          </span><span class="no">&quot;percona&quot;: {</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;3.6&quot;: 30620,  # https://www.percona.com/downloads/percona-server-mongodb-3.6/</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;4.0&quot;: 40020,  # https://www.percona.com/downloads/percona-server-mongodb-4.0/</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;4.2&quot;: 40209,  # https://www.percona.com/downloads/percona-server-mongodb-4.2/</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;4.4&quot;: 40401,  # https://www.percona.com/downloads/percona-server-mongodb-4.4/</span><span class="w"></span>
-<span class="w">          </span><span class="no">},</span><span class="w"></span>
-<span class="w">      </span><span class="no">}</span><span class="w"></span>
+    </p></p>
+<div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Realistic</label><div class="tabbed-content">
+<p><p> 
+```yaml</p>
+</div>
+</div>
+<hr />
+<p>checks:
+  - version: 1
+    name: mongodb_version
+    summary: MongoDB Version
+    description: This check returns warnings if MongoDB/PSMDB version is not the latest one.
+    tiers: [anonymous, registered]
+    type: MONGODB_BUILDINFO
+    script: |
+      LATEST_VERSIONS = {
+          &ldquo;mongodb&rdquo;: {
+              &ldquo;3.6&rdquo;: 30620,  # https://docs.mongodb.com/manual/release-notes/3.6/
+              &ldquo;4.0&rdquo;: 40020,  # https://docs.mongodb.com/manual/release-notes/4.0/
+              &ldquo;4.2&rdquo;: 40210,  # https://docs.mongodb.com/manual/release-notes/4.2/
+              &ldquo;4.4&rdquo;: 40401,  # https://docs.mongodb.com/manual/release-notes/4.4/
+          },
+          &ldquo;percona&rdquo;: {
+              &ldquo;3.6&rdquo;: 30620,  # https://www.percona.com/downloads/percona-server-mongodb-3.6/
+              &ldquo;4.0&rdquo;: 40020,  # https://www.percona.com/downloads/percona-server-mongodb-4.0/
+              &ldquo;4.2&rdquo;: 40209,  # https://www.percona.com/downloads/percona-server-mongodb-4.2/
+              &ldquo;4.4&rdquo;: 40401,  # https://www.percona.com/downloads/percona-server-mongodb-4.4/
+          },
+      }</p>
+<div class="highlight"><pre><span></span><code>  def check(docs):
+      # for compatibility with PMM Server &lt; 2.12
+      context = {
+          &quot;format_version_num&quot;: format_version_num,
+          &quot;parse_version&quot;: parse_version,
+      }
+      return check_context(docs, context)
 
 
-<span class="w">      </span><span class="no">def check(docs):</span><span class="w"></span>
-<span class="w">          </span><span class="no"># for compatibility with PMM Server &lt; 2.12</span><span class="w"></span>
-<span class="w">          </span><span class="no">context = {</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;format_version_num&quot;: format_version_num,</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;parse_version&quot;: parse_version,</span><span class="w"></span>
-<span class="w">          </span><span class="no">}</span><span class="w"></span>
-<span class="w">          </span><span class="no">return check_context(docs, context)</span><span class="w"></span>
+  def check_context(docs, context):
+      # `docs` is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.
+      # `context` is a dict with additional functions.
+      #
+      # Global `print` and `fail` functions are available.
+      #
+      # `check_context` function is expected to return a list of dicts that are then converted to alerts;
+      # in particular, that list can be empty.
+      # Any other value (for example, string) is treated as script execution failure
+      # (Starlark does not support Python exceptions);
+      # it is recommended to use global function `fail` for that instead.
 
+      &quot;&quot;&quot;
+      This check returns warnings if MongoDB/PSMDB version is not the latest one.
+      &quot;&quot;&quot;
 
-<span class="w">      </span><span class="no">def check_context(docs, context):</span><span class="w"></span>
-<span class="w">          </span><span class="no"># `docs` is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.</span><span class="w"></span>
-<span class="w">          </span><span class="no"># `context` is a dict with additional functions.</span><span class="w"></span>
-<span class="w">          </span><span class="no">#</span><span class="w"></span>
-<span class="w">          </span><span class="no"># Global `print` and `fail` functions are available.</span><span class="w"></span>
-<span class="w">          </span><span class="no">#</span><span class="w"></span>
-<span class="w">          </span><span class="no"># `check_context` function is expected to return a list of dicts that are then converted to alerts;</span><span class="w"></span>
-<span class="w">          </span><span class="no"># in particular, that list can be empty.</span><span class="w"></span>
-<span class="w">          </span><span class="no"># Any other value (for example, string) is treated as script execution failure</span><span class="w"></span>
-<span class="w">          </span><span class="no"># (Starlark does not support Python exceptions);</span><span class="w"></span>
-<span class="w">          </span><span class="no"># it is recommended to use global function `fail` for that instead.</span><span class="w"></span>
+      format_version_num = context.get(&quot;format_version_num&quot;, fail)
+      parse_version = context.get(&quot;parse_version&quot;, fail)
 
-<span class="w">          </span><span class="no">&quot;&quot;&quot;</span><span class="w"></span>
-<span class="w">          </span><span class="no">This check returns warnings if MongoDB/PSMDB version is not the latest one.</span><span class="w"></span>
-<span class="w">          </span><span class="no">&quot;&quot;&quot;</span><span class="w"></span>
+      if len(docs) != 1:
+          return &quot;Unexpected number of documents&quot;
 
-<span class="w">          </span><span class="no">format_version_num = context.get(&quot;format_version_num&quot;, fail)</span><span class="w"></span>
-<span class="w">          </span><span class="no">parse_version = context.get(&quot;parse_version&quot;, fail)</span><span class="w"></span>
+      info = docs[0]
 
-<span class="w">          </span><span class="no">if len(docs) != 1:</span><span class="w"></span>
-<span class="w">              </span><span class="no">return &quot;Unexpected number of documents&quot;</span><span class="w"></span>
+      # extract information
+      is_percona = &#39;psmdbVersion&#39; in info
 
-<span class="w">          </span><span class="no">info = docs[0]</span><span class="w"></span>
+      # parse_version returns a dict with keys: major, minor, patch, rest, num
+      version = parse_version(info[&quot;version&quot;])
+      print(&quot;version =&quot;, repr(version))
+      num = version[&quot;num&quot;]
+      mm = &quot;{}.{}&quot;.format(version[&quot;major&quot;], version[&quot;minor&quot;])
 
-<span class="w">          </span><span class="no"># extract information</span><span class="w"></span>
-<span class="w">          </span><span class="no">is_percona = &#39;psmdbVersion&#39; in info</span><span class="w"></span>
+      results = []
 
-<span class="w">          </span><span class="no"># parse_version returns a dict with keys: major, minor, patch, rest, num</span><span class="w"></span>
-<span class="w">          </span><span class="no">version = parse_version(info[&quot;version&quot;])</span><span class="w"></span>
-<span class="w">          </span><span class="no">print(&quot;version =&quot;, repr(version))</span><span class="w"></span>
-<span class="w">          </span><span class="no">num = version[&quot;num&quot;]</span><span class="w"></span>
-<span class="w">          </span><span class="no">mm = &quot;{}.{}&quot;.format(version[&quot;major&quot;], version[&quot;minor&quot;])</span><span class="w"></span>
+      if is_percona:
+          latest = LATEST_VERSIONS[&quot;percona&quot;][mm]
+          if latest &gt; num:
+              results.append({
+                  &quot;summary&quot;: &quot;Newer version of Percona Server for MongoDB is available&quot;,
+                  &quot;description&quot;: &quot;Current version is {}, latest available version is {}.&quot;.format(format_version_num(num), format_version_num(latest)),
+                  &quot;severity&quot;: &quot;warning&quot;,
+                  &quot;labels&quot;: {
+                      &quot;current&quot;: format_version_num(num),
+                      &quot;latest&quot;:  format_version_num(latest),
+                  },
+              })
 
-<span class="w">          </span><span class="no">results = []</span><span class="w"></span>
+          return results
 
-<span class="w">          </span><span class="no">if is_percona:</span><span class="w"></span>
-<span class="w">              </span><span class="no">latest = LATEST_VERSIONS[&quot;percona&quot;][mm]</span><span class="w"></span>
-<span class="w">              </span><span class="no">if latest &gt; num:</span><span class="w"></span>
-<span class="w">                  </span><span class="no">results.append({</span><span class="w"></span>
-<span class="w">                      </span><span class="no">&quot;summary&quot;: &quot;Newer version of Percona Server for MongoDB is available&quot;,</span><span class="w"></span>
-<span class="w">                      </span><span class="no">&quot;description&quot;: &quot;Current version is {}, latest available version is {}.&quot;.format(format_version_num(num), format_version_num(latest)),</span><span class="w"></span>
-<span class="w">                      </span><span class="no">&quot;severity&quot;: &quot;warning&quot;,</span><span class="w"></span>
-<span class="w">                      </span><span class="no">&quot;labels&quot;: {</span><span class="w"></span>
-<span class="w">                          </span><span class="no">&quot;current&quot;: format_version_num(num),</span><span class="w"></span>
-<span class="w">                          </span><span class="no">&quot;latest&quot;:  format_version_num(latest),</span><span class="w"></span>
-<span class="w">                      </span><span class="no">},</span><span class="w"></span>
-<span class="w">                  </span><span class="no">})</span><span class="w"></span>
+      if True:  # MongoDB
+          latest = LATEST_VERSIONS[&quot;mongodb&quot;][mm]
+          if latest &gt; num:
+              results.append({
+                  &quot;summary&quot;: &quot;Newer version of MongoDB is available&quot;,
+                  &quot;description&quot;: &quot;Current version is {}, latest available version is {}.&quot;.format(format_version_num(num), format_version_num(latest)),
+                  &quot;severity&quot;: &quot;warning&quot;,
+                  &quot;labels&quot;: {
+                      &quot;current&quot;: format_version_num(num),
+                      &quot;latest&quot;:  format_version_num(latest),
+                  },
+              })
 
-<span class="w">              </span><span class="no">return results</span><span class="w"></span>
-
-<span class="w">          </span><span class="no">if True:  # MongoDB</span><span class="w"></span>
-<span class="w">              </span><span class="no">latest = LATEST_VERSIONS[&quot;mongodb&quot;][mm]</span><span class="w"></span>
-<span class="w">              </span><span class="no">if latest &gt; num:</span><span class="w"></span>
-<span class="w">                  </span><span class="no">results.append({</span><span class="w"></span>
-<span class="w">                      </span><span class="no">&quot;summary&quot;: &quot;Newer version of MongoDB is available&quot;,</span><span class="w"></span>
-<span class="w">                      </span><span class="no">&quot;description&quot;: &quot;Current version is {}, latest available version is {}.&quot;.format(format_version_num(num), format_version_num(latest)),</span><span class="w"></span>
-<span class="w">                      </span><span class="no">&quot;severity&quot;: &quot;warning&quot;,</span><span class="w"></span>
-<span class="w">                      </span><span class="no">&quot;labels&quot;: {</span><span class="w"></span>
-<span class="w">                          </span><span class="no">&quot;current&quot;: format_version_num(num),</span><span class="w"></span>
-<span class="w">                          </span><span class="no">&quot;latest&quot;:  format_version_num(latest),</span><span class="w"></span>
-<span class="w">                      </span><span class="no">},</span><span class="w"></span>
-<span class="w">                  </span><span class="no">})</span><span class="w"></span>
-
-<span class="w">              </span><span class="no">return results</span><span class="w"></span>
+          return results
 </code></pre></div>
+<p>```
+    </p>
+</p>
+<div class="tabbed-set" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Tab B</label><div class="tabbed-content">
+<p><code>More content.</code></p>
+</div>
+</div>
+<p>Here is a much more realistic example:
+
+
+</p>
 <h2 id="check-fields">Check fields<a class="headerlink" href="#check-fields" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Version</strong> (integer, required) defines what other check properties are expected, what types are supported, what is expected from the script and what it can expect from the execution environment, etc.</li>
@@ -2918,119 +3175,94 @@
 <li><strong>Description</strong> (string, required) defines long human-readable description.</li>
 <li><strong>Type</strong> (string/enum, required) defines PMM Service type for which check is performed and query type.</li>
 <li><strong>Query</strong> (string, optional) contains a SQL query or MongoDB query document (as a string with proper quoting) which is executed on the PMM Client side. It may be absent if type defines the whole query by itself.</li>
-<li><strong>Script</strong> (string, required) contains a small Python program that processes query results, and returns check results. It is executed on the PMM Server side.</li>
+<li><strong>Script</strong> (string, required) contains a small Python program that processes query results, and returns check results. It is executed on the PMM Server side.
+
+Check script assumes that there is a function with a fixed name <em>check</em> that accepts a <em>list</em> of <em>dicts</em> containing returned rows for SQL databases and documents for MongoDB. It returns zero, one, or several check results that are then converted to alerts.
+
+Another function that should be implemented is <strong>check_context</strong>. PMM 2.12.0 and earlier use <strong>context</strong>, while newer versions use <strong>check_context</strong>. Both have the same meaning.
+
+The single query means that currently you cannot implement some advanced checks that would require several queries (and can&rsquo;t be implemented using SQL UNION).
+
+Checks format and the current STT UI use different terminology for severities. Here is how different formats show up on the UI:
+
+| Format    | UI       |
+| --------- | -------- |
+| emergency |          |
+| alert     |          |
+| critical  |          |
+| error     | Critical |
+| warning   | Major    |
+| notice    | Trivial  |
+| info      |          |
+| debug     |          |
+</li>
 </ul>
-<p>Check script assumes that there is a function with a fixed name <em>check</em> that accepts a <em>list</em> of <em>dicts</em> containing returned rows for SQL databases and documents for MongoDB. It returns zero, one, or several check results that are then converted to alerts.</p>
-<p>Another function that should be implemented is <strong>check_context</strong>. PMM 2.12.0 and earlier use <strong>context</strong>, while newer versions use <strong>check_context</strong>. Both have the same meaning.</p>
-<p>The single query means that currently you cannot implement some advanced checks that would require several queries (and can&rsquo;t be implemented using SQL UNION).</p>
-<p>Checks format and the current STT UI use different terminology for severities. Here is how different formats show up on the UI:</p>
-<table>
-<thead>
-<tr>
-<th>Format</th>
-<th>UI</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>emergency</td>
-<td></td>
-</tr>
-<tr>
-<td>alert</td>
-<td></td>
-</tr>
-<tr>
-<td>critical</td>
-<td></td>
-</tr>
-<tr>
-<td>error</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>warning</td>
-<td>Major</td>
-</tr>
-<tr>
-<td>notice</td>
-<td>Trivial</td>
-</tr>
-<tr>
-<td>info</td>
-<td></td>
-</tr>
-<tr>
-<td>debug</td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <h2 id="backend">Backend<a class="headerlink" href="#backend" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html="" href="../_images/BackendSTT.png"><img alt="" src="../_images/BackendSTT.png" /></a></div></p>
-<ol>
-<li>pmm-managed checks that this installation is opted-in into STT.</li>
-<li>pmm-managed downloads checks file from SaaS.</li>
-<li>pmm-managed verifies file signatures using a list of hard-coded public keys. At least one signature should be correct.</li>
-<li>pmm-managed sends queries to pmm-agent and gathers results.</li>
-<li>pmm-managed executes check scripts that produce alert information.</li>
-<li>pmm-managed sends alerts to Alertmanager.</li>
-<li>Due to Alertmanager design, pmm-managed has to send and re-send alerts to it much more often than the frequency of check execution. That&rsquo;s expected, and not important for using STT, but important for understanding how it works.</li>
-<li>Currently, Prometheus is not involved.</li>
-</ol>
+<p><div class="lightgallery"><a data-sub-html="" href="../_images/BackendSTT.png"><img alt="" src="../_images/BackendSTT.png" />
+
+1. pmm-managed checks that this installation is opted-in into STT.
+2. pmm-managed downloads checks file from SaaS.
+3. pmm-managed verifies file signatures using a list of hard-coded public keys. At least one signature should be correct.
+4. pmm-managed sends queries to pmm-agent and gathers results.
+5. pmm-managed executes check scripts that produce alert information.
+6. pmm-managed sends alerts to Alertmanager.
+   - Due to Alertmanager design, pmm-managed has to send and re-send alerts to it much more often than the frequency of check execution. That&rsquo;s expected, and not important for using STT, but important for understanding how it works.
+   - Currently, Prometheus is not involved.
+</a></div></p>
 <h2 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html="" href="../_images/FrontEndSTT.png"><img alt="" src="../_images/FrontEndSTT.png" /></a></div></p>
-<p>Our UI in Grafana uses Alertmanager API v2 to get information about failed security checks.</p>
+<p><div class="lightgallery"><a data-sub-html="" href="../_images/FrontEndSTT.png"><img alt="" src="../_images/FrontEndSTT.png" />
+
+Our UI in Grafana uses Alertmanager API v2 to get information about failed security checks.
+</a></div></p>
 <h2 id="develop-custom-checks">Develop custom checks<a class="headerlink" href="#develop-custom-checks" title="Permanent link">&para;</a></h2>
 <ol>
-<li>
-<p>Download the latest PMM Server and PMM Client builds:</p>
+<li>Download the latest PMM Server and PMM Client builds:
 <ul>
 <li>PMM Server: <a href="https://www.percona.com/software/pmm/quickstart#">percona/pmm-server:2</a></li>
-<li>PMM Client: <em>pmm2-client-2.9.1.tar.gz</em></li>
+<li>PMM Client: <em>pmm2-client-2.9.1.tar.gz</em>
+</li>
 </ul>
 </li>
-<li>
-<p>Run PMM Server with special environment variables:</p>
+<li>Run PMM Server with special environment variables:
 <ul>
 <li><em>PMM_DEBUG=1</em> to enable debug output that would be useful later;</li>
 <li><em>PERCONA_TEST_CHECKS_FILE=/srv/custom-checks.yml</em> to use checks from the local files instead of downloading them from the SaaS</li>
 <li><em>PERCONA_TEST_CHECKS_DISABLE_START_DELAY=true</em> to disable the default check execution start delay, which is currently set to 1 minute, so that checks are run immediately upon system start</li>
-<li><em>PERCONA_TEST_CHECKS_RESEND_INTERVAL=2s</em> to define the frequency for sending the SA-based alerts to Alertmanager.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>docker run -p 80:80 -p 443:443 --name pmm-server \
+<li><em>PERCONA_TEST_CHECKS_RESEND_INTERVAL=2s</em> to define the frequency for sending the SA-based alerts to Alertmanager.
+
+<code>docker run -p 80:80 -p 443:443 --name pmm-server \
 
 -e PMM_DEBUG=1 \
 -e PERCONA_TEST_CHECKS_FILE=/srv/custom-checks.yml \
 -e PERCONA_TEST_CHECKS_DISABLE_START_DELAY=true
 -e PERCONA_TEST_CHECKS_RESEND_INTERVAL=2s \
-perconalab/pmm-server:dev-latest
-</code></pre></div>
+perconalab/pmm-server:dev-latest</code>
 </li>
-<li>
-<p>Log in to Grafana (admin/admin) and enable STT in the settings: http://127.0.0.1/graph/d/pmm-settings/pmm-settings</p>
-<p><div class="lightgallery"><a data-sub-html="" href="../_images/Grafana.png"><img alt="" src="../_images/Grafana.png" /></a></div></p>
+</ul>
 </li>
-<li>
-<p>Create <em>/srv/custom-checks.yml</em> inside a Docker container with the content from the Security Advisor (Security Threat Tool) section above.</p>
+<li>Log in to Grafana (admin/admin) and enable STT in the settings: http://127.0.0.1/graph/d/pmm-settings/pmm-settings
+
+    <div class="lightgallery"><a data-sub-html="" href="../_images/Grafana.png"><img alt="" src="../_images/Grafana.png" />
+</a></div></li>
+<li>Create <em>/srv/custom-checks.yml</em> inside a Docker container with the content from the Security Advisor (Security Threat Tool) section above.
 </li>
-<li>
-<p>STT checks will run with a time interval defined via UI. You can see the result of running the advisor on the home dashboard:</p>
-<p><div class="lightgallery"><a data-sub-html="" href="../_images/HomeDashboard.png"><img alt="" src="../_images/HomeDashboard.png" /></a></div></p>
-</li>
-<li>
-<p>Click on the number of failed checks to open the Failed Checks dashboard:</p>
-<p><div class="lightgallery"><a data-sub-html="" href="../_images/FailedChecks.png"><img alt="" src="../_images/FailedChecks.png" /></a></div></p>
-</li>
-<li>
-<p>Go into Docker container to output the logs of pmm-managed and read STT logs:</p>
-</li>
+<li>STT checks will run with a time interval defined via UI. You can see the result of running the advisor on the home dashboard:
+
+    <div class="lightgallery"><a data-sub-html="" href="../_images/HomeDashboard.png"><img alt="" src="../_images/HomeDashboard.png" />
+</a></div></li>
+<li>Click on the number of failed checks to open the Failed Checks dashboard:
+
+    <div class="lightgallery"><a data-sub-html="" href="../_images/FailedChecks.png"><img alt="" src="../_images/FailedChecks.png" />
+</a></div></li>
+<li>Go into Docker container to output the logs of pmm-managed and read STT logs:
+
+```</li>
 </ol>
-<div class="highlight"><pre><span></span><code># get inside the container
-docker exec -it pmm-server bash
-# print and watch the logs
-supervisorctl tail -f pmm-managed
-</code></pre></div>
+<h1 id="get-inside-the-container">get inside the container<a class="headerlink" href="#get-inside-the-container" title="Permanent link">&para;</a></h1>
+<p>docker exec -it pmm-server bash</p>
+<h1 id="print-and-watch-the-logs">print and watch the logs<a class="headerlink" href="#print-and-watch-the-logs" title="Permanent link">&para;</a></h1>
+<p>supervisorctl tail -f pmm-managed
+```</p>
 <h2 id="sumbit-feedback">Sumbit feedback<a class="headerlink" href="#sumbit-feedback" title="Permanent link">&para;</a></h2>
 <p>We welcome your feedback on the current process for developing and debugging checks. Send us your comments over <a href="https://percona.slack.com">Slack</a> or post a question on the <a href="https://forums.percona.com/">Percona Forums</a>.</p>
 
@@ -3039,7 +3271,7 @@ supervisorctl tail -f pmm-managed
   <small>
     
       Last update:
-      2022-03-08
+      2022-04-08
     
   </small>
 </div>
@@ -3052,41 +3284,6 @@ supervisorctl tail -f pmm-managed
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="interface.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: UI components" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              UI components
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="dashboards/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Dashboards" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Dashboards
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
