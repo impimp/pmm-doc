@@ -3092,20 +3092,22 @@
 <div class="tabbed-block">
 <p>
 <hr />
-<p>checks:
-    - version: 2             &lt;------ version increment
-      name: exampleV2
-      summary: Check format V2
-      description: Checks something important
-      tiers: [ anonymous, registered ]
-      interval: standard
-      family: MYSQL          &lt;------- family
-      queries:               &lt;-------- queries
-        - type: MYSQL_SELECT
-          query: some query</p>
-<pre><code>    - type: MYSQL_SHOW
-      query: some query
+<p>checks:</p>
+<pre><code>- version: 2             &lt;------ version increment
+  name: exampleV2
+  summary: Check format V2
+  description: Checks something important
+  tiers: [ anonymous, registered ]
+  interval: standard
+  family: MYSQL          &lt;------- family
+  queries:
 
+  &lt;-------- queries
+    - type: MYSQL_SELECT
+     query: some query
+
+    - type: MYSQL_SHOW
+      query: some query 
   script: |
     def check_context(docs, context):
         firstQueryResults = docs[0]
