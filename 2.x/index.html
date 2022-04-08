@@ -254,6 +254,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#start-here" class="md-nav__link">
     Start here
   </a>
@@ -3022,6 +3029,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#start-here" class="md-nav__link">
     Start here
   </a>
@@ -3087,21 +3101,85 @@
 
 
 <h1 id="welcome">Welcome</h1>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Tab 1</label><label for="__tabbed_1_2">Tab 2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Format for Advisor Checks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Markdown <strong>content</strong>.</p>
-<p>Multiple paragraphs.</p>
+<p><p>---</p>
 </div>
+</div>
+</div>
+<p>checks:
+  - version: 2             &lt;------ version increment
+    name: exampleV2
+    summary: Check format V2
+    description: Checks something important
+    tiers: [ anonymous, registered ]
+    interval: standard
+    family: MYSQL          &lt;------- family
+    queries:               &lt;-------- queries
+      - type: MYSQL_SELECT
+        query: some query</p>
+<pre><code>  - type: MYSQL_SHOW
+    query: some query
+
+script: |
+  def check_context(docs, context):
+      firstQueryResults = docs[0]
+      secondQueryResults = docs[1]
+      // Process query results
+      return results
+
+&lt;/p&gt;
+</code></pre>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Tab 2</label></div>
+<div class="tabbed-content">
 <div class="tabbed-block">
-<p>More Markdown <strong>content</strong>.</p>
-<ul>
-<li>list item a</li>
-<li>list item b</li>
-</ul>
+<h2 id="_1"><p></h2>
 </div>
 </div>
 </div>
+<p>checks:
+  - version: 1
+    name: example
+    summary: Example check
+    description: This check is just an example.
+    tiers: [anonymous, registered]
+    type: MONGODB_BUILDINFO
+    script: |
+      def check(docs):
+          # for compatibility with PMM Server &lt; 2.12
+          context = {
+              "format_version_num": format_version_num,
+              "parse_version": parse_version,
+          }
+          return check_context(docs, context)</p>
+<pre><code>  def check_context(docs, context):
+      # `docs` is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.
+      # `context` is a dict with additional functions.
+      #
+      # Global `print` and `fail` functions are available.
+      #
+      # `check_context` function is expected to return a list of dicts that are then converted to alerts;
+      # in particular, that list can be empty.
+      # Any other value (for example, string) is treated as script execution failure
+      # (Starlark does not support Python exceptions);
+      # it is recommended to use global function `fail` for that instead.
+
+      format_version_num = context.get("format_version_num", fail)
+      parse_version = context.get("parse_version", fail)
+
+      print("first doc =", repr(docs[0]))
+
+      return [{
+          "summary": "Example summary",
+          "description": "Example description",
+          "severity": "warning",
+          "labels": {
+              "version": format_version_num(10203),
+          }
+      }]
+&lt;/p&gt;
+</code></pre>
 <p><strong>Percona Monitoring and Management</strong> (PMM) is a free, open-source monitoring tool for MySQL, PostgreSQL, MongoDB, and ProxySQL, and the servers they run on.</p>
 <p>PMM helps you improve the performance of your databases, simplify their management, and strengthen their security. It's efficient, quick to <a href="setting-up/index.html">set up</a>, and easy to use.</p>
 <ul>
@@ -3283,7 +3361,7 @@ This is the documentation for the latest release, <strong>PMM 2.26.0</strong> (<
   <small>
     
       Last update:
-      2022-04-08
+      2022-04-09
     
   </small>
 </div>
