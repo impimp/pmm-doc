@@ -3040,17 +3040,17 @@
 
 
 
-<h1 id="mongodb-write-ticket-is-more-than-128">MongoDB write ticket is more than 128<a class="headerlink" href="#mongodb-write-ticket-is-more-than-128" title="Permanent link">&para;</a></h1>
-<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<h1 id="mongodb-write-ticket-is-more-than-128">MongoDB write ticket is more than 128</h1>
+<h2 id="description">Description</h2>
 <p>This check returns a warning if the write ticket is more than 128. This can cause performance issues.
 Ideally the number of tickets should be based on the number of CPU available.
 The default write ticket is 128.
 It can be adjusted for your mongod and your mongos nodes.</p>
 <p><a href="https://docs.mongodb.com/manual/reference/parameters/#mongodb-parameter-param.wiredTigerConcurrentWriteTransactions">https://docs.mongodb.com/manual/reference/parameters/#mongodb-parameter-param.wiredTigerConcurrentWriteTransactions</a></p>
-<h2 id="rule">Rule<a class="headerlink" href="#rule" title="Permanent link">&para;</a></h2>
+<h2 id="rule">Rule</h2>
 <p>MONGODB_GETPARAMETER</p>
 <p><code>db.adminCommand( { setParameter: 1, "wiredTigerConcurrentWriteTransactions": "128"  } )</code></p>
-<h2 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Permanent link">&para;</a></h2>
+<h2 id="resolution">Resolution</h2>
 <p>Please Perform the steps mentioned below to turn adjust the verbosity of your logs.</p>
 <p>It is possible to do it online:</p>
 <p><code>mongo&gt; db.adminCommand( { setParameter: 1, "wiredTigerConcurrentWriteTransactions": "128"  } )</code></p>

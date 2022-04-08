@@ -2993,31 +2993,34 @@
 
 
 
-<h1 id="develop-security-checks">Develop Security Checks<a class="headerlink" href="#develop-security-checks" title="Permanent link">&para;</a></h1>
+<h1 id="develop-security-checks">Develop Security Checks</h1>
 <p>The Security Threat Tool in PMM offers a set of checks that can detect common security threats, performance degradation, data loss and data corruption.</p>
 <p>As a developer, you can create custom checks to cover additional use cases that are relevant to your specific database infrastructure.</p>
-<h2 id="check-components">Check components<a class="headerlink" href="#check-components" title="Permanent link">&para;</a></h2>
+<h2 id="check-components">Check components</h2>
 <p>A check is a combination of:</p>
 <ul>
 <li>SQL query or MongoDB query document for extracting data from the database.</li>
-<li>Python script for converting extracted data into check results. This is actually a <a href="https://github.com/google/starlark-go">Starlark</a> script – a Python dialect that adds more imperative features from the Python. Script&rsquo;s execution environment is sandboxed; no I/O can be done from it.</li>
+<li>Python script for converting extracted data into check results. This is actually a <a href="https://github.com/google/starlark-go">Starlark</a> script – a Python dialect that adds more imperative features from the Python. Script's execution environment is sandboxed; no I/O can be done from it.</li>
 </ul>
 <p>All checks in the first phase (and most of the planned ones) are self-contained. This means that extracted data is processed on the PMM side and not sent back to the SaaS.</p>
 <p>On the other hand, checks results and other metadata can be sent to SaaS to implement a history feature if the user opted-in and is entitled.</p>
 <p>For example, below is a single check that returns the static result:</p>
-<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Tab 1</label><div class="tabbed-content">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Tab 1</label><label for="__tabbed_1_2">Tab 2</label><label for="__tabbed_1_3">Tab 1</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Markdown <strong>content</strong>.</p>
 <p>Multiple paragraphs.</p>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Tab 2</label><div class="tabbed-content">
+<div class="tabbed-block">
 <p>More Markdown <strong>content</strong>.</p>
 <ul>
 <li>list item a</li>
 <li>list item b</li>
 </ul>
 </div>
-<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Tab 1</label><div class="tabbed-content">
+<div class="tabbed-block">
 <p><p> </p>
+</div>
 </div>
 </div>
 <p><div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
@@ -3065,9 +3068,12 @@
 <span class="w">          </span><span class="no">}]</span><span class="w"></span>
 </code></pre></div>
     </p></p>
-<div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Realistic</label><div class="tabbed-content">
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Realistic</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p><p> 
 ```yaml</p>
+</div>
 </div>
 </div>
 <hr />
@@ -3080,24 +3086,24 @@
     type: MONGODB_BUILDINFO
     script: |
       LATEST_VERSIONS = {
-          &ldquo;mongodb&rdquo;: {
-              &ldquo;3.6&rdquo;: 30620,  # https://docs.mongodb.com/manual/release-notes/3.6/
-              &ldquo;4.0&rdquo;: 40020,  # https://docs.mongodb.com/manual/release-notes/4.0/
-              &ldquo;4.2&rdquo;: 40210,  # https://docs.mongodb.com/manual/release-notes/4.2/
-              &ldquo;4.4&rdquo;: 40401,  # https://docs.mongodb.com/manual/release-notes/4.4/
+          "mongodb": {
+              "3.6": 30620,  # https://docs.mongodb.com/manual/release-notes/3.6/
+              "4.0": 40020,  # https://docs.mongodb.com/manual/release-notes/4.0/
+              "4.2": 40210,  # https://docs.mongodb.com/manual/release-notes/4.2/
+              "4.4": 40401,  # https://docs.mongodb.com/manual/release-notes/4.4/
           },
-          &ldquo;percona&rdquo;: {
-              &ldquo;3.6&rdquo;: 30620,  # https://www.percona.com/downloads/percona-server-mongodb-3.6/
-              &ldquo;4.0&rdquo;: 40020,  # https://www.percona.com/downloads/percona-server-mongodb-4.0/
-              &ldquo;4.2&rdquo;: 40209,  # https://www.percona.com/downloads/percona-server-mongodb-4.2/
-              &ldquo;4.4&rdquo;: 40401,  # https://www.percona.com/downloads/percona-server-mongodb-4.4/
+          "percona": {
+              "3.6": 30620,  # https://www.percona.com/downloads/percona-server-mongodb-3.6/
+              "4.0": 40020,  # https://www.percona.com/downloads/percona-server-mongodb-4.0/
+              "4.2": 40209,  # https://www.percona.com/downloads/percona-server-mongodb-4.2/
+              "4.4": 40401,  # https://www.percona.com/downloads/percona-server-mongodb-4.4/
           },
       }</p>
-<div class="highlight"><pre><span></span><code>  def check(docs):
+<pre><code>  def check(docs):
       # for compatibility with PMM Server &lt; 2.12
       context = {
-          &quot;format_version_num&quot;: format_version_num,
-          &quot;parse_version&quot;: parse_version,
+          "format_version_num": format_version_num,
+          "parse_version": parse_version,
       }
       return check_context(docs, context)
 
@@ -3114,71 +3120,74 @@
       # (Starlark does not support Python exceptions);
       # it is recommended to use global function `fail` for that instead.
 
-      &quot;&quot;&quot;
+      """
       This check returns warnings if MongoDB/PSMDB version is not the latest one.
-      &quot;&quot;&quot;
+      """
 
-      format_version_num = context.get(&quot;format_version_num&quot;, fail)
-      parse_version = context.get(&quot;parse_version&quot;, fail)
+      format_version_num = context.get("format_version_num", fail)
+      parse_version = context.get("parse_version", fail)
 
       if len(docs) != 1:
-          return &quot;Unexpected number of documents&quot;
+          return "Unexpected number of documents"
 
       info = docs[0]
 
       # extract information
-      is_percona = &#39;psmdbVersion&#39; in info
+      is_percona = 'psmdbVersion' in info
 
       # parse_version returns a dict with keys: major, minor, patch, rest, num
-      version = parse_version(info[&quot;version&quot;])
-      print(&quot;version =&quot;, repr(version))
-      num = version[&quot;num&quot;]
-      mm = &quot;{}.{}&quot;.format(version[&quot;major&quot;], version[&quot;minor&quot;])
+      version = parse_version(info["version"])
+      print("version =", repr(version))
+      num = version["num"]
+      mm = "{}.{}".format(version["major"], version["minor"])
 
       results = []
 
       if is_percona:
-          latest = LATEST_VERSIONS[&quot;percona&quot;][mm]
+          latest = LATEST_VERSIONS["percona"][mm]
           if latest &gt; num:
               results.append({
-                  &quot;summary&quot;: &quot;Newer version of Percona Server for MongoDB is available&quot;,
-                  &quot;description&quot;: &quot;Current version is {}, latest available version is {}.&quot;.format(format_version_num(num), format_version_num(latest)),
-                  &quot;severity&quot;: &quot;warning&quot;,
-                  &quot;labels&quot;: {
-                      &quot;current&quot;: format_version_num(num),
-                      &quot;latest&quot;:  format_version_num(latest),
+                  "summary": "Newer version of Percona Server for MongoDB is available",
+                  "description": "Current version is {}, latest available version is {}.".format(format_version_num(num), format_version_num(latest)),
+                  "severity": "warning",
+                  "labels": {
+                      "current": format_version_num(num),
+                      "latest":  format_version_num(latest),
                   },
               })
 
           return results
 
       if True:  # MongoDB
-          latest = LATEST_VERSIONS[&quot;mongodb&quot;][mm]
+          latest = LATEST_VERSIONS["mongodb"][mm]
           if latest &gt; num:
               results.append({
-                  &quot;summary&quot;: &quot;Newer version of MongoDB is available&quot;,
-                  &quot;description&quot;: &quot;Current version is {}, latest available version is {}.&quot;.format(format_version_num(num), format_version_num(latest)),
-                  &quot;severity&quot;: &quot;warning&quot;,
-                  &quot;labels&quot;: {
-                      &quot;current&quot;: format_version_num(num),
-                      &quot;latest&quot;:  format_version_num(latest),
+                  "summary": "Newer version of MongoDB is available",
+                  "description": "Current version is {}, latest available version is {}.".format(format_version_num(num), format_version_num(latest)),
+                  "severity": "warning",
+                  "labels": {
+                      "current": format_version_num(num),
+                      "latest":  format_version_num(latest),
                   },
               })
 
           return results
-</code></pre></div>
+</code></pre>
 <p>```
     </p>
 </p>
-<div class="tabbed-set" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Tab B</label><div class="tabbed-content">
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Tab B</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p><code>More content.</code></p>
+</div>
 </div>
 </div>
 <p>Here is a much more realistic example:
 
 
 </p>
-<h2 id="check-fields">Check fields<a class="headerlink" href="#check-fields" title="Permanent link">&para;</a></h2>
+<h2 id="check-fields">Check fields</h2>
 <ul>
 <li><strong>Version</strong> (integer, required) defines what other check properties are expected, what types are supported, what is expected from the script and what it can expect from the execution environment, etc.</li>
 <li><strong>Name</strong> (string, required) defined machine-readable name (ID).</li>
@@ -3192,7 +3201,7 @@ Check script assumes that there is a function with a fixed name <em>check</em> t
 
 Another function that should be implemented is <strong>check_context</strong>. PMM 2.12.0 and earlier use <strong>context</strong>, while newer versions use <strong>check_context</strong>. Both have the same meaning.
 
-The single query means that currently you cannot implement some advanced checks that would require several queries (and can&rsquo;t be implemented using SQL UNION).
+The single query means that currently you cannot implement some advanced checks that would require several queries (and can't be implemented using SQL UNION).
 
 Checks format and the current STT UI use different terminology for severities. Here is how different formats show up on the UI:
 
@@ -3208,8 +3217,8 @@ Checks format and the current STT UI use different terminology for severities. H
 | debug     |          |
 </li>
 </ul>
-<h2 id="backend">Backend<a class="headerlink" href="#backend" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html="" href="../_images/BackendSTT.png"><img alt="" src="../_images/BackendSTT.png" />
+<h2 id="backend">Backend</h2>
+<p><img alt="!" src="../_images/BackendSTT.png" />
 
 1. pmm-managed checks that this installation is opted-in into STT.
 2. pmm-managed downloads checks file from SaaS.
@@ -3217,15 +3226,15 @@ Checks format and the current STT UI use different terminology for severities. H
 4. pmm-managed sends queries to pmm-agent and gathers results.
 5. pmm-managed executes check scripts that produce alert information.
 6. pmm-managed sends alerts to Alertmanager.
-   - Due to Alertmanager design, pmm-managed has to send and re-send alerts to it much more often than the frequency of check execution. That&rsquo;s expected, and not important for using STT, but important for understanding how it works.
+   - Due to Alertmanager design, pmm-managed has to send and re-send alerts to it much more often than the frequency of check execution. That's expected, and not important for using STT, but important for understanding how it works.
    - Currently, Prometheus is not involved.
-</a></div></p>
-<h2 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html="" href="../_images/FrontEndSTT.png"><img alt="" src="../_images/FrontEndSTT.png" />
+</p>
+<h2 id="frontend">Frontend</h2>
+<p><img alt="!" src="../_images/FrontEndSTT.png" />
 
 Our UI in Grafana uses Alertmanager API v2 to get information about failed security checks.
-</a></div></p>
-<h2 id="develop-custom-checks">Develop custom checks<a class="headerlink" href="#develop-custom-checks" title="Permanent link">&para;</a></h2>
+</p>
+<h2 id="develop-custom-checks">Develop custom checks</h2>
 <ol>
 <li>Download the latest PMM Server and PMM Client builds:
 <ul>
@@ -3253,28 +3262,28 @@ perconalab/pmm-server:dev-latest</code>
 </li>
 <li>Log in to Grafana (admin/admin) and enable STT in the settings: http://127.0.0.1/graph/d/pmm-settings/pmm-settings
 
-    <div class="lightgallery"><a data-sub-html="" href="../_images/Grafana.png"><img alt="" src="../_images/Grafana.png" />
-</a></div></li>
+    <img alt="!" src="../_images/Grafana.png" />
+</li>
 <li>Create <em>/srv/custom-checks.yml</em> inside a Docker container with the content from the Security Advisor (Security Threat Tool) section above.
 </li>
 <li>STT checks will run with a time interval defined via UI. You can see the result of running the advisor on the home dashboard:
 
-    <div class="lightgallery"><a data-sub-html="" href="../_images/HomeDashboard.png"><img alt="" src="../_images/HomeDashboard.png" />
-</a></div></li>
+    <img alt="!" src="../_images/HomeDashboard.png" />
+</li>
 <li>Click on the number of failed checks to open the Failed Checks dashboard:
 
-    <div class="lightgallery"><a data-sub-html="" href="../_images/FailedChecks.png"><img alt="" src="../_images/FailedChecks.png" />
-</a></div></li>
+    <img alt="!" src="../_images/FailedChecks.png" />
+</li>
 <li>Go into Docker container to output the logs of pmm-managed and read STT logs:
 
 ```</li>
 </ol>
-<h1 id="get-inside-the-container">get inside the container<a class="headerlink" href="#get-inside-the-container" title="Permanent link">&para;</a></h1>
+<h1 id="get-inside-the-container">get inside the container</h1>
 <p>docker exec -it pmm-server bash</p>
-<h1 id="print-and-watch-the-logs">print and watch the logs<a class="headerlink" href="#print-and-watch-the-logs" title="Permanent link">&para;</a></h1>
+<h1 id="print-and-watch-the-logs">print and watch the logs</h1>
 <p>supervisorctl tail -f pmm-managed
 ```</p>
-<h2 id="sumbit-feedback">Sumbit feedback<a class="headerlink" href="#sumbit-feedback" title="Permanent link">&para;</a></h2>
+<h2 id="sumbit-feedback">Sumbit feedback</h2>
 <p>We welcome your feedback on the current process for developing and debugging checks. Send us your comments over <a href="https://percona.slack.com">Slack</a> or post a question on the <a href="https://forums.percona.com/">Percona Forums</a>.</p>
 
   <hr>
