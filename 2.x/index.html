@@ -3093,14 +3093,14 @@
 <p>
 <hr />
 <p>checks:
-- version: 1
-  name: example
-  summary: Example check
-  description: This check is just an example.
-  tiers: [anonymous, registered]
-  type: MONGODB_BUILDINFO
-  script: |
-   def check(docs):
+ - version: 1
+   name: example
+   summary: Example check
+   description: This check is just an example.
+   tiers: [anonymous, registered]
+   type: MONGODB_BUILDINFO
+   script: |
+    def check(docs):
         # for compatibility with PMM Server &lt; 2.12
         context = {
            "format_version_num": format_version_num,
