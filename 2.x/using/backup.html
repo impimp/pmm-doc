@@ -3229,37 +3229,23 @@
 
 
 <h1 id="backup-and-restore">Backup and Restore</h1>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Caution</p>
-<ul>
-<li>Backup and restore are <a href="../details/glossary.html#technical-preview">technical preview</a> features.</li>
-<li>Currently supported: MySQL database server or MongoDB replica set cluster, backing up to Amazon AWS S3 storage locations.</li>
-</ul>
-</div>
-<div class="admonition summary alert alert-info">
-<p class="admonition-title">Summary</p>
-<ul>
-<li><a href="#before-you-start">Enable backup features</a>.</li>
-<li><a href="#add-a-storage-location">Add a storage location</a>.</li>
-<li>Satisfy preconditions:<ul>
-<li>For <a href="#mysql-backup-preconditions">MySQL</a>:<ul>
-<li>Confirm instance service parameters and storage location.</li>
-<li>Install required packages.</li>
-</ul>
-</li>
-<li>For <a href="#mongodb-backup-preconditions">MongoDB</a>:<ul>
-<li>Install and run <a href="https://www.percona.com/doc/percona-backup-mongodb/installation.html">Percona Backup for MongoDB</a> on every node in the replica set.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#make-a-backup">Make a backup</a>, or,</li>
-<li><a href="#make-a-scheduled-backup">Make</a> or <a href="#edit-a-scheduled-backup">edit</a> a scheduled backup, or,</li>
-<li><a href="#mongodb-point-in-time-recoverable-backups">Enable MongoDB Point-In-Time-Recoverable Backups</a>, or,</li>
-<li><a href="#restore-a-backup">Restore a backup</a>.</li>
-<li><a href="#delete-a-backup">Delete a backup</a>.</li>
-</ul>
-</div>
+<p>!!! caution alert alert-warning "Caution"
+    - Backup and restore are <a href="../details/glossary.html#technical-preview">technical preview</a> features.
+    - Currently supported: MySQL database server or MongoDB replica set cluster, backing up to Amazon AWS S3 storage locations.</p>
+<p>!!! summary alert alert-info "Summary"
+    - <a href="#before-you-start">Enable backup features</a>.
+    - <a href="#add-a-storage-location">Add a storage location</a>.
+    - Satisfy preconditions:
+        - For <a href="#mysql-backup-preconditions">MySQL</a>:
+            - Confirm instance service parameters and storage location.
+            - Install required packages.
+        - For <a href="#mongodb-backup-preconditions">MongoDB</a>:
+            - Install and run <a href="https://www.percona.com/doc/percona-backup-mongodb/installation.html">Percona Backup for MongoDB</a> on every node in the replica set.
+    - <a href="#make-a-backup">Make a backup</a>, or,
+    - <a href="#make-a-scheduled-backup">Make</a> or <a href="#edit-a-scheduled-backup">edit</a> a scheduled backup, or,
+    - <a href="#mongodb-point-in-time-recoverable-backups">Enable MongoDB Point-In-Time-Recoverable Backups</a>, or,
+    - <a href="#restore-a-backup">Restore a backup</a>.
+    - <a href="#delete-a-backup">Delete a backup</a>.</p>
 <h2 id="before-you-start">Before you start</h2>
 <ul>
 <li>
@@ -3278,9 +3264,8 @@
 <p>Click <em>Apply changes</em>.</p>
 </li>
 </ol>
-<div class="admonition note alert alert-primary">
-<p>If PMM Server runs as a Docker container, enable backup features at container creation time by adding <code>-e ENABLE_BACKUP_MANAGEMENT=1</code> to your <code>docker run</code> command.</p>
-</div>
+<p>!!! note alert alert-primary ""
+    If PMM Server runs as a Docker container, enable backup features at container creation time by adding <code>-e ENABLE_BACKUP_MANAGEMENT=1</code> to your <code>docker run</code> command.</p>
 </li>
 </ul>
 <h2 id="add-a-storage-location">Add a storage location</h2>
@@ -3371,10 +3356,8 @@
 <p><a href="https://www.percona.com/doc/percona-xtrabackup/LATEST/backup_scenarios/compressed_backup.html"><code>qpress</code></a>.</p>
 </li>
 </ul>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Important</p>
-<p>The versions of each must be compatible with the installed version of MySQL.</p>
-</div>
+<p>!!! caution alert alert-warning "Important"
+    The versions of each must be compatible with the installed version of MySQL.</p>
 </li>
 </ul>
 <h2 id="mongodb-backup-preconditions">MongoDB backup preconditions</h2>
@@ -3479,9 +3462,8 @@
 <li><em>Enable</em>: Deselect to define the scheduled backup without enabling it.</li>
 </ul>
 <p><img alt="!" src="../_images/PMM_Backup_Management_Schedule.png" /></p>
-<div class="admonition note">
-<p>For this release (2.26.0), times are UTC.</p>
-</div>
+<p>!!! note ""
+    For this release (2.26.0), times are UTC.</p>
 </li>
 </ul>
 </li>
@@ -3514,23 +3496,15 @@
 </li>
 </ol>
 <h2 id="mongodb-point-in-time-recoverable-backups">MongoDB Point-In-Time-Recoverable Backups</h2>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Caution</p>
-<ul>
-<li>MongoDB Point-In-Time-Recoverable Backups is part of Backup Management which is a <a href="../details/glossary.html#technical-preview">technical preview</a> feature.</li>
-</ul>
-</div>
+<p>!!! caution alert alert-warning "Caution"
+    - MongoDB Point-In-Time-Recoverable Backups is part of Backup Management which is a <a href="../details/glossary.html#technical-preview">technical preview</a> feature.</p>
 <h3 id="what-is-it">What is it?</h3>
 <p>Better described by our team mates that develop Percona Backup for MongoDB:</p>
-<div class="admonition note alert alert-primary">
-<p>Point-in-Time Recovery is restoring a database up to a specific moment. Point-in-Time Recovery includes restoring the data from a backup snapshot and replaying all events that occurred to this data up to a specified moment from <a href="https://www.percona.com/doc/percona-backup-mongodb/glossary.html#term-oplog-slice">oplog slices</a>. Point-in-Time Recovery helps you prevent data loss during a disaster such as crashed database, accidental data deletion or drop of tables, unwanted update of multiple fields instead of a single one.</p>
-</div>
+<p>!!! note alert alert-primary ""
+    Point-in-Time Recovery is restoring a database up to a specific moment. Point-in-Time Recovery includes restoring the data from a backup snapshot and replaying all events that occurred to this data up to a specified moment from <a href="https://www.percona.com/doc/percona-backup-mongodb/glossary.html#term-oplog-slice">oplog slices</a>. Point-in-Time Recovery helps you prevent data loss during a disaster such as crashed database, accidental data deletion or drop of tables, unwanted update of multiple fields instead of a single one.</p>
 <p>Point-In-Time-Recovery (PITR) Backups for MongoDB is new functionality available with PMM 2.23.0 as part of the larger Backup Management feature. This implementation in PMM uses Percona Backup for MongoDB <code>pbm &gt;= 1.6.0</code> behind the scenes.</p>
-<div class="admonition caution alert alert-warning">
-<ul>
-<li>Percona Backup for MongoDB is a distributed, low-impact solution for achieving consistent backups of MongoDB sharded clusters and replica sets. Percona Backup for MongoDB supports <a href="https://www.percona.com/software/mongo-database/percona-server-for-mongodb">Percona Server for MongoDB</a> and MongoDB Community v3.6 or higher with <a href="https://docs.mongodb.com/manual/replication/">MongoDB Replication</a> enabled. Learn more about <a href="https://www.percona.com/doc/percona-backup-mongodb/installation.html">Percona Backup for MongoDB</a>.</li>
-</ul>
-</div>
+<p>!!! caution alert alert-warning ""
+    - Percona Backup for MongoDB is a distributed, low-impact solution for achieving consistent backups of MongoDB sharded clusters and replica sets. Percona Backup for MongoDB supports <a href="https://www.percona.com/software/mongo-database/percona-server-for-mongodb">Percona Server for MongoDB</a> and MongoDB Community v3.6 or higher with <a href="https://docs.mongodb.com/manual/replication/">MongoDB Replication</a> enabled. Learn more about <a href="https://www.percona.com/doc/percona-backup-mongodb/installation.html">Percona Backup for MongoDB</a>.</p>
 <h3 id="how-does-it-work">How does it work?</h3>
 <h4 id="enabling-pitr">Enabling PITR</h4>
 <p>The very first thing you want to do is to enable PITR. Here’s how:</p>
@@ -3555,9 +3529,8 @@
 <p>Go ahead to manually disable the existing scheduled jobs, then you’ll be able to enable PITR.</p>
 <p>The above constraint applies at the service level. That said, you can still have PITR enabled for one service while having regular scheduled backup jobs for other services.</p>
 <h2 id="restore-a-backup">Restore a backup</h2>
-<div class="admonition note alert alert-primary">
-<p>For now, you can only restore a backup to the same service it was created from, or to a compatible one.</p>
-</div>
+<p>!!! note alert alert-primary ""
+    For now, you can only restore a backup to the same service it was created from, or to a compatible one.</p>
 <ol>
 <li>
 <p>Select <i class="uil uil-history"></i> → <em>Backup</em> → <em>Backup Inventory</em>.</p>

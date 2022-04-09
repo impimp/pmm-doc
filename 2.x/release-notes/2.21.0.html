@@ -3139,14 +3139,14 @@
 <ul>
 <li>Failure to upgrade when using a dashboard with custom tags.  </li>
 </ul>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Important</p>
-<p>In some cases users may not be able to complete the upgrade to 2.21.0 and we have linked this back to dashboards with custom tags.  This is to be fixed in our upcoming 2.22.0 release but there are steps (more in the <a href="https://jira.percona.com/browse/PMM-8703">ticket</a>) that you can take if you're already impacted by this:</p>
-<div class="highlight"><pre><span></span><code>curl -LJOs https://raw.githubusercontent.com/percona/pmm-server/c2e92bc3aec123affda5f1992c96c95ac74f4a2d/import-dashboards.py
+<p>!!! caution alert alert-warning "Important"
+    In some cases users may not be able to complete the upgrade to 2.21.0 and we have linked this back to dashboards with custom tags.  This is to be fixed in our upcoming 2.22.0 release but there are steps (more in the <a href="https://jira.percona.com/browse/PMM-8703">ticket</a>) that you can take if you're already impacted by this:</p>
+<pre><code>```
+curl -LJOs https://raw.githubusercontent.com/percona/pmm-server/c2e92bc3aec123affda5f1992c96c95ac74f4a2d/import-dashboards.py
 docker cp import-dashboards.py pmm-server:/usr/share/percona-dashboards/
 docker exec -it pmm-server chmod a+x /usr/share/percona-dashboards/import-dashboards.py
-</code></pre></div>
-</div>
+```
+</code></pre>
 
   <hr>
 <div class="md-source-file">

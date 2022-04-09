@@ -3350,15 +3350,11 @@
 
 <h1 id="mongodb">MongoDB</h1>
 <p>How to set up PMM to monitor a <a href="https://www.mongodb.com/">MongoDB</a> or <a href="https://www.percona.com/software/mongodb/percona-server-for-mongodb">Percona Server for MongoDB</a> database instance.</p>
-<div class="admonition summary alert alert-info">
-<p class="admonition-title">Summary</p>
-<ul>
-<li>Create PMM account and set permissions.</li>
-<li>Configure profiling.</li>
-<li>Add service.</li>
-<li>Check service.</li>
-</ul>
-</div>
+<p>!!! summary alert alert-info "Summary"
+    - Create PMM account and set permissions.
+    - Configure profiling.
+    - Add service.
+    - Check service.</p>
 <h2 id="before-you-start">Before you start</h2>
 <p>Check that:</p>
 <ul>
@@ -3371,9 +3367,8 @@
 <h2 id="create-pmm-account-and-set-permissions">Create PMM account and set permissions</h2>
 <p>We recommend using a dedicated account to connect PMM Client to the monitored database instance.</p>
 <p>This example creates a new custom role with the privileges needed by the Query Analyzer, and adds a database user with that role plus the built-in <code>clusterMonitor</code> role.</p>
-<div class="admonition caution alert alert-warning">
-<p>Values for username (<code>user</code>) and password (<code>pwd</code>) are examples. Replace them before using this code.</p>
-</div>
+<p>!!! caution alert alert-warning ""
+    Values for username (<code>user</code>) and password (<code>pwd</code>) are examples. Replace them before using this code.</p>
 <p>Run this in a <code>mongo</code> session.</p>
 <div class="highlight"><pre><span></span><code><span class="err">db.ge</span><span class="kc">t</span><span class="err">Sibli</span><span class="kc">n</span><span class="err">gDB(</span><span class="s2">&quot;admin&quot;</span><span class="err">).crea</span><span class="kc">te</span><span class="err">Role(</span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="err">role</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;explainRole&quot;</span><span class="p">,</span><span class="w"></span>
@@ -3412,9 +3407,8 @@
 <li>when starting MongoDB, by passing arguments to <code>mongod</code> on the command line;</li>
 <li>until the next database instance restart, by running a command in a <code>mongo</code> session.</li>
 </ul>
-<div class="admonition note alert alert-primary">
-<p>Profiling is turned off by default as it can adversely affect the performance of the database server.</p>
-</div>
+<p>!!! note alert alert-primary ""
+    Profiling is turned off by default as it can adversely affect the performance of the database server.</p>
 <h3 id="set-profiling-in-the-configuration-file">Set profiling in the configuration file</h3>
 <ol>
 <li>
@@ -3427,10 +3421,8 @@
   slowOpThresholdMs: 200
   rateLimit: 100 # (Only available with Percona Server for MongoDB.)
 </code></pre></div>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Important</p>
-<p>This is a <a href="http://yaml.org/spec/">YAML</a> file. Indentation matters.</p>
-</div>
+<p>!!! caution alert alert-warning "Important"
+    This is a <a href="http://yaml.org/spec/">YAML</a> file. Indentation matters.</p>
 </li>
 <li>
 <p>Restart the <code>mongod</code> service. (Example for <code>systemd</code>.)</p>
@@ -3447,10 +3439,8 @@
 <li><code>--slowms</code>: An operation is classified as <em>slow</em> if it runs for longer than this number of milliseconds.</li>
 <li>
 <p><code>--rateLimit</code>: (Only available with Percona Server for MongoDB.) The sample rate of profiled queries. A value of <code>100</code> means sample every 100th fast query. (<a href="https://www.percona.com/doc/percona-server-for-mongodb/LATEST/rate-limit.html#enabling-the-rate-limit">Read more</a>.)</p>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Caution</p>
-<p>Smaller values improve accuracy but can adversly affect the performance of your server.</p>
-</div>
+<p>!!! caution alert alert-warning "Caution"
+    Smaller values improve accuracy but can adversly affect the performance of your server.</p>
 </li>
 </ul>
 <h3 id="set-profiling-in-a-mongo-session">Set profiling in a <code>mongo</code> session</h3>
@@ -3459,9 +3449,8 @@ For example, to enable the profiler in the <code>testdb</code>, run this:</p>
 <div class="highlight"><pre><span></span><code><span class="err">use</span><span class="w"> </span><span class="kc">test</span><span class="err">db</span><span class="w"></span>
 <span class="err">db.se</span><span class="kc">t</span><span class="err">Pro</span><span class="kc">f</span><span class="err">ili</span><span class="kc">n</span><span class="err">gLevel(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="err">slowms</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">}</span><span class="err">)</span><span class="w"></span>
 </code></pre></div>
-<div class="admonition note alert alert-primary">
-<p>If you have already <a href="#add-service">added a service</a>, you should remove it and re-add it after changing the profiling level.</p>
-</div>
+<p>!!! note alert alert-primary ""
+    If you have already <a href="#add-service">added a service</a>, you should remove it and re-add it after changing the profiling level.</p>
 <h2 id="add-service">Add service</h2>
 <p>When you have configured your database server, you can add a MongoDB service with the user interface or on the command line.</p>
 <h3 id="with-the-user-interface">With the user interface</h3>
@@ -3483,13 +3472,9 @@ For example, to enable the profiler in the <code>testdb</code>, run this:</p>
 <h3 id="on-the-command-line">On the command line</h3>
 <p>Use <code>pmm-admin</code> to add the database server as a service using one of these example commands.</p>
 <p>When successful, PMM Client will print <code>MongoDB Service added</code> with the service's ID and name. Use the <code>--environment</code> and <code>-custom-labels</code> options to set tags for the service to help identify them.</p>
-<div class="admonition hint alert alert-success">
-<p class="admonition-title">Tips</p>
-<ul>
-<li>When adding nodes of a sharded cluster, add each node separately using the <code>--cluster mycluster</code> option for the MongoDB Cluster Summary dashboard to populate correctly.</li>
-<li>Atlas doesn't support direct connections. When connecting to an Atlas instance, use the <code>pmm-admin</code> option <code>--direct-connection=false</code>. (Doing so will prevent replicaset status from working and the MongoDB Overview dashboard widget will show invalid values.)</li>
-</ul>
-</div>
+<p>!!! hint alert alert-success "Tips"
+    - When adding nodes of a sharded cluster, add each node separately using the <code>--cluster mycluster</code> option for the MongoDB Cluster Summary dashboard to populate correctly.
+    - Atlas doesn't support direct connections. When connecting to an Atlas instance, use the <code>pmm-admin</code> option <code>--direct-connection=false</code>. (Doing so will prevent replicaset status from working and the MongoDB Overview dashboard widget will show invalid values.)</p>
 <h3 id="examples">Examples</h3>
 <div class="highlight"><pre><span></span><code>pmm-admin add mongodb <span class="se">\</span>
 --username<span class="o">=</span>pmm_mongodb --password<span class="o">=</span>password <span class="se">\</span>
@@ -3570,13 +3555,9 @@ mongo <span class="m">127</span>.0.0.1:27017
 <ul>
 <li><code>SERVICE_NAME</code>: The name the service was added as. (Find it with <code>pmm-admin list</code>.)</li>
 </ul>
-<div class="admonition seealso alert alert-info">
-<p class="admonition-title">See also</p>
-<ul>
-<li><a href="../../details/commands/pmm-admin.html#mongodb"><code>pmm-admin add mongodb</code></a></li>
-<li><a href="../../how-to/troubleshoot.html#connection-difficulties">Troubleshooting connection difficulties</a></li>
-</ul>
-</div>
+<p>!!! seealso alert alert-info "See also"
+    - <a href="../../details/commands/pmm-admin.html#mongodb"><code>pmm-admin add mongodb</code></a>
+    - <a href="../../how-to/troubleshoot.html#connection-difficulties">Troubleshooting connection difficulties</a></p>
 
   <hr>
 <div class="md-source-file">

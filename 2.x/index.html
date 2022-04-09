@@ -3166,153 +3166,166 @@
 </tbody>
 </table>
 </details>
-<p>=== "Security Checks"
-        ---
-        checks:
-        - version: 1
-            name: example
-            summary: Example check
-            description: This check is just an example.
-            tiers: [anonymous, registered]
-            type: MONGODB_BUILDINFO
-            script: |
-            def check(docs):
-                # for compatibility with PMM Server &lt; 2.12
-                context = {
-                    "format_version_num": format_version_num,
-                    "parse_version": parse_version,
-                }
-                return check_context(docs, context)</p>
-<pre><code>        def check_context(docs, context):
-            # `docs` is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.
-            # `context` is a dict with additional functions.
-            #
-            # Global `print` and `fail` functions are available.
-            #
-            # `check_context` function is expected to return a list of dicts that are then converted to alerts;
-            # in particular, that list can be empty.
-            # Any other value (for example, string) is treated as script execution failure
-            # (Starlark does not support Python exceptions);
-            # it is recommended to use global function `fail` for that instead.
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Security Checks</label><label for="__tabbed_1_2">Relistic example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<pre><code>---
+checks:
+- version: 1
+    name: example
+    summary: Example check
+    description: This check is just an example.
+    tiers: [anonymous, registered]
+    type: MONGODB_BUILDINFO
+    script: |
+    def check(docs):
+        # for compatibility with PMM Server &lt; 2.12
+        context = {
+            "format_version_num": format_version_num,
+            "parse_version": parse_version,
+        }
+        return check_context(docs, context)
 
-            format_version_num = context.get("format_version_num", fail)
-            parse_version = context.get("parse_version", fail)
+    def check_context(docs, context):
+        # `docs` is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.
+        # `context` is a dict with additional functions.
+        #
+        # Global `print` and `fail` functions are available.
+        #
+        # `check_context` function is expected to return a list of dicts that are then converted to alerts;
+        # in particular, that list can be empty.
+        # Any other value (for example, string) is treated as script execution failure
+        # (Starlark does not support Python exceptions);
+        # it is recommended to use global function `fail` for that instead.
 
-            print("first doc =", repr(docs[0]))
+        format_version_num = context.get("format_version_num", fail)
+        parse_version = context.get("parse_version", fail)
 
-            return [{
-                "summary": "Example summary",
-                "description": "Example description",
-                "severity": "warning",
-                "labels": {
-                    "version": format_version_num(10203),
-                }
-            }]
-</code></pre>
-<p>=== "Relistic example"
-            ---
-        checks:
-        - version: 1
-            name: mongodb_version
-            summary: MongoDB Version
-            description: This check returns warnings if MongoDB/PSMDB version is not the latest one.
-            tiers: [anonymous, registered]
-            type: MONGODB_BUILDINFO
-            script: |
-            LATEST_VERSIONS = {
-                "mongodb": {
-                    "3.6": 30620,  # https://docs.mongodb.com/manual/release-notes/3.6/
-                    "4.0": 40020,  # https://docs.mongodb.com/manual/release-notes/4.0/
-                    "4.2": 40210,  # https://docs.mongodb.com/manual/release-notes/4.2/
-                    "4.4": 40401,  # https://docs.mongodb.com/manual/release-notes/4.4/
-                },
-                "percona": {
-                    "3.6": 30620,  # https://www.percona.com/downloads/percona-server-mongodb-3.6/
-                    "4.0": 40020,  # https://www.percona.com/downloads/percona-server-mongodb-4.0/
-                    "4.2": 40209,  # https://www.percona.com/downloads/percona-server-mongodb-4.2/
-                    "4.4": 40401,  # https://www.percona.com/downloads/percona-server-mongodb-4.4/
-                },
-            }</p>
-<pre><code>        def check(docs):
-            # for compatibility with PMM Server &lt; 2.12
-            context = {
-                "format_version_num": format_version_num,
-                "parse_version": parse_version,
+        print("first doc =", repr(docs[0]))
+
+        return [{
+            "summary": "Example summary",
+            "description": "Example description",
+            "severity": "warning",
+            "labels": {
+                "version": format_version_num(10203),
             }
-            return check_context(docs, context)
-
-
-        def check_context(docs, context):
-            # `docs` is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.
-            # `context` is a dict with additional functions.
-            #
-            # Global `print` and `fail` functions are available.
-            #
-            # `check_context` function is expected to return a list of dicts that are then converted to alerts;
-            # in particular, that list can be empty.
-            # Any other value (for example, string) is treated as script execution failure
-            # (Starlark does not support Python exceptions);
-            # it is recommended to use global function `fail` for that instead.
-
-            """
-            This check returns warnings if MongoDB/PSMDB version is not the latest one.
-            """
-
-            format_version_num = context.get("format_version_num", fail)
-            parse_version = context.get("parse_version", fail)
-
-            if len(docs) != 1:
-                return "Unexpected number of documents"
-
-            info = docs[0]
-
-            # extract information
-            is_percona = 'psmdbVersion' in info
-
-            # parse_version returns a dict with keys: major, minor, patch, rest, num
-            version = parse_version(info["version"])
-            print("version =", repr(version))
-            num = version["num"]
-            mm = "{}.{}".format(version["major"], version["minor"])
-
-            results = []
-
-            if is_percona:
-                latest = LATEST_VERSIONS["percona"][mm]
-                if latest &gt; num:
-                    results.append({
-                        "summary": "Newer version of Percona Server for MongoDB is available",
-                        "description": "Current version is {}, latest available version is {}.".format(format_version_num(num), format_version_num(latest)),
-                        "severity": "warning",
-                        "labels": {
-                            "current": format_version_num(num),
-                            "latest":  format_version_num(latest),
-                        },
-                    })
-
-                return results
-
-            if True:  # MongoDB
-                latest = LATEST_VERSIONS["mongodb"][mm]
-                if latest &gt; num:
-                    results.append({
-                        "summary": "Newer version of MongoDB is available",
-                        "description": "Current version is {}, latest available version is {}.".format(format_version_num(num), format_version_num(latest)),
-                        "severity": "warning",
-                        "labels": {
-                            "current": format_version_num(num),
-                            "latest":  format_version_num(latest),
-                        },
-                    })
-
-                return results
+        }]
 </code></pre>
-<p>===! "Tab A"
-    Different tab set.</p>
-<p>=== "Tab B"
-    <div class="highlight"><pre><span></span><code>More content.
-</code></pre></div></p>
-<p>=== "Format for Advisor Checks"</p>
+</div>
+<div class="tabbed-block">
+<pre><code>    ---
+checks:
+- version: 1
+    name: mongodb_version
+    summary: MongoDB Version
+    description: This check returns warnings if MongoDB/PSMDB version is not the latest one.
+    tiers: [anonymous, registered]
+    type: MONGODB_BUILDINFO
+    script: |
+    LATEST_VERSIONS = {
+        "mongodb": {
+            "3.6": 30620,  # https://docs.mongodb.com/manual/release-notes/3.6/
+            "4.0": 40020,  # https://docs.mongodb.com/manual/release-notes/4.0/
+            "4.2": 40210,  # https://docs.mongodb.com/manual/release-notes/4.2/
+            "4.4": 40401,  # https://docs.mongodb.com/manual/release-notes/4.4/
+        },
+        "percona": {
+            "3.6": 30620,  # https://www.percona.com/downloads/percona-server-mongodb-3.6/
+            "4.0": 40020,  # https://www.percona.com/downloads/percona-server-mongodb-4.0/
+            "4.2": 40209,  # https://www.percona.com/downloads/percona-server-mongodb-4.2/
+            "4.4": 40401,  # https://www.percona.com/downloads/percona-server-mongodb-4.4/
+        },
+    }
+
+    def check(docs):
+        # for compatibility with PMM Server &lt; 2.12
+        context = {
+            "format_version_num": format_version_num,
+            "parse_version": parse_version,
+        }
+        return check_context(docs, context)
+
+    def check_context(docs, context):
+        # `docs` is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.
+        # `context` is a dict with additional functions.
+        #
+        # Global `print` and `fail` functions are available.
+        #
+        # `check_context` function is expected to return a list of dicts that are then converted to alerts;
+        # in particular, that list can be empty.
+        # Any other value (for example, string) is treated as script execution failure
+        # (Starlark does not support Python exceptions);
+        # it is recommended to use global function `fail` for that instead.
+
+        """
+        This check returns warnings if MongoDB/PSMDB version is not the latest one.
+        """
+
+        format_version_num = context.get("format_version_num", fail)
+        parse_version = context.get("parse_version", fail)
+
+        if len(docs) != 1:
+            return "Unexpected number of documents"
+
+        info = docs[0]
+
+        # extract information
+        is_percona = 'psmdbVersion' in info
+
+        # parse_version returns a dict with keys: major, minor, patch, rest, num
+        version = parse_version(info["version"])
+        print("version =", repr(version))
+        num = version["num"]
+        mm = "{}.{}".format(version["major"], version["minor"])
+
+        results = []
+
+        if is_percona:
+            latest = LATEST_VERSIONS["percona"][mm]
+            if latest &gt; num:
+                results.append({
+                    "summary": "Newer version of Percona Server for MongoDB is available",
+                    "description": "Current version is {}, latest available version is {}.".format(format_version_num(num), format_version_num(latest)),
+                    "severity": "warning",
+                    "labels": {
+                        "current": format_version_num(num),
+                        "latest":  format_version_num(latest),
+                    },
+                })
+
+            return results
+
+        if True:  # MongoDB
+            latest = LATEST_VERSIONS["mongodb"][mm]
+            if latest &gt; num:
+                results.append({
+                    "summary": "Newer version of MongoDB is available",
+                    "description": "Current version is {}, latest available version is {}.".format(format_version_num(num), format_version_num(latest)),
+                    "severity": "warning",
+                    "labels": {
+                        "current": format_version_num(num),
+                        "latest":  format_version_num(latest),
+                    },
+                })
+
+            return results
+</code></pre>
+</div>
+</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Tab A</label><label for="__tabbed_2_2">Tab B</label><label for="__tabbed_2_3">Format for Advisor Checks</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Different tab set.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>More content.
+</code></pre></div>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
 <hr />
 <pre><code> checks:
 - version: 1
@@ -3356,9 +3369,11 @@
           }
       }]
 </code></pre>
-<p>=== "Security check example"</p>
-<pre><code>---
-checks:
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Security check example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<hr />
+<p>checks:
 - version: 1
 name: mongodb_version
 summary: MongoDB Version
@@ -3379,83 +3394,81 @@ script: |
           "4.2": 40209,  # https://www.percona.com/downloads/percona-server-mongodb-4.2/
           "4.4": 40401,  # https://www.percona.com/downloads/percona-server-mongodb-4.4/
       },
-  }
-
-
-  def check(docs):
+  }</p>
+<p>def check(docs):
       # for compatibility with PMM Server &lt; 2.12
       context = {
           "format_version_num": format_version_num,
           "parse_version": parse_version,
       }
-      return check_context(docs, context)
-
-
-  def check_context(docs, context):
-      # `docs` is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.
-      # `context` is a dict with additional functions.
+      return check_context(docs, context)</p>
+<p>def check_context(docs, context):
+      # <code>docs</code> is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.
+      # <code>context</code> is a dict with additional functions.
       #
-      # Global `print` and `fail` functions are available.
+      # Global <code>print</code> and <code>fail</code> functions are available.
       #
-      # `check_context` function is expected to return a list of dicts that are then converted to alerts;
+      # <code>check_context</code> function is expected to return a list of dicts that are then converted to alerts;
       # in particular, that list can be empty.
       # Any other value (for example, string) is treated as script execution failure
       # (Starlark does not support Python exceptions);
-      # it is recommended to use global function `fail` for that instead.
+      # it is recommended to use global function <code>fail</code> for that instead.</p>
+<pre><code>  """
+  This check returns warnings if MongoDB/PSMDB version is not the latest one.
+  """
 
-      """
-      This check returns warnings if MongoDB/PSMDB version is not the latest one.
-      """
+  format_version_num = context.get("format_version_num", fail)
+  parse_version = context.get("parse_version", fail)
 
-      format_version_num = context.get("format_version_num", fail)
-      parse_version = context.get("parse_version", fail)
+  if len(docs) != 1:
+      return "Unexpected number of documents"
 
-      if len(docs) != 1:
-          return "Unexpected number of documents"
+  info = docs[0]
 
-      info = docs[0]
+  # extract information
+  is_percona = 'psmdbVersion' in info
 
-      # extract information
-      is_percona = 'psmdbVersion' in info
+  # parse_version returns a dict with keys: major, minor, patch, rest, num
+  version = parse_version(info["version"])
+  print("version =", repr(version))
+  num = version["num"]
+  mm = "{}.{}".format(version["major"], version["minor"])
 
-      # parse_version returns a dict with keys: major, minor, patch, rest, num
-      version = parse_version(info["version"])
-      print("version =", repr(version))
-      num = version["num"]
-      mm = "{}.{}".format(version["major"], version["minor"])
+  results = []
 
-      results = []
+  if is_percona:
+      latest = LATEST_VERSIONS["percona"][mm]
+      if latest &gt; num:
+          results.append({
+              "summary": "Newer version of Percona Server for MongoDB is available",
+              "description": "Current version is {}, latest available version is {}.".format(format_version_num(num), format_version_num(latest)),
+              "severity": "warning",
+              "labels": {
+                  "current": format_version_num(num),
+                  "latest":  format_version_num(latest),
+              },
+          })
 
-      if is_percona:
-          latest = LATEST_VERSIONS["percona"][mm]
-          if latest &gt; num:
-              results.append({
-                  "summary": "Newer version of Percona Server for MongoDB is available",
-                  "description": "Current version is {}, latest available version is {}.".format(format_version_num(num), format_version_num(latest)),
-                  "severity": "warning",
-                  "labels": {
-                      "current": format_version_num(num),
-                      "latest":  format_version_num(latest),
-                  },
-              })
+      return results
 
-          return results
+  if True:  # MongoDB
+      latest = LATEST_VERSIONS["mongodb"][mm]
+      if latest &gt; num:
+          results.append({
+              "summary": "Newer version of MongoDB is available",
+              "description": "Current version is {}, latest available version is {}.".format(format_version_num(num), format_version_num(latest)),
+              "severity": "warning",
+              "labels": {
+                  "current": format_version_num(num),
+                  "latest":  format_version_num(latest),
+              },
+          })
 
-      if True:  # MongoDB
-          latest = LATEST_VERSIONS["mongodb"][mm]
-          if latest &gt; num:
-              results.append({
-                  "summary": "Newer version of MongoDB is available",
-                  "description": "Current version is {}, latest available version is {}.".format(format_version_num(num), format_version_num(latest)),
-                  "severity": "warning",
-                  "labels": {
-                      "current": format_version_num(num),
-                      "latest":  format_version_num(latest),
-                  },
-              })
-
-          return results
+      return results
 </code></pre>
+</div>
+</div>
+</div>
 <p><strong>Percona Monitoring and Management</strong> (PMM) is a free, open-source monitoring tool for MySQL, PostgreSQL, MongoDB, and ProxySQL, and the servers they run on.</p>
 <p>PMM helps you improve the performance of your databases, simplify their management, and strengthen their security. It's efficient, quick to <a href="setting-up/index.html">set up</a>, and easy to use.</p>
 <ul>
@@ -3469,8 +3482,8 @@ script: |
 <p>Additional features include checking databases for <a href="using/security-threat-tool.html">security threats</a>.</p>
 </li>
 </ul>
-<div class="admonition alert alert-info"></div>
-<p>This is the documentation for the latest release, <strong>PMM 2.26.0</strong> (<a href="release-notes/2.26.0.html">Release Notes</a>).</p>
+<p>!!! alert alert-info ""
+This is the documentation for the latest release, <strong>PMM 2.26.0</strong> (<a href="release-notes/2.26.0.html">Release Notes</a>).</p>
 <p>Here's how the home page looks on our <a href='https://pmmdemo.percona.com/' target='_blank'>free, live demo system</a>.</p>
 <p><a href='https://pmmdemo.percona.com/' target='_blank'>
     <img src="_images/PMM_Home_Dashboard.png" alt="PMM Demo Home Page" width=800px class="imgcenter"/>

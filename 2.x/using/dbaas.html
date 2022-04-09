@@ -3243,10 +3243,8 @@
 
 
 <h1 id="dbaas">DBaaS</h1>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Caution</p>
-<p>DBaaS functionality is currently in <a href="../details/glossary.html#technical-preview">technical preview</a> and is subject to change.</p>
-</div>
+<p>!!! caution alert alert-warning "Caution"
+    DBaaS functionality is currently in <a href="../details/glossary.html#technical-preview">technical preview</a> and is subject to change.</p>
 <p>The DBaaS dashboard is where you add, remove, and operate on Kubernetes and database clusters.</p>
 <h2 id="activate-dbaas">Activate DBaaS</h2>
 <p>The DBaaS feature is turned off by default. To turn it on:</p>
@@ -3263,14 +3261,12 @@
 <p><img alt="!" src="../_images/PMM_DBaaS_Kubernetes_Cluster_Panel.jpg" /></p>
 <h2 id="kubernetes-clusters">Kubernetes clusters</h2>
 <h3 id="add-a-kubernetes-cluster">Add a Kubernetes cluster</h3>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Caution</p>
-<p>Ensure that you set PMM <em>Public Address</em> under <i class="uil uil-cog"></i> <em>Configuration</em> → <i class="uil uil-setting"></i> <em>Settings</em> → <em>Advanced Settings</em> before creating a Kubernetes cluster. Otherwise, PMM would <strong>not</strong> monitor the Kubernetes cluster along with the associated database clusters.</p>
-</div>
-<div class="admonition note alert alert-primary">
-<p>PXC and PSMDB operators are installed as part of the Kubernetes cluster registration process. It enables you to deploy database clusters into the Kubernetes cluster.</p>
-<p>If a public address is set VM Operator is also installed as part of the Kubernetes cluster registration process. It lets you monitor a kubernetes cluster via PMM.</p>
-</div>
+<p>!!! caution alert alert-warning "Caution"
+    Ensure that you set PMM <em>Public Address</em> under <i class="uil uil-cog"></i> <em>Configuration</em> → <i class="uil uil-setting"></i> <em>Settings</em> → <em>Advanced Settings</em> before creating a Kubernetes cluster. Otherwise, PMM would <strong>not</strong> monitor the Kubernetes cluster along with the associated database clusters.</p>
+<p>!!! note alert alert-primary ""
+    PXC and PSMDB operators are installed as part of the Kubernetes cluster registration process. It enables you to deploy database clusters into the Kubernetes cluster.</p>
+<pre><code>If a public address is set VM Operator is also installed as part of the Kubernetes cluster registration process. It lets you monitor a kubernetes cluster via PMM.
+</code></pre>
 <ol>
 <li>
 <p>Click <em>Register new Kubernetes Cluster</em>.</p>
@@ -3278,12 +3274,11 @@
 <li>
 <p>Enter values for the <em>Kubernetes Cluster Name</em> and <em>Kubeconfig file</em> in the corresponding fields.</p>
 <p><img alt="!" src="../_images/PMM_DBaaS_Kubernetes_Cluster_Details.png" /></p>
-<div class="admonition note alert alert-info">
-<p>For a Kubernetes cluster, when using Amazon Elastic Kubernetes Service (EKS) and the <em>kubeconfig file</em> does not contain the AWS 
-access key ID and AWS secret access key. Select the <em>Using Amazon Elastic Kubernetes Service (EKS)</em> 
-checkbox and enter the access key ID and secret access key in the respective fields.
-For information on obtaining these, see the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html">AWS documentation</a>.</p>
-</div>
+<p>!!! note alert alert-info ""
+    For a Kubernetes cluster, when using Amazon Elastic Kubernetes Service (EKS) and the <em>kubeconfig file</em> does not contain the AWS 
+    access key ID and AWS secret access key. Select the <em>Using Amazon Elastic Kubernetes Service (EKS)</em> 
+    checkbox and enter the access key ID and secret access key in the respective fields.
+    For information on obtaining these, see the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html">AWS documentation</a>.</p>
 <p><img alt="!" src="../_images/PMM_DBaaS_Kubernetes_Cluster_EKS.png" /></p>
 </li>
 <li>
@@ -3295,10 +3290,8 @@ For information on obtaining these, see the <a href="https://docs.aws.amazon.com
 </li>
 </ol>
 <h3 id="unregister-a-kubernetes-cluster">Unregister a Kubernetes cluster</h3>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Important</p>
-<p>You can't unregister a Kubernetes cluster if there DB clusters associated with it.</p>
-</div>
+<p>!!! caution alert alert-warning "Important"
+    You can't unregister a Kubernetes cluster if there DB clusters associated with it.</p>
 <ol>
 <li>
 <p>Click <em>Unregister</em>.</p>
@@ -3458,10 +3451,8 @@ For information on obtaining these, see the <a href="https://docs.aws.amazon.com
 <p><img alt="!" src="../_images/PMM_DBaaS_DB_Cluster_Delete.png" /></p>
 </li>
 </ol>
-<div class="admonition danger alert alert-danger">
-<p class="admonition-title">Danger</p>
-<p>Deleting a cluster in this way also deletes any attached volumes.</p>
-</div>
+<p>!!! danger alert alert-danger "Danger"
+    Deleting a cluster in this way also deletes any attached volumes.</p>
 <h3 id="edit-a-db-cluster">Edit a DB Cluster</h3>
 <ol>
 <li>
@@ -3526,10 +3517,8 @@ For information on obtaining these, see the <a href="https://docs.aws.amazon.com
 <p><img alt="!DBaaS Update Confirmation" src="../_images/PMM_DBaaS_DB_Cluster_Update_confirmation.png" /></p>
 </li>
 </ol>
-<div class="admonition seealso alert alert-info">
-<p class="admonition-title">See also</p>
-<p><a href="../setting-up/server/dbaas.html">Setting up a development environment for DBaaS</a></p>
-</div>
+<p>!!! seealso alert alert-info "See also"
+    <a href="../setting-up/server/dbaas.html">Setting up a development environment for DBaaS</a></p>
 
   <hr>
 <div class="md-source-file">

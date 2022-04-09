@@ -3161,10 +3161,8 @@
 
 
 <h1 id="microsoft-azure">Microsoft Azure</h1>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Caution</p>
-<p>Microsoft Azure functionality is currently in <a href="../details/glossary.md#technical-preview">technical preview</a> and is subject to change.</p>
-</div>
+<p>!!! caution alert alert-warning "Caution"
+    Microsoft Azure functionality is currently in <a href="../details/glossary.md#technical-preview">technical preview</a> and is subject to change.</p>
 <h2 id="activate-microsoft-azure">Activate Microsoft Azure</h2>
 <p>The Microsoft Azure feature is turned off by default. To turn it on:</p>
 <ol>
@@ -3256,10 +3254,8 @@ won't receive any query data.</p>
 <li><a href="https://docs.microsoft.com/en-us/azure/postgresql/">https://docs.microsoft.com/en-us/azure/postgresql/</a></li>
 <li><a href="https://docs.microsoft.com/en-us/azure/mysql/">https://docs.microsoft.com/en-us/azure/mysql/</a></li>
 </ul>
-<div class="admonition hint alert alert-success">
-<p class="admonition-title">Tip</p>
-<p>You must set <code>pg_stat_statements.track = all</code> in your PostgreSQL Server settings to use PMM Query Analytics. (<a href="postgresql.html#pg_stat_statements">Read more.</a>)</p>
-</div>
+<p>!!! hint alert alert-success "Tip"
+    You must set <code>pg_stat_statements.track = all</code> in your PostgreSQL Server settings to use PMM Query Analytics. (<a href="postgresql.html#pg_stat_statements">Read more.</a>)</p>
 <p><img alt="!" src="../../_images/PMM_Add_Instance_Azure_3.png" /></p>
 <p>In the list of databases on the Discovery page click <em>Start Monitoring</em> to add the selected Azure Database to PMM.</p>
 <p>Fill in all required fields and click <em>Add service</em>.</p>

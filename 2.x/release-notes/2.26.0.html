@@ -3087,10 +3087,8 @@
 <p><a href="https://www.percona.com/doc/percona-monitoring-and-management/2.x/details/dashboards/dashboard-environent-summary.html">Environment Summary dashboard</a></p>
 </li>
 </ul>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Important</p>
-<p>These experimental dashboards are subject to change. It is recommended to use these dashboards for testing purposes only.   </p>
-</div>
+<p>!!! caution alert alert-warning "Important"
+    These experimental dashboards are subject to change. It is recommended to use these dashboards for testing purposes only.   </p>
 <ul>
 <li><strong>SMTP Configuration Verification</strong></li>
 </ul>
@@ -3101,10 +3099,8 @@ For more information about setting up an SMTP email server, see <a href="https:/
 <li><strong>Breaking change for Integrated Alerting (Technical Preview)</strong></li>
 </ul>
 <p>This release introduces major changes to the core structure of rule templates. As a result, alert rules and templates created in previous PMM versions are not compatible with PMM 2.26.0 and cannot be migrated to this new version. After upgrading, make sure to manually recreate any custom alert rules and rule templates that you want to transfer to PMM 2.26.0.</p>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Disclaimer</p>
-<p>Integrated Alerting is still a Preview functionality and, as such, subject to change. We recommend that early adopters use this feature for testing purposes only.</p>
-</div>
+<p>!!! caution alert alert-warning "Disclaimer"
+    Integrated Alerting is still a Preview functionality and, as such, subject to change. We recommend that early adopters use this feature for testing purposes only.</p>
 <h2 id="new-features">New Features</h2>
 <ul>
 <li><a href="https://jira.percona.com/browse/PMM-9059">PMM-9059</a>: Following the recently introduced support for connecting PMM to Percona Platform, you now have the option to also unlink any servers that are no longer relevant to your Platform organization.
@@ -3125,10 +3121,8 @@ For more information about setting up an SMTP email server, see <a href="https:/
 <ul>
 <li><a href="https://jira.percona.com/browse/PMM-9416">PMM-9416</a>: Upgrading to PMM 2.25.0 using docker (replacing the image) fails when upgrading from versions less than or equal to 2.23.0.</li>
 </ul>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Caution</p>
-<p>It is recommended to upgrade directly to PMM 2.26.0 instead of 2.25.0 when updating from versions less than or equal to PMM 2.23.0 if your PMM doesn't have external access (access to <code>repo.percona.com</code>).</p>
-</div>
+<p>!!! caution alert alert-warning
+    It is recommended to upgrade directly to PMM 2.26.0 instead of 2.25.0 when updating from versions less than or equal to PMM 2.23.0 if your PMM doesn't have external access (access to <code>repo.percona.com</code>).</p>
 <ul>
 <li><a href="https://jira.percona.com/browse/PMM-8867">PMM-8867</a>: Fixed an issue for PMM Client installation using the tarball script (without using RPMs) where the configuration was getting lost due to the configuration file pmm-agent.yml being recreated.</li>
 <li><a href="https://jira.percona.com/browse/PMM-8094">PMM-8094</a>: DBaaS - Fixed an issue for paused clusters that froze with PSMDB v1.8 operators when all the pods were terminated, providing no cluster resumption option.</li>
