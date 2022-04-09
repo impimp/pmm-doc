@@ -3087,53 +3087,56 @@
 
 
 <h1 id="welcome">Welcome</h1>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Security Checks</label><label for="__tabbed_1_2">Tab 2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Security Checks</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<pre><code>---
-checks:
-    - version: 1
-    name: example
-    summary: Example check
-    description: This check is just an example.
-    tiers: [anonymous, registered]
-    type: MONGODB_BUILDINFO
-    script: |
-        def check(docs):
-            # for compatibility with PMM Server &lt; 2.12
-            context = {
-            "format_version_num": format_version_num,
-      x          "parse_version": parse_version,
-            }
-            return check_context(docs, context)
-
-        def check_context(docs, context):
-                # `docs` is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.
-                # `context` is a dict with additional functions.
-                #
-                # Global `print` and `fail` functions are available.
-                #
-                # `check_context` function is expected to return a list of dicts that are then converted to alerts;
-            # in particular, that list can be empty.
-            # Any other value (for example, string) is treated as script execution failure
-                # (Starlark does not support Python exceptions);
-            # it is recommended to use global function `fail` for that instead.
-
-            format_version_num = context.get("format_version_num", fail)
-            parse_version = context.get("parse_version", fail)
-
-            print("first doc =", repr(docs[0]))
-
-            return [{
-                "summary": "Example summary",
-                "description": "Example description",
-                "severity": "warning",
-                "labels": {
-                    "version": format_version_num(10203),
-                }
-            }]
-</code></pre>
+<div class="tabbed-block"></div>
 </div>
+</div>
+<p>```yaml        ---
+        checks:
+            - version: 1
+            name: example
+            summary: Example check
+            description: This check is just an example.
+            tiers: [anonymous, registered]
+            type: MONGODB_BUILDINFO
+            script: |
+                def check(docs):
+                    # for compatibility with PMM Server &lt; 2.12
+                    context = {
+                    "format_version_num": format_version_num,
+              x          "parse_version": parse_version,
+                    }
+                    return check_context(docs, context)</p>
+<pre><code>            def check_context(docs, context):
+                    # `docs` is a frozen (deeply immutable) list of dicts where each dict represents a single document in result set.
+                    # `context` is a dict with additional functions.
+                    #
+                    # Global `print` and `fail` functions are available.
+                    #
+                    # `check_context` function is expected to return a list of dicts that are then converted to alerts;
+                # in particular, that list can be empty.
+                # Any other value (for example, string) is treated as script execution failure
+                    # (Starlark does not support Python exceptions);
+                # it is recommended to use global function `fail` for that instead.
+
+                format_version_num = context.get("format_version_num", fail)
+                parse_version = context.get("parse_version", fail)
+
+                print("first doc =", repr(docs[0]))
+
+                return [{
+                    "summary": "Example summary",
+                    "description": "Example description",
+                    "severity": "warning",
+                    "labels": {
+                        "version": format_version_num(10203),
+                    }
+                }]
+</code></pre>
+<p>```</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Tab 2</label></div>
+<div class="tabbed-content">
 <div class="tabbed-block">
 <p>More Markdown <strong>content</strong>.</p>
 <ul>
@@ -3143,14 +3146,13 @@ checks:
 </div>
 </div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Tab A</label><label for="__tabbed_2_2">Tab B</label><label for="__tabbed_2_3">Format for Advisor Checks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Tab A</label><label for="__tabbed_3_2">Tab B</label><label for="__tabbed_3_3">Format for Advisor Checks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Different tab set.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>More content.
-</code></pre></div>
+<p><code>More content.</code></p>
 </div>
 <div class="tabbed-block"></div>
 </div>
@@ -3198,7 +3200,7 @@ checks:
           }
       }]
 </code></pre>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Security check example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Security check example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <hr />
