@@ -3243,8 +3243,9 @@
 <li>the <a href="#overview-panel">Overview Panel</a>;</li>
 <li>the <a href="#details-panel">Details Panel</a>.</li>
 </ul>
-<p>!!! note alert alert-primary ""
-    Query Analytics data retrieval is not instantaneous and can be delayed due to network conditions. In such situations <em>no data</em> is reported and a gap appears in the sparkline.</p>
+<div class="admonition note alert alert-primary">
+<p>Query Analytics data retrieval is not instantaneous and can be delayed due to network conditions. In such situations <em>no data</em> is reported and a gap appears in the sparkline.</p>
+</div>
 <h2 id="filters-panel">Filters Panel</h2>
 <p><img alt="!image" src="../_images/PMM_Query_Analytics_Panels_Filters.jpg" /></p>
 <ul>
@@ -3379,8 +3380,9 @@
 <p>(For <em>Query</em> dimension.)</p>
 <p>The <em>Examples</em> tab shows an example of the selected query’s fingerprint or table element.</p>
 <p><img alt="!image" src="../_images/PMM_Query_Analytics_Tabs_Examples.jpg" /></p>
-<p>!!! note alert alert-primary ""
-    Query example and fingerprint can be truncated to 1024 long to reduce space usage. In this case, the query explains section will not work.</p>
+<div class="admonition note alert alert-primary">
+<p>Query example and fingerprint can be truncated to 1024 long to reduce space usage. In this case, the query explains section will not work.</p>
+</div>
 <h3 id="explain-tab">Explain Tab</h3>
 <p>(For <em>Query</em> dimension.)</p>
 <p>The <em>Explain</em> tab shows the <code>explain</code> output for the selected query, in Classic or JSON formats.</p>
@@ -3389,15 +3391,13 @@
 <li>MongoDB: JSON only.</li>
 <li>PostgreSQL: Not supported.</li>
 </ul>
-<p>!!! note alert alert-primary "'Explain' for MongoDB"</p>
-<pre><code>To run Explain you need the same permissions as for executing the original query. For example, to run explain on `updates` you need update permissions.
-
-Example: Grant the `explainRole` with update permissions.
-
-```
-db.grantPrivilegesToRole( "explainRole", [ { resource: { db: "", collection: "" }, actions: [ "update" ] } ])
-```
-</code></pre>
+<div class="admonition note alert alert-primary">
+<p class="admonition-title">'Explain' for MongoDB</p>
+<p>To run Explain you need the same permissions as for executing the original query. For example, to run explain on <code>updates</code> you need update permissions.  </p>
+<p>Example: Grant the <code>explainRole</code> with update permissions.</p>
+<div class="highlight"><pre><span></span><code>db.grantPrivilegesToRole( &quot;explainRole&quot;, [ { resource: { db: &quot;&quot;, collection: &quot;&quot; }, actions: [ &quot;update&quot; ] } ])
+</code></pre></div>
+</div>
 <p><img alt="!image" src="../_images/PMM_Query_Analytics_Tabs_Explain.jpg" /></p>
 <h3 id="tables-tab">Tables Tab</h3>
 <p>(For <em>Query</em> dimension.)</p>
@@ -3414,8 +3414,8 @@ db.grantPrivilegesToRole( "explainRole", [ { resource: { db: "", collection: "" 
 <p>Query Analytics can monitor MongoDB queries. Although MongoDB is not a relational database management system, you analyze its databases and collections in the same interface using the same tools.</p>
 <h2 id="sharing-a-link-for-query-analytics">Sharing a link for Query Analytics</h2>
 <p>To share a link for Query Analytics, use <em>Copy Link</em>. It copies the link to the clipboard with all the relevant information such as selected query, table page, selected filters, details tab, and time range. Thus, when you open the link, it will display the exact information.</p>
-<p>!!! caution alert alert-warning ""
-  Ensure that you use <em>Copy Link</em> to copy the link instead of using the browser address bar or the standard Grafana functionality (to share a dashboard). Otherwise, Query Analytics might not display the exact information that existed while sharing the link.
+<div class="admonition caution alert alert-warning"></div>
+<p>Ensure that you use <em>Copy Link</em> to copy the link instead of using the browser address bar or the standard Grafana functionality (to share a dashboard). Otherwise, Query Analytics might not display the exact information that existed while sharing the link.
   By default, Grafana uses a relative time range and not an absolute range, so it will have a different timestamp when this link is opened.</p>
 <p><img alt="!image" src="../_images/PMM_Query_Analytics_Share_Link.png" /></p>
 

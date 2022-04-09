@@ -3098,18 +3098,14 @@
 <li><a href="https://jira.percona.com/browse/PMM-8703">PMM-8703</a>: Custom dashboard prevents PMM Server Docker update from 2.20 to 2.21 (Thanks to Hubertus Krogmann for reporting this issue)</li>
 <li><a href="https://jira.percona.com/browse/PMM-7690">PMM-7690</a>: AWS discovery and monitoring based on IAM roles is not working</li>
 </ul>
-<p>!!! note alert alert-primary ""
-    If you have problems upgrading your pmm-2-client packages, try clearing caches with:</p>
-<pre><code>```sh
-sudo apt-get clean
-```
-
-and remove files manually with:
-
-```sh
-cd /var/cache/apt/archives &amp;&amp; sudo rm -rf ./*
-```
-</code></pre>
+<div class="admonition note alert alert-primary">
+<p>If you have problems upgrading your pmm-2-client packages, try clearing caches with:</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get clean
+</code></pre></div>
+<p>and remove files manually with:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /var/cache/apt/archives <span class="o">&amp;&amp;</span> sudo rm -rf ./*
+</code></pre></div>
+</div>
 
   <hr>
 <div class="md-source-file">

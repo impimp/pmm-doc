@@ -6590,8 +6590,10 @@
 
 <h1 id="mysql-innodb-details">MySQL InnoDB Details</h1>
 <p><img alt="!image" src="../../_images/PMM_MySQL_InnoDB_Details.jpg" /></p>
-<p>!!! hint alert alert-success "Tip"
-    If metrics are missing, try running: <code>SET GLOBAL innodb_monitor_enable=all;</code> in the MySQL client.</p>
+<div class="admonition hint alert alert-success">
+<p class="admonition-title">Tip</p>
+<p>If metrics are missing, try running: <code>SET GLOBAL innodb_monitor_enable=all;</code> in the MySQL client.</p>
+</div>
 <h2 id="innodb-activity">InnoDB Activity</h2>
 <h3 id="writes-rows">Writes (Rows)</h3>
 <h3 id="writes-transactions">Writes (Transactions)</h3>
@@ -6654,8 +6656,9 @@
 <h3 id="log-written-per-fsync">Log Written Per Fsync</h3>
 <h3 id="data-read-per-row-read">Data Read Per Row Read</h3>
 <h3 id="data-written-per-row-written">Data Written Per Row Written</h3>
-<p>!!! note alert alert-primary ""
-    Due to difference in timing of Row Write and Data Write the value may be misleading on short intervals.</p>
+<div class="admonition note alert alert-primary">
+<p>Due to difference in timing of Row Write and Data Write the value may be misleading on short intervals.</p>
+</div>
 <h3 id="innodb-data-io">InnoDB Data I/O</h3>
 <p><strong>InnoDB I/O</strong></p>
 <ul>
@@ -6970,12 +6973,14 @@ Do not set it to actual storage capacity.</p>
 <h2 id="innodb-online-operations-mariadb">InnoDB Online Operations (MariaDB)</h2>
 <h3 id="innodb-defragmentation">InnoDB Defragmentation</h3>
 <p>The InnoDB Defragmentation graph shows the status information related to the InnoDB online defragmentation feature of MariaDB for the optimize table command.  To enable this feature, the variable <code>innodb-defragment</code> must be set to 1 in the configuration file.</p>
-<p>!!! note alert alert-primary ""
-    Currently available only on a MariaDB server.</p>
+<div class="admonition note alert alert-primary">
+<p>Currently available only on a MariaDB server.</p>
+</div>
 <h3 id="innodb-online-ddl">InnoDB Online DDL</h3>
 <p>The InnoDB Online DDL graph shows the state of the online DDL (alter table) operations in InnoDB.  The progress metric is estimate of the percentage of the rows processed by the online DDL.</p>
-<p>!!! note alert alert-primary ""
-    Currently available only on a MariaDB server.</p>
+<div class="admonition note alert alert-primary">
+<p>Currently available only on a MariaDB server.</p>
+</div>
 <h2 id="mysql-summary">MySQL Summary</h2>
 <h3 id="mysql-uptime">MySQL Uptime</h3>
 <p><strong>MySQL Uptime</strong></p>
@@ -7020,14 +7025,16 @@ Do not set it to actual storage capacity.</p>
 <p>RAM (Random Access Memory) is the hardware in a computing device where the operating system, application programs and data in current use are kept so they can be quickly reached by the device's processor.</p>
 <h3 id="memory-available">Memory Available</h3>
 <p>Percent of Memory Available</p>
-<p>!!! note alert alert-primary ""
-    On Modern Linux Kernels amount of Memory Available for application is not the same as Free+Cached+Buffers.</p>
+<div class="admonition note alert alert-primary">
+<p>On Modern Linux Kernels amount of Memory Available for application is not the same as Free+Cached+Buffers.</p>
+</div>
 <h3 id="virtual-memory">Virtual Memory</h3>
 <p>RAM + SWAP</p>
 <h3 id="disk-space">Disk Space</h3>
 <p>Sum of disk space on all partitions.</p>
-<p>!!! note alert alert-primary ""
-    It can be significantly over-reported in some installations.</p>
+<div class="admonition note alert alert-primary">
+<p>It can be significantly over-reported in some installations.</p>
+</div>
 <h3 id="min-space-available">Min Space Available</h3>
 <p>Lowest percent of the disk space available.</p>
 <h3 id="cpu-usage">CPU Usage</h3>

@@ -3069,22 +3069,21 @@
   </tbody>
 </table>
 
-<p>!!! caution alert alert-warning "Important note for users of PMM 2.24.0"
-    2.24.0 AMI image has only 8GB available for the data, it is a bug (see <a href="https://jira.percona.com/browse/PMM-9298">PMM-9298</a>). To resize a disk to full size you need to login to AMI instance with SSH and use the following command:</p>
-<pre><code>```sh
-curl https://raw.githubusercontent.com/percona/pmm-update/main/ansible/playbook/tasks/create-lvm.yml -o lvn-fix.yml &amp;&amp; sudo ansible-playbook lvn-fix.yml
-```
-
-For instructions about how to access your instances by using an SSH client, see [Connecting to Your Linux Instance Using SSH](https://www.percona.com/doc/percona-monitoring-and-management/2.x/setting-up/server/aws.html#:~:text=Connecting%20to%20Your%20Linux%20Instance%20Using%20SSH)
-Make sure to replace the user name ec2-user used in this document with admin.
-
-What this command does:
-
-1. Downloads Ansible playbook and runs it
-2. Copy your data from /srv to the temporary directory
-3. Create lvm partition
-4. Copy data from system disk to a new LVM partition
-</code></pre>
+<div class="admonition caution alert alert-warning">
+<p class="admonition-title">Important note for users of PMM 2.24.0</p>
+<p>2.24.0 AMI image has only 8GB available for the data, it is a bug (see <a href="https://jira.percona.com/browse/PMM-9298">PMM-9298</a>). To resize a disk to full size you need to login to AMI instance with SSH and use the following command:</p>
+<div class="highlight"><pre><span></span><code>curl https://raw.githubusercontent.com/percona/pmm-update/main/ansible/playbook/tasks/create-lvm.yml -o lvn-fix.yml <span class="o">&amp;&amp;</span> sudo ansible-playbook lvn-fix.yml
+</code></pre></div>
+<p>For instructions about how to access your instances by using an SSH client, see <a href="https://www.percona.com/doc/percona-monitoring-and-management/2.x/setting-up/server/aws.html#:~:text=Connecting%20to%20Your%20Linux%20Instance%20Using%20SSH">Connecting to Your Linux Instance Using SSH</a>
+Make sure to replace the user name ec2-user used in this document with admin.</p>
+<p>What this command does:</p>
+<ol>
+<li>Downloads Ansible playbook and runs it</li>
+<li>Copy your data from /srv to the temporary directory</li>
+<li>Create lvm partition</li>
+<li>Copy data from system disk to a new LVM partition</li>
+</ol>
+</div>
 <p>Percona Monitoring and Management (PMM) is a free and open-source platform for managing and monitoring MySQL, MongoDB, and PostgreSQL performance.</p>
 <h2 id="release-highlights">Release Highlights</h2>
 <ul>

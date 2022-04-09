@@ -3710,15 +3710,19 @@
 
 <h1 id="virtual-appliance">Virtual Appliance</h1>
 <p>How to run PMM Server as a virtual machine.</p>
-<p>!!! summary alert alert-info "Summary"
-    - Download and verify the <a href="https://www.percona.com/downloads/pmm2/2.26.0/ova">latest</a> OVF file.
-    - Import it.
-    - Reconfigure network.
-    - Start the VM and get IP.
-    - Log into PMM UI.
-    - (Optional) Change VM root password.
-    - (Optional) Set up SSH.
-    - (Optional) Set up static IP.</p>
+<div class="admonition summary alert alert-info">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>Download and verify the <a href="https://www.percona.com/downloads/pmm2/2.26.0/ova">latest</a> OVF file.</li>
+<li>Import it.</li>
+<li>Reconfigure network.</li>
+<li>Start the VM and get IP.</li>
+<li>Log into PMM UI.</li>
+<li>(Optional) Change VM root password.</li>
+<li>(Optional) Set up SSH.</li>
+<li>(Optional) Set up static IP.</li>
+</ul>
+</div>
 <hr />
 <p>Most steps can be done with either a user interface or on the command line, but some steps can only be done in one or the other. Sections are labeled <strong>UI</strong> for user interface or <strong>CLI</strong> for command line instructions.</p>
 <h2 id="terminology">Terminology</h2>
@@ -3871,8 +3875,9 @@ pmm-server.vmx
 </li>
 </ol>
 <h3 id="reconfigure-interface">Reconfigure interface</h3>
-<p>!!! note alert alert-primary ""
-    When using the command line, the interface is remapped during import.</p>
+<div class="admonition note alert alert-primary">
+<p>When using the command line, the interface is remapped during import.</p>
+</div>
 <h4 id="ui_2">UI</h4>
 <ol>
 <li>If started, shut down the virtual machine.</li>
