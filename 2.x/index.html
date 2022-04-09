@@ -3166,10 +3166,10 @@
 </tbody>
 </table>
 </details>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Security Checks</label><label for="__tabbed_1_2">Relistic example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Security Checks format</label><label for="__tabbed_1_2">Realistic example of security checks</label><label for="__tabbed_1_3">Format for Advisor Checks</label><label for="__tabbed_1_4">Security check example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<pre><code>---
+<pre><code>    ---
 checks:
 - version: 1
     name: example
@@ -3312,33 +3312,20 @@ checks:
             return results
 </code></pre>
 </div>
-</div>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Tab A</label><label for="__tabbed_2_2">Tab B</label><label for="__tabbed_2_3">Format for Advisor Checks</label></div>
-<div class="tabbed-content">
 <div class="tabbed-block">
-<p>Different tab set.</p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>More content.
-</code></pre></div>
-</div>
-<div class="tabbed-block"></div>
-</div>
-</div>
-<hr />
-<pre><code> checks:
+<pre><code>---
+checks:
 - version: 1
-  name: example
-  summary: Example check
-  description: This check is just an example.
-  tiers: [anonymous, registered]
-  type: MONGODB_BUILDINFO
-  script: |
-   def check(docs):
+name: example
+summary: Example check
+description: This check is just an example.
+tiers: [anonymous, registered]
+type: MONGODB_BUILDINFO
+script: |
+def check(docs):
         # for compatibility with PMM Server &lt; 2.12
         context = {
-           "format_version_num": format_version_num,
+        "format_version_num": format_version_num,
             "parse_version": parse_version,
         }
         return check_context(docs, context)
@@ -3350,27 +3337,26 @@ checks:
         # Global `print` and `fail` functions are available.
         #
         # `check_context` function is expected to return a list of dicts that are then converted to alerts;
-       # in particular, that list can be empty.
-       # Any other value (for example, string) is treated as script execution failure
+    # in particular, that list can be empty.
+    # Any other value (for example, string) is treated as script execution failure
         # (Starlark does not support Python exceptions);
-       # it is recommended to use global function `fail` for that instead.
+    # it is recommended to use global function `fail` for that instead.
 
-      format_version_num = context.get("format_version_num", fail)
-      parse_version = context.get("parse_version", fail)
+    format_version_num = context.get("format_version_num", fail)
+    parse_version = context.get("parse_version", fail)
 
-      print("first doc =", repr(docs[0]))
+    print("first doc =", repr(docs[0]))
 
-      return [{
-          "summary": "Example summary",
-          "description": "Example description",
-          "severity": "warning",
-          "labels": {
-              "version": format_version_num(10203),
-          }
-      }]
+    return [{
+        "summary": "Example summary",
+        "description": "Example description",
+        "severity": "warning",
+        "labels": {
+            "version": format_version_num(10203),
+        }
+    }]
 </code></pre>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Security check example</label></div>
-<div class="tabbed-content">
+</div>
 <div class="tabbed-block">
 <hr />
 <p>checks:
