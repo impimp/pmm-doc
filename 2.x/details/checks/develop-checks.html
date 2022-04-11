@@ -3080,14 +3080,14 @@
 
 
 
-<h1 id="develop-security-checks">Develop security checks</h1>
+<h1 id="develop-security-checks">Develop security checks<a class="headerlink" href="#develop-security-checks" title="Permanent link">&para;</a></h1>
 <p>The Security Threat Tool in PMM offers a set of checks that can detect common security threats, performance degradation, data loss and data corruption.</p>
 <p>As a developer, you can create custom checks to cover additional use cases that are relevant to your specific database infrastructure.</p>
-<h2 id="check-components">Check components</h2>
+<h2 id="check-components">Check components<a class="headerlink" href="#check-components" title="Permanent link">&para;</a></h2>
 <p>A check is a combination of:</p>
 <ul>
 <li>SQL query or MongoDB query document for extracting data from the database.</li>
-<li>Python script for converting extracted data into check results. This is actually a <a href="https://github.com/google/starlark-go">Starlark</a> script – a Python dialect that adds more imperative features from Python. Script's execution environment is sandboxed so no I/O can be done from it.</li>
+<li>Python script for converting extracted data into check results. This is actually a <a href="https://github.com/google/starlark-go">Starlark</a> script – a Python dialect that adds more imperative features from Python. Script&rsquo;s execution environment is sandboxed so no I/O can be done from it.</li>
 </ul>
 <p>All checks in the first phase (and most of the planned ones) are self-contained. This means that extracted data is processed on the PMM side and not sent back to the SaaS.</p>
 <p>On the other hand, checks results and other metadata can be sent to SaaS to implement a history feature if the user opted-in and is entitled.</p>
@@ -3236,7 +3236,7 @@
 
 <span class="w">              </span><span class="no">return results</span><span class="w"></span>
 </code></pre></div>
-<h2 id="check-fields">Check fields</h2>
+<h2 id="check-fields">Check fields<a class="headerlink" href="#check-fields" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Version</strong> (integer, required) defines what other check properties are expected, what types are supported, what is expected from the script and what it can expect from the execution environment, etc.</li>
 <li><strong>Name</strong> (string, required) defined machine-readable name (ID).</li>
@@ -3248,7 +3248,7 @@
 </ul>
 <p>Check script assumes that there is a function with a fixed name <em>check</em> that accepts a <em>list</em> of <em>dicts</em> containing returned rows for SQL databases and documents for MongoDB. It returns zero, one, or several check results that are then converted to alerts.</p>
 <p>Another function that should be implemented is <strong>check_context</strong>. PMM 2.12.0 and earlier use <strong>context</strong>, while newer versions use <strong>check_context</strong>. Both have the same meaning.</p>
-<p>The single query means that currently you cannot implement some advanced checks that would require several queries (and can't be implemented using SQL UNION).</p>
+<p>The single query means that currently you cannot implement some advanced checks that would require several queries (and can&rsquo;t be implemented using SQL UNION).</p>
 <p>Checks format and the current STT UI use different terminology for severities. Here is how different formats show up on the UI:</p>
 <table>
 <thead>
@@ -3292,8 +3292,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="backend">Backend</h2>
-<p><img alt="!" src="../../../_images/BackendSTT.png" /></p>
+<h2 id="backend">Backend<a class="headerlink" href="#backend" title="Permanent link">&para;</a></h2>
+<p><div class="lightgallery"><a data-sub-html="" href="../../../_images/BackendSTT.png"><img alt="" src="../../../_images/BackendSTT.png" /></a></div></p>
 <ol>
 <li>pmm-managed checks that this installation is opted-in into STT.</li>
 <li>pmm-managed downloads checks file from SaaS.</li>
@@ -3301,13 +3301,13 @@
 <li>pmm-managed sends queries to pmm-agent and gathers results.</li>
 <li>pmm-managed executes check scripts that produce alert information.</li>
 <li>pmm-managed sends alerts to Alertmanager.</li>
-<li>Due to Alertmanager design, pmm-managed has to send and re-send alerts to it much more often than the frequency of check execution. That's expected, and not important for using STT, but important for understanding how it works.</li>
+<li>Due to Alertmanager design, pmm-managed has to send and re-send alerts to it much more often than the frequency of check execution. That&rsquo;s expected, and not important for using STT, but important for understanding how it works.</li>
 <li>Currently, Prometheus is not involved.</li>
 </ol>
-<h2 id="frontend">Frontend</h2>
-<p><img alt="!" src="../../../_images/FrontEndSTT.png" /></p>
+<h2 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h2>
+<p><div class="lightgallery"><a data-sub-html="" href="../../../_images/FrontEndSTT.png"><img alt="" src="../../../_images/FrontEndSTT.png" /></a></div></p>
 <p>Our UI in Grafana uses Alertmanager API v2 to get information about failed security checks.</p>
-<h2 id="develop-custom-checks">Develop custom checks</h2>
+<h2 id="develop-custom-checks">Develop custom checks<a class="headerlink" href="#develop-custom-checks" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Download the latest PMM Server and PMM Client builds:</p>
@@ -3335,18 +3335,18 @@ perconalab/pmm-server:dev-latest
 </li>
 <li>
 <p>Log in to Grafana (admin/admin) and enable STT in the settings: http://127.0.0.1/graph/d/pmm-settings/pmm-settings</p>
-<p><img alt="!" src="../../../_images/Grafana.png" /></p>
+<p><div class="lightgallery"><a data-sub-html="" href="../../../_images/Grafana.png"><img alt="" src="../../../_images/Grafana.png" /></a></div></p>
 </li>
 <li>
 <p>Create <em>/srv/custom-checks.yml</em> inside a Docker container with the content from the Security Advisor (Security Threat Tool) section above.</p>
 </li>
 <li>
 <p>STT checks will run with a time interval defined via UI. You can see the result of running the advisor on the home dashboard:</p>
-<p><img alt="!" src="../../../_images/HomeDashboard.png" /></p>
+<p><div class="lightgallery"><a data-sub-html="" href="../../../_images/HomeDashboard.png"><img alt="" src="../../../_images/HomeDashboard.png" /></a></div></p>
 </li>
 <li>
 <p>Click on the number of failed checks to open the Failed Checks dashboard:</p>
-<p><img alt="!" src="../../../_images/FailedChecks.png" /></p>
+<p><div class="lightgallery"><a data-sub-html="" href="../../../_images/FailedChecks.png"><img alt="" src="../../../_images/FailedChecks.png" /></a></div></p>
 </li>
 <li>
 <p>Go into Docker container to output the logs of pmm-managed and read STT logs:</p>
@@ -3357,7 +3357,7 @@ supervisorctl tail -f pmm-managed
 </code></pre></div>
 </li>
 </ol>
-<h2 id="sumbit-feedback">Sumbit feedback</h2>
+<h2 id="sumbit-feedback">Sumbit feedback<a class="headerlink" href="#sumbit-feedback" title="Permanent link">&para;</a></h2>
 <p>We welcome your feedback on the current process for developing and debugging checks. Send us your comments over <a href="percona.slack.com">Slack</a> or post a question on the <a href="https://forums.percona.com/">Percona Forums</a>.</p>
 
   <hr>

@@ -2985,12 +2985,12 @@
 
 
 
-<h1 id="mysql-binaries-are-32-bits">MySQL binaries are 32 bits</h1>
-<h2 id="description">Description</h2>
+<h1 id="mysql-binaries-are-32-bits">MySQL binaries are 32 bits<a class="headerlink" href="#mysql-binaries-are-32-bits" title="Permanent link">&para;</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p>Older version MySQL server (plus some custom compilations) might be compiled for 32 bits whereas we suggest using the new 64 bits version. </p>
-<h2 id="rule">Rule</h2>
+<h2 id="rule">Rule<a class="headerlink" href="#rule" title="Permanent link">&para;</a></h2>
 <p><code>Select @@global.version_compile_machine as version_compile_machine == ‘i686’</code></p>
-<h2 id="resolution">Resolution</h2>
+<h2 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Permanent link">&para;</a></h2>
 <p>Binaries should be re installed but using the 64 bits version of the version binaries used</p>
 
   <hr>

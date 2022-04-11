@@ -3040,12 +3040,12 @@
 
 
 
-<h1 id="anonymous-users">Anonymous users</h1>
-<h2 id="description">Description</h2>
+<h1 id="anonymous-users">Anonymous users<a class="headerlink" href="#anonymous-users" title="Permanent link">&para;</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p>MySQL allows the creation of users without names, this is very insecure, it is best practice to remove anonymous users to secure the MySQL installation. </p>
-<h2 id="rule">Rule</h2>
+<h2 id="rule">Rule<a class="headerlink" href="#rule" title="Permanent link">&para;</a></h2>
 <p><code>Select user,host from mysql.user where user = ''</code></p>
-<h2 id="resolution">Resolution</h2>
+<h2 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Permanent link">&para;</a></h2>
 <p>Remove any user that does not have a name in the mysql.user table. 
 <div class="highlight"><pre><span></span><code>Delete from mysql.user where user=’’;
 FLUSH PRIVILEGES;

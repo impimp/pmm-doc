@@ -3026,8 +3026,8 @@
 
 
 
-<h1 id="non-root-accounts-with-super-privileges">Non-root accounts with SUPER privileges</h1>
-<h2 id="description">Description</h2>
+<h1 id="non-root-accounts-with-super-privileges">Non-root accounts with SUPER privileges<a class="headerlink" href="#non-root-accounts-with-super-privileges" title="Permanent link">&para;</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p>The <em>Super</em> privilege grants administrator privileges to a user and should be granted only to users that are supposed to act at MySQL instance level. 
 The <em>Super</em> privilege grants:
 - Enables server configuration changes by modifying global system variables. For some system variables, setting the session value also requires the SUPER privilege. If a system variable is restricted and requires a special privilege to set the session value, the variable description indicates that restriction. Examples include binlog_format, sql_log_bin, and sql_log_off. See also Section 5.1.8.1, “System Variable Privileges”.
@@ -3044,9 +3044,9 @@ The <em>Super</em> privilege grants:
     - The server does not execute init_connect system variable content when SUPER clients connect.
     - The server accepts one connection from a SUPER client even if the connection limit configured by the max_connections system variable is reached.
     - Updates can be performed even when the read_only system variable is enabled. This applies to explicit table updates, and to use of account-management statements such as GRANT and REVOKE that update tables implicitly.</p>
-<h2 id="resolution">Resolution</h2>
+<h2 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Permanent link">&para;</a></h2>
 <p>Revoke Super grants from the users that are not supposed to be MySQL instance administrators. 
-Revoke super on <em>.</em> from user@'host';</p>
+Revoke super on <em>.</em> from user@&rsquo;host&rsquo;;</p>
 
   <hr>
 <div class="md-source-file">
