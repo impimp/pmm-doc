@@ -3433,7 +3433,7 @@ psql -c <span class="s2">&quot;select pg_reload_conf()&quot;</span>
 <p>We recommend choosing only one of these. <strong>If you use both, you will get duplicate metrics.</strong></p>
 <div class="admonition caution alert alert-warning">
 <p class="admonition-title">Caution</p>
-<p>While we recommend use of the newer <code>pg_stat_monitor</code> extension, be aware it is currently in beta phase and unsupported.</p>
+<p><code>pg_stat_monitor</code> 1.0.0 does not work with PostgreSQL versions 11 and 12 and will be fixed in the subsequent releases.</p>
 </div>
 <p>Here are the benefits and drawbacks of each.</p>
 <table>
@@ -3515,14 +3515,10 @@ track_io_timing = on             # Capture read/write stats
 </div>
 <p>You can now <a href="#add-service">add the service</a>.</p>
 <h3 id="pg_stat_monitor"><code>pg_stat_monitor</code><a class="headerlink" href="#pg_stat_monitor" title="Permanent link">&para;</a></h3>
-<div class="admonition caution alert alert-warning">
-<p class="admonition-title">Caution</p>
-<p><code>pg_stat_monitor</code> is currently in beta phase and is unsupported.</p>
-</div>
 <p><code>pg_stat_monitor</code> has been tested with:</p>
 <ul>
-<li>PostgreSQL versions 11, 12, 13.</li>
-<li>Percona Distribution for PostgreSQL versions 11, 12, 13.</li>
+<li>PostgreSQL versions 11, 12, 13, and 14.</li>
+<li>Percona Distribution for PostgreSQL versions 11, 12, 13, and 14.</li>
 </ul>
 <h4 id="install_1">Install<a class="headerlink" href="#install_1" title="Permanent link">&para;</a></h4>
 <ul>
@@ -3716,7 +3712,7 @@ The file is a yaml where each query can have these fields:</p>
   <small>
     
       Last update:
-      2021-12-22
+      2022-04-12
     
   </small>
 </div>
