@@ -3191,18 +3191,15 @@
 </div>
 <hr />
 <ol>
-<li>Install.</li>
-</ol>
+<li>
+<p>Install.</p>
 <p><a href="../client/index.html#package-manager">Set up repos</a> to enable PMM server for the host system.</p>
 <p>After you have repository added:</p>
-<div class="highlight"><pre><span></span><code>```sh
-#install package
+<div class="highlight"><pre><span></span><code><span class="c1">#install package</span>
 sudo yum install pmm-server-systemd
-```
-
-This creates and enables user and service that runs PMM.
 </code></pre></div>
-<ol>
+<p>This creates and enables user and service that runs PMM.</p>
+</li>
 <li>
 <p>Start.</p>
 <div class="highlight"><pre><span></span><code>sudo systemctl start pmm-server
