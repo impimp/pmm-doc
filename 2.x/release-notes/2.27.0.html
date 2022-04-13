@@ -2953,66 +2953,12 @@
     PMM and Percona Portal Integration
   </a>
   
-    <nav class="md-nav" aria-label="PMM and Percona Portal Integration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#enhanced-ux-for-connecting-pmm-server-to-percona-portal" class="md-nav__link">
-    Enhanced UX for connecting PMM server to Percona Portal
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#access-to-account-information-for-percona-customers" class="md-nav__link">
-    Access to account information for Percona customers
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
   <a href="#advisors" class="md-nav__link">
     Advisors
   </a>
-  
-    <nav class="md-nav" aria-label="Advisors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#broader-database-health-assessments-with-advisors" class="md-nav__link">
-    Broader database health assessments with Advisors
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#new-paid-tier-and-special-advisor-checks-for-customers" class="md-nav__link">
-    New Paid tier and special Advisor checks for customers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advisor-checks-have-been-extended-with-two-new-query-types-getdiagnosticdata-and-replsetgetstatus" class="md-nav__link">
-    Advisor checks have been extended with two new query types: GetDiagnosticData and replSetGetStatus.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#improved-the-documentation-around-developing-checks" class="md-nav__link">
-    Improved the documentation around developing checks.
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3100,32 +3046,56 @@
 </div>
 <h2 id="release-highlights">Release Highlights<a class="headerlink" href="#release-highlights" title="Permanent link">&para;</a></h2>
 <h3 id="pmm-and-percona-portal-integration">PMM and Percona Portal Integration<a class="headerlink" href="#pmm-and-percona-portal-integration" title="Permanent link">&para;</a></h3>
-<h4 id="enhanced-ux-for-connecting-pmm-server-to-percona-portal">Enhanced UX for connecting PMM server to Percona Portal<a class="headerlink" href="#enhanced-ux-for-connecting-pmm-server-to-percona-portal" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Enhanced UX for connecting PMM server to Percona Portal</strong></li>
+</ul>
 <p>To leverage Percona Platform&rsquo;s recent support for federated identity, PMM now uses access-token authorization for connecting PMM instances to Percona Platform. </p>
 <p>This replaces the former username/password authentication used in PMM 2.26.0 and older versions.</p>
 <p>For more information, see <a href="../how-to/integrate-platform.md">Integrate PMM with Percona Platform</a>. </p>
-<h4 id="access-to-account-information-for-percona-customers">Access to account information for Percona customers<a class="headerlink" href="#access-to-account-information-for-percona-customers" title="Permanent link">&para;</a></h4>
-<p>When you connect your PMM instances to Percona Platform as a Percona customer, you can now check all your Percona Platform account information on the new <strong>Entitlements</strong> and <strong>Support Tickets</strong> tab on the main menu.</p>
+<ul>
+<li><strong>Access to account information for Percona customers</strong>
+  When you connect your PMM instances to Percona Platform as a Percona customer, you can now check all your Percona Platform account information on the new <strong>Entitlements</strong> and <strong>Support Tickets</strong> tab on the main menu.      </li>
+</ul>
 <p>For more information, see <a href="../how-to/account-info.md">Check your account information</a> in the online Help.</p>
 <h3 id="advisors">Advisors<a class="headerlink" href="#advisors" title="Permanent link">&para;</a></h3>
-<h4 id="broader-database-health-assessments-with-advisors">Broader database health assessments with Advisors<a class="headerlink" href="#broader-database-health-assessments-with-advisors" title="Permanent link">&para;</a></h4>
-<p>This release changes security checks to Advisors, grouped according to the functionality and recommendations they provide.</p>
+<ul>
+<li><strong>Broader database health assessments with Advisors</strong></li>
+</ul>
+<p>This release changes security checks to Advisors, grouped according to the functionality and recommendations they provide</p>
 <p>To reflect these changes, the old <strong>Security Threat Tool</strong> option has been renamed to <strong>Advisors</strong>.</p>
 <p>In addition, the following new checks are now available:</p>
-<p><strong>New MySQL advisor checks</strong>:
-  -  Validate Password Policy
-  -  Local Option Of Load Data Enabled
-  -  Not Verifying Checksums
-  -  SQL Processing Not Multi-Threaded</p>
-<p><strong>New MongoDB Checks</strong>:
-  - Check the Replica Set Topology
-  - Check Active/Available connections ratio</p>
+<ul>
+<li>
+<p><strong>New MySQL advisor checks</strong>:</p>
+<ul>
+<li>Validate Password Policy</li>
+<li>Local Option Of Load Data Enabled</li>
+<li>Not Verifying Checksums</li>
+<li>SQL Processing Not Multi-Threaded</li>
+</ul>
+</li>
+<li>
+<p><strong>New MongoDB Checks</strong>:</p>
+<ul>
+<li>Check the Replica Set Topology</li>
+<li>Check Active/Available connections ratio</li>
+</ul>
+</li>
+</ul>
 <p>To check the list of checks and the tier for which they are available, see <a href="https://docs.percona.com/percona-platform/checks.html">Advisor checks for PMM</a> in the Percona Platform online Help.</p>
-<h4 id="new-paid-tier-and-special-advisor-checks-for-customers">New Paid tier and special Advisor checks for customers<a class="headerlink" href="#new-paid-tier-and-special-advisor-checks-for-customers" title="Permanent link">&para;</a></h4>
-<p>In addition to Registered Checks, Percona customers who connect PMM to Pecona Platform now also have access to Paid Advisor checks, which offer more advanced database health information.</p>
-<p>For more information, see <a href="https://www.percona.com/doc/percona-monitoring-and-management/2.x/details/checks/index.html">Working with Advisor checks</a>.</p>
-<h4 id="advisor-checks-have-been-extended-with-two-new-query-types-getdiagnosticdata-and-replsetgetstatus">Advisor checks have been extended with two new query types: <em>GetDiagnosticData</em> and <em>replSetGetStatus</em>.<a class="headerlink" href="#advisor-checks-have-been-extended-with-two-new-query-types-getdiagnosticdata-and-replsetgetstatus" title="Permanent link">&para;</a></h4>
-<h4 id="improved-the-documentation-around-developing-checks">Improved the documentation around <a href="https://www.percona.com/doc/percona-monitoring-and-management/2.x/details/checks/index.html">developing checks</a>.<a class="headerlink" href="#improved-the-documentation-around-developing-checks" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>New Paid tier and special Advisor checks for customers</strong>
+In addition to Registered Checks, Percona customers who connect PMM to Pecona Platform now also have access to Paid Advisor checks, which offer more advanced database health information.
+ For more information, see <a href="https://www.percona.com/doc/percona-monitoring-and-management/2.x/details/checks/index.html">Working with Advisor checks</a>.</p>
+</li>
+<li>
+<p><strong>Advisor checks have been extended with two new query types: <em>GetDiagnosticData<em> and </em>replSetGetStatus</em></strong></p>
+</li>
+<li>
+<p><strong>Improved the documentation around <a href="https://www.percona.com/doc/percona-monitoring-and-management/2.x/details/checks/index.html">developing checks</a></strong>.</p>
+</li>
+</ul>
 <h3 id="dbaas">DBaaS<a class="headerlink" href="#dbaas" title="Permanent link">&para;</a></h3>
 <p>Simplified experience in registering EKS cluster with kubeconfig generated by eksctl.</p>
 <h3 id="components-upgrade">Components upgrade<a class="headerlink" href="#components-upgrade" title="Permanent link">&para;</a></h3>
