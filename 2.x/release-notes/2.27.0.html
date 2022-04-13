@@ -12,14 +12,14 @@
         <meta name="author" content="Percona LLC">
       
       
-        <link rel="canonical" href="https://pmm-doc.onrender.com/2.x/release-notes/index.html">
+        <link rel="canonical" href="https://pmm-doc.onrender.com/2.x/release-notes/2.27.0.html">
       
       <link rel="icon" href="../_images/percona-favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
     
     
       
-        <title>Release Notes - Percona Monitoring and Management</title>
+        <title>Percona Monitoring and Management 2.27.0 - Percona Monitoring and Management</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#release-notes" class="md-skip">
+        <a href="#percona-monitoring-and-management-2270" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Release Notes
+              Percona Monitoring and Management 2.27.0
             
           </span>
         </div>
@@ -2390,21 +2390,19 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
       
         
         
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+        <div class="md-nav__link md-nav__link--index ">
           <a href="index.html">Release Notes</a>
           
             <label for="__nav_7">
@@ -2936,6 +2934,130 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-highlights" class="md-nav__link">
+    Release Highlights
+  </a>
+  
+    <nav class="md-nav" aria-label="Release Highlights">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pmm-and-percona-portal-integration" class="md-nav__link">
+    PMM and Percona Portal Integration
+  </a>
+  
+    <nav class="md-nav" aria-label="PMM and Percona Portal Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-ux-for-connecting-pmm-server-to-percona-portal" class="md-nav__link">
+    Enhanced UX for connecting PMM server to Percona Portal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-to-account-information-for-percona-customers" class="md-nav__link">
+    Access to account information for Percona customers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advisors" class="md-nav__link">
+    Advisors
+  </a>
+  
+    <nav class="md-nav" aria-label="Advisors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#broader-database-health-assessments-with-advisors" class="md-nav__link">
+    Broader database health assessments with Advisors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-paid-tier-and-special-advisor-checks-for-customers" class="md-nav__link">
+    New Paid tier and special Advisor checks for customers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advisor-checks-have-been-extended-with-two-new-query-types-getdiagnosticdata-and-replsetgetstatus" class="md-nav__link">
+    Advisor checks have been extended with two new query types: GetDiagnosticData and replSetGetStatus.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improved-the-documentation-around-developing-checks" class="md-nav__link">
+    Improved the documentation around developing checks.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dbaas" class="md-nav__link">
+    DBaaS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components-upgrade" class="md-nav__link">
+    Components upgrade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-features" class="md-nav__link">
+    New Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improvements" class="md-nav__link">
+    Improvements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bugs-fixed" class="md-nav__link">
+    Bugs Fixed
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2946,50 +3068,193 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/percona/pmm-doc/edit/main/docs/release-notes/index.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/percona/pmm-doc/edit/main/docs/release-notes/2.27.0.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
+<h1 id="percona-monitoring-and-management-2270">Percona Monitoring and Management 2.27.0<a class="headerlink" href="#percona-monitoring-and-management-2270" title="Permanent link">&para;</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+  <colgroup>
+    <col class="field-name">
+    <col class="field-body">
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field-odd field">
+    <th class="field-name">Date:</th>
+    <td class="field-body">April 8, 2022</td>
+    </tr>
+    <tr class="field-even field">
+      <th class="field-name">Installation:</th>
+      <td class="field-body">
+        <a class="reference external" href="https://www.percona.com/software/pmm/quickstart">Installing Percona Monitoring and Management</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Percona Monitoring and Management (PMM) is a free and open-source platform for managing and monitoring MySQL, MongoDB, and PostgreSQL performance.</p>
+<div class="admonition caution alert alert-warning">
+<p class="admonition-title">Important</p>
+<p>We recommend using the latest version of the PMM instance. This ensures that you access the latest features of the underlying components, such as VictoriaMetrics, with all the bug fixes in place. One of the critical features of VictoriaMetrics is <a href="https://docs.victoriametrics.com/vmagent.html#stream-parsing-mode">stream parsing mode</a>, which enhances the performance of PMM and saves memory when scraping targets expose millions of metrics.</p>
+</div>
+<h2 id="release-highlights">Release Highlights<a class="headerlink" href="#release-highlights" title="Permanent link">&para;</a></h2>
+<h3 id="pmm-and-percona-portal-integration">PMM and Percona Portal Integration<a class="headerlink" href="#pmm-and-percona-portal-integration" title="Permanent link">&para;</a></h3>
+<h4 id="enhanced-ux-for-connecting-pmm-server-to-percona-portal">Enhanced UX for connecting PMM server to Percona Portal<a class="headerlink" href="#enhanced-ux-for-connecting-pmm-server-to-percona-portal" title="Permanent link">&para;</a></h4>
+<p>To leverage Percona Platform&rsquo;s recent support for federated identity, PMM now uses access-token authorization for connecting PMM instances to Percona Platform. </p>
+<p>This replaces the former username/password authentication used in PMM 2.26.0 and older versions.</p>
+<p>For more information, see <a href="../how-to/integrate-platform.md">Integrate PMM with Percona Platform</a>. </p>
+<h4 id="access-to-account-information-for-percona-customers">Access to account information for Percona customers<a class="headerlink" href="#access-to-account-information-for-percona-customers" title="Permanent link">&para;</a></h4>
+<p>When you connect your PMM instances to Percona Platform as a Percona customer, you can now check all your Percona Platform account information on the new <strong>Entitlements</strong> and <strong>Support Tickets</strong> tab on the main menu.</p>
+<p>For more information, see <a href="../how-to/account-info.md">Check your account information</a> in the online Help.</p>
+<h3 id="advisors">Advisors<a class="headerlink" href="#advisors" title="Permanent link">&para;</a></h3>
+<h4 id="broader-database-health-assessments-with-advisors">Broader database health assessments with Advisors<a class="headerlink" href="#broader-database-health-assessments-with-advisors" title="Permanent link">&para;</a></h4>
+<p>This release changes security checks to Advisors, grouped according to the functionality and recommendations they provide.</p>
+<p>To reflect these changes, the old <strong>Security Threat Tool</strong> option has been renamed to <strong>Advisors</strong>.</p>
+<p>In addition, the following new checks are now available:</p>
+<p><strong>New MySQL advisor checks</strong>:
+  -  Validate Password Policy
+  -  Local Option Of Load Data Enabled
+  -  Not Verifying Checksums
+  -  SQL Processing Not Multi-Threaded</p>
+<p><strong>New MongoDB Checks</strong>:
+  - Check the Replica Set Topology
+  - Check Active/Available connections ratio</p>
+<p>To check the list of checks and the tier for which they are available, see <a href="https://docs.percona.com/percona-platform/checks.html">Advisor checks for PMM</a> in the Percona Platform online Help.</p>
+<h4 id="new-paid-tier-and-special-advisor-checks-for-customers">New Paid tier and special Advisor checks for customers<a class="headerlink" href="#new-paid-tier-and-special-advisor-checks-for-customers" title="Permanent link">&para;</a></h4>
+<p>In addition to Registered Checks, Percona customers who connect PMM to Pecona Platform now also have access to Paid Advisor checks, which offer more advanced database health information.</p>
+<p>For more information, see <a href="https://www.percona.com/doc/percona-monitoring-and-management/2.x/details/checks/index.html">Working with Advisor checks</a>.</p>
+<h4 id="advisor-checks-have-been-extended-with-two-new-query-types-getdiagnosticdata-and-replsetgetstatus">Advisor checks have been extended with two new query types: <em>GetDiagnosticData</em> and <em>replSetGetStatus</em>.<a class="headerlink" href="#advisor-checks-have-been-extended-with-two-new-query-types-getdiagnosticdata-and-replsetgetstatus" title="Permanent link">&para;</a></h4>
+<h4 id="improved-the-documentation-around-developing-checks">Improved the documentation around <a href="https://www.percona.com/doc/percona-monitoring-and-management/2.x/details/checks/index.html">developing checks</a>.<a class="headerlink" href="#improved-the-documentation-around-developing-checks" title="Permanent link">&para;</a></h4>
+<h3 id="dbaas">DBaaS<a class="headerlink" href="#dbaas" title="Permanent link">&para;</a></h3>
+<p>Simplified experience in registering EKS cluster with kubeconfig generated by eksctl.</p>
+<h3 id="components-upgrade">Components upgrade<a class="headerlink" href="#components-upgrade" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="2.27.0.html">Percona Monitoring and Management 2.27.0</a></li>
-<li><a href="2.26.0.html">Percona Monitoring and Management 2.26.0</a></li>
-<li><a href="2.25.0.html">Percona Monitoring and Management 2.25.0</a></li>
-<li><a href="2.24.0.html">Percona Monitoring and Management 2.24.0</a></li>
-<li><a href="2.23.0.html">Percona Monitoring and Management 2.23.0</a></li>
-<li><a href="2.22.0.html">Percona Monitoring and Management 2.22.0</a></li>
-<li><a href="2.21.0.html">Percona Monitoring and Management 2.21.0</a></li>
-<li><a href="2.20.0.html">Percona Monitoring and Management 2.20.0</a></li>
-<li><a href="2.19.0.html">Percona Monitoring and Management 2.19.0</a></li>
-<li><a href="2.18.0.html">Percona Monitoring and Management 2.18.0</a></li>
-<li><a href="2.17.0.html">Percona Monitoring and Management 2.17.0</a></li>
-<li><a href="2.16.0.html">Percona Monitoring and Management 2.16.0</a></li>
-<li><a href="2.15.1.html">Percona Monitoring and Management 2.15.1</a></li>
-<li><a href="2.15.0.html">Percona Monitoring and Management 2.15.0</a></li>
-<li><a href="2.14.0.html">Percona Monitoring and Management 2.14.0</a></li>
-<li><a href="2.13.0.html">Percona Monitoring and Management 2.13.0</a></li>
-<li><a href="2.12.0.html">Percona Monitoring and Management 2.12.0</a></li>
-<li><a href="2.11.1.html">Percona Monitoring and Management 2.11.1</a></li>
-<li><a href="2.11.0.html">Percona Monitoring and Management 2.11.0</a></li>
-<li><a href="2.10.1.html">Percona Monitoring and Management 2.10.1</a></li>
-<li><a href="2.10.0.html">Percona Monitoring and Management 2.10.0</a></li>
-<li><a href="2.9.1.html">Percona Monitoring and Management 2.9.1</a></li>
-<li><a href="2.9.0.html">Percona Monitoring and Management 2.9.0</a></li>
-<li><a href="2.8.0.html">Percona Monitoring and Management 2.8.0</a></li>
-<li><a href="2.7.0.html">Percona Monitoring and Management 2.7.0</a></li>
-<li><a href="2.6.1.html">Percona Monitoring and Management 2.6.1</a></li>
-<li><a href="2.6.0.html">Percona Monitoring and Management 2.6.0</a></li>
-<li><a href="2.5.0.html">Percona Monitoring and Management 2.5.0</a></li>
-<li><a href="2.4.0.html">Percona Monitoring and Management 2.4.0</a></li>
-<li><a href="2.3.0.html">Percona Monitoring and Management 2.3.0</a></li>
-<li><a href="2.2.2.html">Percona Monitoring and Management 2.2.2</a></li>
-<li><a href="2.2.1.html">Percona Monitoring and Management 2.2.1</a></li>
-<li><a href="2.2.0.html">Percona Monitoring and Management 2.2.0</a></li>
-<li><a href="2.1.0.html">Percona Monitoring and Management 2.1.0</a></li>
-<li><a href="2.0.1.html">Percona Monitoring and Management 2.0.1</a></li>
-<li><a href="2.0.0.html">Percona Monitoring and Management 2.0.0</a></li>
+<li><strong>Grafana</strong>: PMM 2.27.0 has now migrated to Grafana 8.3.5. This version of Grafana is loaded with a gamut of exciting features. For more information, see <a href="https://grafana.com/docs/grafana/latest/whatsnew/whats-new-in-v8-0/">What&rsquo;s new in Grafana v8.0</a>.</li>
+<li><strong>VictoriaMetrics</strong>: VictoriaMetrics has been upgraded to 1.72.0.</li>
+</ul>
+<h2 id="new-features">New Features<a class="headerlink" href="#new-features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9718">PMM-9718</a>: PMM and Percona Portal Integration: Federated connections to Percona Platform.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9305">PMM-9305</a>, <a href="https://jira.percona.com/browse/PMM-8661">PMM-8661</a>: PMM and Percona Portal Integration: Visibility over Percona Platform Entitlements and Support Tickets.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9473">PMM-9473</a>: Advisors: Additional abilities for MongoDB Advisor Checks.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-8800">PMM-8800</a>: DBaaS: With PMM, you can now have a simplified experience in registering your EKS cluster with kubeconfig generated by eksctl. Copy-paste the configuration by selecting Using Amazon Elastic Kubernetes Service (EKS) checkbox, and your K8s cluster is registered.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-8434">PMM-8434</a>: Support for passing PMM Server Public Address as an environment variable while starting the PMM server. For more information see <a href="https://www.percona.com/doc/percona-monitoring-and-management/2.x/setting-up/server/docker.html#environment-variables">Documentation</a>.</p>
+</li>
+</ul>
+<h2 id="improvements">Improvements<a class="headerlink" href="#improvements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9319">PMM-9319</a>: PMM and Percona Portal Integration: Synchronized Platform and PMM roles: We have updated PMM permissions to ensure that Administrators of Percona Portal organizations are also granted Admin role in PMM. - </p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9339">PMM-9339</a>: Integrated Alerting: The Use TLS option in webhook settings has been renamed to Show TLS setting to better reflect its functionality.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9182">PMM-9182</a>: Integrated Alerting: Added <strong>Silence All</strong> option for when you want to stop notifications from all alerting rules at once.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9182">PMM-9164</a>: Integrated Alerting: You can now use an existing rule as a source for new ones instead of using a template.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9635">PMM-9635</a>: Advisors: Extended security checks to Advisors to cover broader database health checks.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9148">PMM-9148</a>: QAN: You can now share a link for Query Analytics at the click of a button with the <em>Copy Link</em>.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-8045">PMM-8045</a>: DBaaS: With this version of PMM, we have added a warning about the deletion of API keys so that the user is forewarned before deleting the API key.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9452">PMM-9452</a>: With this release of PMM, we have implemented a simplified password change method for the default admin user using the command line parameter change-admin-password.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9542">PMM-9542</a>: PMM now predefines certain flags that allow users to set all other <a href="https://docs.victoriametrics.com/#list-of-command-line-flags">VictoriaMetrics parameters</a> as environment variables. For more information see <a href="https://www.percona.com/doc/percona-monitoring-and-management/2.x/details/victoria-metrics.html#environment-variables">Documentation</a>.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-8794">PMM-8794</a>: For consistency, we have implemented a unified 24 hours time format for backup management.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9306">PMM-9306</a>: VictoriaMetrics has been upgraded to 1.72.0. </p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-8412">PMM-8412</a>: Grafana has been upgraded to 8.x.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9648">PMM-9648</a>: With PMM 2.27.0 migrating to Grafana 8.0, the Singlestat Panel has been deprecated and replaced with Stat Panel in Grafana for an enhanced user experience.</p>
+</li>
+</ul>
+<h2 id="bugs-fixed">Bugs Fixed<a class="headerlink" href="#bugs-fixed" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9797">PMM-9797</a>: Fixed an issue where the data on the Home Dashboard was represented incorrectly on the Stat Panel, which could potentially confuse the user.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9783">PMM-9783</a>: Fixed an issue where QAN failed to work after an upgrade.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9757">PMM-9757</a>: Fixed an issue where the metrics for MongoDB were not being exposed when the database connection was getting lost.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9603">PMM-9603</a>: PMM and Percona Portal Integration: Fixed “Insufficient access rights” error that was displayed  for admin user after connecting  PMM server connect to Percona Portal.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9323">PMM-9323</a>: PMM and Percona Portal Integration: Ensured PMM no longer downloads checks and templates from Percona Portal when the Telemetry option is disabled in the PMM Advanced Settings.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-8986">PMM-8986</a>: Advisors: Fixed an issue where the Advisors check on the PMM servers monitoring a large number of database services was causing a timeout. </p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9570">PMM-9570</a>: DBaaS: Create DB Cluster dialog box was closing automatically while trying to create  a database cluster and had to be opened twice. This issue has been fixed now.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9496">PMM-9496</a>: DBaaS: Fixed an issue where the host and database were not being monitored in DBaas.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9783">PMM-9783</a>: QAN: Fixed an issue where QAN failed to work after an upgrade.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9661">PMM-9661</a>: QAN: Fixed an issue where QAN layout breaks while resizing the window.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9797">PMM-9797</a>: Dashboard: Fixed an issue where the data on the Home Dashboard was represented incorrectly on the Stat Panel, which could potentially confuse the user.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9757">PMM-9757</a>: Fixed an issue where the metrics for MongoDB were not being exposed when the database connection was getting lost.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9671">PMM-9671</a>: Fixed an issue where an upgrade to 2.26.0 failed as PMM crashed.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9413">PMM-9413</a>: Fixed an issue where the PMM management daemon was getting deadlocked when a PMM agent was getting connected with a duplicate <code>agent_id</code>.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9015">PMM-9015</a>: Fixed an issue where PMM does not display when PostgreSQL is down, thus failing to capture the metrics for PostgreSQL.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-8203">PMM-8203</a>: Fixed an issue where the <code>pmm-agent.log</code> is cluttered with unnecessary errors when MariaDB database versions 10.2, 10.3, 10.4, and 10.5 are added for monitoring.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-5831">PMM-5831</a>: Fixed an issue where <code>pmm-admin</code> uses the default value of ‘listen port’ rather than picking up the value from the agent configuration file.</p>
+</li>
+<li>
+<p>Fixed the following CVE’s:</p>
+<ul>
+<li><a href="https://jira.percona.com/browse/PMM-9726">PMM-9726</a>: Fixed a critical CVE that was affecting some versions of Go.</li>
+<li><a href="https://jira.percona.com/browse/PMM-9722">PMM-9722</a>: Fixed a CVE for ClickHouse DBMS.</li>
+<li><a href="https://jira.percona.com/browse/PMM-9327">PMM-9327</a>: Fixed a vulnerability in the Network Security Services (NSS) package.</li>
+<li><a href="https://jira.percona.com/browse/PMM-9502">PMM-9502</a>: Fixed multiple JavaScript Common Vulnerabilities and Exposures (CVE) for PMM AMI setup.</li>
+</ul>
+</li>
 </ul>
 
   <hr>
@@ -2997,7 +3262,7 @@
   <small>
     
       Last update:
-      2022-04-07
+      2022-04-13
     
   </small>
 </div>
@@ -3010,41 +3275,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../faq.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: FAQ" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              FAQ
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="2.26.0.html" class="md-footer__link md-footer__link--next" aria-label="Next: PMM 2.26.0" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              PMM 2.26.0
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
