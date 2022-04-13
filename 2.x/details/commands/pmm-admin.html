@@ -2402,6 +2402,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pmm-admin-add-pmm-agent-listen-portlisten_port" class="md-nav__link">
+    pmm-admin add --pmm-agent-listen-port=LISTEN_PORT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pmm-admin-remove" class="md-nav__link">
     pmm-admin remove
   </a>
@@ -3276,6 +3283,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pmm-admin-add-pmm-agent-listen-portlisten_port" class="md-nav__link">
+    pmm-admin add --pmm-agent-listen-port=LISTEN_PORT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pmm-admin-remove" class="md-nav__link">
     pmm-admin remove
   </a>
@@ -3454,6 +3468,7 @@
 <p><code>pmm-admin config [FLAGS] --server-url=server-url</code></p>
 <p><code>pmm-admin add DATABASE [FLAGS] [NAME] [ADDRESS]</code></p>
 <p>DATABASE:= [<a href="#mongodb">MongoDB</a> | <a href="#mysql">MySQL</a> | <a href="#postgresql">PostgreSQL</a> | <a href="#proxysql">ProxySQL</a>]</p>
+<p><code>pmm-admin add --pmm-agent-listen-port=LISTEN_PORT DATABASE [FLAGS] [NAME] [ADDRESS]</code></p>
 <p><code>pmm-admin add external [FLAGS] [NAME] [ADDRESS]</code> (CAUTION: Technical preview feature)</p>
 <p><code>pmm-admin add haproxy [FLAGS] [NAME]</code></p>
 <p><code>pmm-admin add external [FLAGS] [NAME] [ADDRESS]</code></p>
@@ -3583,6 +3598,18 @@
 </dl>
 </dd>
 </dl>
+<h4 id="pmm-admin-add-pmm-agent-listen-portlisten_port"><code>pmm-admin add --pmm-agent-listen-port=LISTEN_PORT</code><a class="headerlink" href="#pmm-admin-add-pmm-agent-listen-portlisten_port" title="Permanent link">&para;</a></h4>
+<dl>
+<dt><code>pmm-admin add --pmm-agent-listen-port=LISTEN_PORT DATABASE [FLAGS] [NAME] [ADDRESS]</code></dt>
+<dd>
+<p>Configure the PMM agent with a listen port.</p>
+<dl>
+<dt><code>--pmm-agent-listen-port=LISTEN_PORT</code></dt>
+<dd>The PMM agent listen port.</dd>
+</dl>
+</dd>
+</dl>
+<p>DATABASE:= [<a href="#mongodb">MongoDB</a> | <a href="#mysql">MySQL</a> | <a href="#postgresql">PostgreSQL</a> | <a href="#proxysql">ProxySQL</a>]</p>
 <h4 id="pmm-admin-remove"><code>pmm-admin remove</code><a class="headerlink" href="#pmm-admin-remove" title="Permanent link">&para;</a></h4>
 <dl>
 <dt><code>pmm-admin remove [FLAGS] service-type [service-name]</code></dt>
@@ -4156,7 +4183,7 @@ Agents:
   <small>
     
       Last update:
-      2022-03-14
+      2022-03-15
     
   </small>
 </div>
