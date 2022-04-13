@@ -3047,39 +3047,41 @@
 <h2 id="release-highlights">Release Highlights<a class="headerlink" href="#release-highlights" title="Permanent link">&para;</a></h2>
 <h3 id="pmm-and-percona-portal-integration">PMM and Percona Portal Integration<a class="headerlink" href="#pmm-and-percona-portal-integration" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Enhanced UX for connecting PMM server to Percona Portal</strong>: To leverage Percona Platform&rsquo;s recent support for federated identity, PMM now uses access-token authorization for connecting PMM instances to Percona Platform. </li>
-</ul>
+<li>
+<p><strong>Enhanced UX for connecting PMM server to Percona Portal</strong>: To leverage Percona Platform&rsquo;s recent support for federated identity, PMM now uses access-token authorization for connecting PMM instances to Percona Platform. </p>
 <p>This replaces the former username/password authentication used in PMM 2.26.0 and older versions.</p>
+</li>
+</ul>
 <p>For more information, see <a href="../how-to/integrate-platform.md">Integrate PMM with Percona Platform</a>. </p>
 <ul>
 <li><strong>Access to account information for Percona customers</strong>: When you connect your PMM instances to Percona Platform as a Percona customer, you can now check all your Percona Platform account information on the new <strong>Entitlements</strong> and <strong>Support Tickets</strong> tab on the main menu.</li>
 </ul>
-<p>For more information, see <a href="../how-to/integrate-platform.mdaccount-info.md">Check your account information</a> in the online Help.</p>
+<p>For more information, see <a href="../how-to/account-info.md">Check your account information</a> in the online Help.</p>
 <h3 id="advisors">Advisors<a class="headerlink" href="#advisors" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Broader database health assessments with Advisors</strong>: This release changes security checks to Advisors, grouped according to the functionality and recommendations they provide.</li>
 </ul>
 <p>To reflect these changes, the old <strong>Security Threat Tool</strong> option has been renamed to <strong>Advisors</strong>.</p>
-<p>Im addition, the following new checks are now available:</p>
-<p>New MySQL advisor checks:
--  Validate Password Policy
--  Local Option Of Load Data Enabled
--  Not Verifying Checksums
--  SQL Processing Not Multi-Threaded</p>
-<p>New MongoDB Checks:
-- Check the Replica Set Topology
-- Check Active/Available connections ratio</p>
+<p>In addition, the following new checks are now available:</p>
+<p><strong>New MySQL advisor checks</strong>:
+  -  Validate Password Policy
+  -  Local Option Of Load Data Enabled
+  -  Not Verifying Checksums
+  -  SQL Processing Not Multi-Threaded</p>
+<p><strong>New MongoDB Checks</strong>:
+  - Check the Replica Set Topology
+  - Check Active/Available connections ratio</p>
 <p>To check the list of checks and the tier for which they are available, see <a href="https://docs.percona.com/percona-platform/checks.html">Advisor checks for PMM</a> in the Percona Platform online Help.</p>
 <ul>
 <li><strong>New Paid tier and special Advisor checks for customers</strong>: In addition to Registered Checks, Percona customers who connect PMM to Pecona Platform now also have access to Paid Advisor checks, which offer more advanced database health information.</li>
 </ul>
-<p>For more information, see <a href="https://docs.percona.com/percona-platform/checks.html">Working with Advisor checks</a>.</p>
+<p>For more information, see <a href="https://www.percona.com/doc/percona-monitoring-and-management/2.x/details/checks/index.html">Working with Advisor checks</a>.</p>
 <ul>
 <li>
 <p>Advisor checks have been extended with two new query types: <em>GetDiagnosticData</em> and <em>replSetGetStatus</em>. </p>
 </li>
 <li>
-<p>Improved the documentation around <a href="https://github.com/percona/pmm-doc/blob/NewMongoDBChecks/docs/details/develop-checks.md">developing checks</a>.</p>
+<p>Improved the documentation around <a href="h">developing checks</a>.</p>
 </li>
 </ul>
 <h3 id="dbaas">DBaas<a class="headerlink" href="#dbaas" title="Permanent link">&para;</a></h3>
