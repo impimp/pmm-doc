@@ -3066,8 +3066,8 @@ Alert templates contain general template details and an alert expression defined
 <h3 id="template-example">Template example<a class="headerlink" href="#template-example" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
 <span class="nt">templates</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pmm_mongodb_high_memory_usage</span><span class="w"></span>
-<span class="w">  </span><span class="w w-Error"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pmm_mongodb_high_memory_usage</span><span class="w"></span>
+<span class="w">   </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
 <span class="w">   </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Memory used by MongoDB</span><span class="w"></span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">expr</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">|-</span><span class="w"></span>
 <span class="w">      </span><span class="no">sum by (node_name) (mongodb_ss_mem_resident * 1024 * 1024)</span><span class="w"></span>
