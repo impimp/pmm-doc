@@ -601,6 +601,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pmm-doc.onrender.com/2.x/release-notes/2.27.0.html</loc>
+         <lastmod>2022-04-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pmm-doc.onrender.com/2.x/release-notes/2.3.0.html</loc>
          <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>

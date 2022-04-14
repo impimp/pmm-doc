@@ -2391,6 +2391,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     Troubleshooting
   </a>
@@ -2474,6 +2481,20 @@
           Release Notes
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes/2.27.0.md"" class="md-nav__link">
+        PMM 2.27.0
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -3012,6 +3033,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     Troubleshooting
   </a>
@@ -3092,6 +3120,14 @@
 </tr>
 </tbody>
 </table>
+<h2 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
+<p>PMM predefines certain flags that allow users to set all other <a href="https://docs.victoriametrics.com/#list-of-command-line-flags">VictoriaMetrics parameters</a> as environment variables:</p>
+<p>The environment variable must be prepended with <code>VM_</code>.</p>
+<p><strong>Example</strong></p>
+<p>To set downsampling, use the <code>downsampling.period</code> parameter as follows:</p>
+<div class="highlight"><pre><span></span><code>-e VM_downsampling_period=20d:10m,120d:2h
+</code></pre></div>
+<p>This instructs VictoriaMetrics to <a href="https://docs.victoriametrics.com/#deduplication">deduplicate</a> samples older than 20 days with 10 mins intervals and samples older than 120 days with two-hour intervals.</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p>To troubleshoot issues, see the VictoriaMetrics <a href="https://victoriametrics.github.io/#troubleshooting">troubleshooting documentation</a>.</p>
 <p>You can also contact the VictoriaMetrics team via:</p>
@@ -3107,7 +3143,7 @@
   <small>
     
       Last update:
-      2021-07-29
+      2022-03-23
     
   </small>
 </div>
