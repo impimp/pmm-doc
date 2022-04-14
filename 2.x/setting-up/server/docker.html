@@ -2544,20 +2544,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release-notes/2.27.0.md"" class="md-nav__link">
-        PMM 2.27.0
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../release-notes/2.26.0.html" class="md-nav__link">
         PMM 2.26.0
       </a>
@@ -3229,21 +3215,6 @@ percona/pmm-server:2
 </code></pre></div>
 </li>
 <li>
-<p>Change the password for the default <code>admin</code> user.</p>
-<ul>
-<li>For PMM versions 2.27.0 and later:</li>
-</ul>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -t pmm-server change-admin-password &lt;new_password&gt;
-</code></pre></div>
-<ul>
-<li>
-<p>For PMM versions prior to 2.27.0:</p>
-<div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -t pmm-server bash -c <span class="s1">&#39;grafana-cli --homepath /usr/share/grafana --configOverrides cfg:default.paths.data=/srv/grafana admin reset-admin-password newpass&#39;</span>
-</code></pre></div>
-</li>
-</ul>
-</li>
-<li>
 <p>Visit <code>https://localhost:443</code> to see the PMM user interface in a web browser. (If you are accessing the docker host remotely, replace <code>localhost</code> with the IP or server name of the host.)</p>
 </li>
 </ol>
@@ -3505,10 +3476,6 @@ docker run --rm --volumes-from pmm-data -it percona/pmm-server:2 chown -R postgr
 <td><code>PMM_TRACE</code></td>
 <td>Enables a more verbose log level including trace-back information.</td>
 </tr>
-<tr>
-<td><code>PMM_PUBLIC_ADDRESS</code></td>
-<td>External IP address or the DNS name on which PMM server is running.</td>
-</tr>
 </tbody>
 </table>
 <h3 id="ignored-variables">Ignored variables<a class="headerlink" href="#ignored-variables" title="Permanent link">&para;</a></h3>
@@ -3560,8 +3527,8 @@ docker run --rm --volumes-from pmm-data -it percona/pmm-server:2 chown -R postgr
 <ol>
 <li>
 <p>On an internet-connected host, download the Docker image and its checksum file.</p>
-<div class="highlight"><pre><span></span><code>wget https://downloads.percona.com/downloads/pmm2/2.27.0/docker/pmm-server-2.27.0.docker
-wget https://downloads.percona.com/downloads/pmm2/2.27.0/docker/pmm-server-2.27.0.sha256sum
+<div class="highlight"><pre><span></span><code>wget https://downloads.percona.com/downloads/pmm2/2.26.0/docker/pmm-server-2.26.0.docker
+wget https://downloads.percona.com/downloads/pmm2/2.26.0/docker/pmm-server-2.26.0.sha256sum
 </code></pre></div>
 </li>
 <li>
@@ -3572,18 +3539,18 @@ wget https://downloads.percona.com/downloads/pmm2/2.27.0/docker/pmm-server-2.27.
 </li>
 <li>
 <p>(Optional) Check the Docker image file integrity.</p>
-<div class="highlight"><pre><span></span><code>shasum -ca <span class="m">256</span> pmm-server-2.27.0.sha256sum
+<div class="highlight"><pre><span></span><code>shasum -ca <span class="m">256</span> pmm-server-2.26.0.sha256sum
 </code></pre></div>
 </li>
 <li>
 <p>Load the image.</p>
-<div class="highlight"><pre><span></span><code>docker load -i pmm-server-2.27.0.docker
+<div class="highlight"><pre><span></span><code>docker load -i pmm-server-2.26.0.docker
 </code></pre></div>
 </li>
 <li>
 <p>Create the <code>pmm-data</code> persistent data container.</p>
 <div class="highlight"><pre><span></span><code>docker create --volume /srv <span class="se">\</span>
---name pmm-data percona/pmm-server:2.27.0 /bin/true
+--name pmm-data percona/pmm-server:2.26.0 /bin/true
 </code></pre></div>
 </li>
 <li>
@@ -3594,7 +3561,7 @@ wget https://downloads.percona.com/downloads/pmm2/2.27.0/docker/pmm-server-2.27.
 --publish <span class="m">443</span>:443 <span class="se">\</span>
 --volumes-from pmm-data <span class="se">\</span>
 --name pmm-server <span class="se">\</span>
-percona/pmm-server:2.27.0
+percona/pmm-server:2.26.0
 </code></pre></div>
 </li>
 </ol>
@@ -3604,7 +3571,7 @@ percona/pmm-server:2.27.0
   <small>
     
       Last update:
-      2022-03-22
+      2022-02-04
     
   </small>
 </div>
