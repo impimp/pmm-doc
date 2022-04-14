@@ -12,14 +12,14 @@
         <meta name="author" content="Percona LLC">
       
       
-        <link rel="canonical" href="https://pmm-doc.onrender.com/2.x/how-to/integrate-platform.html">
+        <link rel="canonical" href="https://pmm-doc.onrender.com/2.x/using/security-threat-tool.html">
       
       <link rel="icon" href="../_images/percona-favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
     
     
       
-        <title>Integrate with Percona Platform - Percona Monitoring and Management</title>
+        <title>Security Threat Tool - Percona Monitoring and Management</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#integrate-pmm-with-percona-platform" class="md-skip">
+        <a href="#security-threat-tool" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Integrate with Percona Platform
+              Security Threat Tool
             
           </span>
         </div>
@@ -589,12 +589,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -602,7 +604,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../using/index.html">Using</a>
+          <a href="index.html">Using</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -623,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using/interface.html" class="md-nav__link">
+      <a href="interface.html" class="md-nav__link">
         User Interface
       </a>
     </li>
@@ -637,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using/alerting.html" class="md-nav__link">
+      <a href="alerting.html" class="md-nav__link">
         Integrated Alerting
       </a>
     </li>
@@ -651,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using/backup.html" class="md-nav__link">
+      <a href="backup.html" class="md-nav__link">
         Backup and Restore
       </a>
     </li>
@@ -665,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using/query-analytics.html" class="md-nav__link">
+      <a href="query-analytics.html" class="md-nav__link">
         Query Analytics
       </a>
     </li>
@@ -679,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using/dbaas.html" class="md-nav__link">
+      <a href="dbaas.html" class="md-nav__link">
         DBaaS
       </a>
     </li>
@@ -691,11 +693,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../using/security-threat-tool.md" class="md-nav__link">
-        None
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Security Threat Tool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="security-threat-tool.html" class="md-nav__link md-nav__link--active">
+        Security Threat Tool
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anonymous-and-registered-checks" class="md-nav__link">
+    Anonymous and registered checks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-enable" class="md-nav__link">
+    How to enable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checks-results" class="md-nav__link">
+    Checks results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-a-checks-interval" class="md-nav__link">
+    Change a check's interval
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -713,14 +777,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -728,7 +790,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="index.html">How to</a>
+          <a href="../how-to/index.html">How to</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -749,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configure.html" class="md-nav__link">
+      <a href="../how-to/configure.html" class="md-nav__link">
         Configure
       </a>
     </li>
@@ -763,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="manage-users.html" class="md-nav__link">
+      <a href="../how-to/manage-users.html" class="md-nav__link">
         Manage users
       </a>
     </li>
@@ -777,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="upgrade.html" class="md-nav__link">
+      <a href="../how-to/upgrade.html" class="md-nav__link">
         Upgrade
       </a>
     </li>
@@ -791,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="secure.html" class="md-nav__link">
+      <a href="../how-to/secure.html" class="md-nav__link">
         Secure
       </a>
     </li>
@@ -805,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="optimize.html" class="md-nav__link">
+      <a href="../how-to/optimize.html" class="md-nav__link">
         Optimize
       </a>
     </li>
@@ -819,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="annotate.html" class="md-nav__link">
+      <a href="../how-to/annotate.html" class="md-nav__link">
         Annotate
       </a>
     </li>
@@ -833,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="render-dashboard-images.html" class="md-nav__link">
+      <a href="../how-to/render-dashboard-images.html" class="md-nav__link">
         Render dashboard images
       </a>
     </li>
@@ -847,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="extend-metrics.html" class="md-nav__link">
+      <a href="../how-to/extend-metrics.html" class="md-nav__link">
         Extend Metrics
       </a>
     </li>
@@ -861,78 +923,9 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshoot.html" class="md-nav__link">
+      <a href="../how-to/troubleshoot.html" class="md-nav__link">
         Troubleshoot
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10" type="checkbox" id="__nav_4_10" checked>
-      
-      
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="integrate-platform.html">Integrate with Percona Platform</a>
-          
-            <label for="__nav_4_10">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Integrate with Percona Platform" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_10">
-          <span class="md-nav__icon md-icon"></span>
-          Integrate with Percona Platform
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="account-info.html" class="md-nav__link">
-        Check Percona Portal account information
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="advisors.html" class="md-nav__link">
-        Working with Advisor checks
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -1011,10 +1004,334 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../details/checks/index.html">Security checks</a>
+          
+            <label for="__nav_5_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Security checks" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Security checks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../details/develop-checks.html" class="md-nav__link">
-        Developing Advisors
+      <a href="../details/checks/develop-checks.html" class="md-nav__link">
+        Developing security checks
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2" type="checkbox" id="__nav_5_3_2" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../details/checks/platform-mysql-binaries-32-bit.html">MySQL checks</a>
+          
+            <label for="__nav_5_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="MySQL checks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          MySQL checks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/checks/security-anonymous-user.html" class="md-nav__link">
+        Anonymous users
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/checks/security-non-root-accounts-super-privileges.html" class="md-nav__link">
+        Non-root accounts with SUPER privileges
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/checks/security-user-not-using-ssl-protocol.html" class="md-nav__link">
+        User not using SSL protocol to connect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/checks/security-user-with-open-to-the-word-scope.html" class="md-nav__link">
+        User with open to the word scope
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/checks/security-user-without-password.html" class="md-nav__link">
+        There are users without passwords
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/checks/root-account-can-login-remotely.html" class="md-nav__link">
+        Root account can log in remotely
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_3" type="checkbox" id="__nav_5_3_3" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../details/checks/mongodb-log-messages.html">MongoDB checks</a>
+          
+            <label for="__nav_5_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="MongoDB checks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          MongoDB checks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/checks/mongodb-profiler-check.html" class="md-nav__link">
+        MongoDB Profiling level set to high
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/checks/mongodb-read-tickets.html" class="md-nav__link">
+        MongoDB read ticket is more than 128
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/checks/mongodb-write-tickets.html" class="md-nav__link">
+        MongoDB write ticket is more than 128
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/checks/mongodb-scram-sha-256.html" class="md-nav__link">
+        MongoDB not using the default SHA-256 hashing function
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_4" type="checkbox" id="__nav_5_3_4" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../details/checks/performance-pg-archiver-failing.html">PostgreSQL checks</a>
+          
+            <label for="__nav_5_3_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="PostgreSQL checks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          PostgreSQL checks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/checks/performance-pg-low-cache-hit-ratio.html" class="md-nav__link">
+        PostgreSQL Cache Hit Ratio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/checks/performance-pg-stale-replication-slot.html" class="md-nav__link">
+        PostgreSQL stale replication slot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2171,6 +2488,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../release-notes/2.27.0.html" class="md-nav__link">
+        PMM 2.27.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../release-notes/2.26.0.html" class="md-nav__link">
         PMM 2.26.0
       </a>
@@ -2688,89 +3019,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#connect-pmm-to-percona-platform" class="md-nav__link">
-    Connect PMM to Percona Platform
-  </a>
-  
-    <nav class="md-nav" aria-label="Connect PMM to Percona Platform">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pre-requisites" class="md-nav__link">
-    Pre-requisites
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#upgrade-to-pmm-2270-or-later" class="md-nav__link">
-    Upgrade to PMM 2.27.0 or later
+  <a href="#anonymous-and-registered-checks" class="md-nav__link">
+    Anonymous and registered checks
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check-that-you-are-a-member-of-an-existing-platform-organization" class="md-nav__link">
-    Check that you are a member of an existing Platform organization
+  <a href="#how-to-enable" class="md-nav__link">
+    How to enable
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#set-the-public-address-of-your-pmm-server" class="md-nav__link">
-    Set the public address of your PMM server
+  <a href="#checks-results" class="md-nav__link">
+    Checks results
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connect-pmm-to-percona-platform_1" class="md-nav__link">
-    Connect PMM to Percona Platform
-  </a>
-  
-    <nav class="md-nav" aria-label="Connect PMM to Percona Platform">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#token-validity" class="md-nav__link">
-    Token validity
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-percona-portal-entitlements" class="md-nav__link">
-    Check Percona Portal entitlements
-  </a>
-  
-    <nav class="md-nav" aria-label="Check Percona Portal entitlements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#disconnect-a-pmm-instance" class="md-nav__link">
-    Disconnect a PMM instance
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sign-into-pmm-with-your-percona-account" class="md-nav__link">
-    Sign into PMM with your Percona Account
+  <a href="#change-a-checks-interval" class="md-nav__link">
+    Change a check's interval
   </a>
   
 </li>
@@ -2787,66 +3058,45 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/percona/pmm-doc/edit/main/docs/how-to/integrate-platform.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/percona/pmm-doc/edit/main/docs/using/security-threat-tool.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="integrate-pmm-with-percona-platform">Integrate PMM with Percona Platform<a class="headerlink" href="#integrate-pmm-with-percona-platform" title="Permanent link">&para;</a></h1>
-<p>Percona Platform brings together database distributions, support expertise, services, management, and automated insights. </p>
-<p>Connect your PMM servers to Percona Platform to boost the monitoring capabilities of your PMM installations and manage database deployments easier. In addition, you get access to PMM updates, automated insights, advanced advisor checks and more alert rule templates.</p>
-<h3 id="connect-pmm-to-percona-platform">Connect PMM to Percona Platform<a class="headerlink" href="#connect-pmm-to-percona-platform" title="Permanent link">&para;</a></h3>
-<p>You can connect to Percona Platform with a Percona Account or via Google or GitHub authentication. If <a href="https://www.percona.com/about-percona/contact">Percona Support</a> has enabled a custom identity provider for your account, you can also log in using your company&rsquo;s credentials.</p>
-<p>We recommend that you connect with a Percona Account, as this gives you access to other Percona services, including Percona Platform, Percona Customer Portal, and Community Forum. If you don’t have a Percona Account, you can create one on the <a href="https://portal.percona.com/login">Percona Platform homepage</a> using the <strong>Don&rsquo;t have an account? Create one?</strong> link.</p>
-<h4 id="pre-requisites">Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h4>
-<p>To ensure that PMM can establish a connection to Percona Platform: </p>
-<h3 id="upgrade-to-pmm-2270-or-later">Upgrade to PMM 2.27.0 or later<a class="headerlink" href="#upgrade-to-pmm-2270-or-later" title="Permanent link">&para;</a></h3>
-<p>Before connecting your PMM server to Percona Platform, make sure you are using PMM version 2.27 or newer. Otherwise, upgrade your PMM installation beforehand. </p>
-<p>This is required because, starting with PMM 2.27, Percona Platform has replaced username/password authentication with access token authentication. Access-token authentication increases security and enables federated identity. </p>
-<p>This change did not affect existing connections to PMM Platform, which were not automatically terminated. </p>
-<p>For more information, see <a href="../setting-up/index.html">Install and set up PMM</a>.</p>
-<h3 id="check-that-you-are-a-member-of-an-existing-platform-organization">Check that you are a member of an existing Platform organization<a class="headerlink" href="#check-that-you-are-a-member-of-an-existing-platform-organization" title="Permanent link">&para;</a></h3>
+<h1 id="security-threat-tool">Security Threat Tool<a class="headerlink" href="#security-threat-tool" title="Permanent link">&para;</a></h1>
+<p>The Security Threat Tool runs regular checks against connected databases, alerting you if any servers pose a potential security threat.</p>
+<h3 id="anonymous-and-registered-checks">Anonymous and registered checks<a class="headerlink" href="#anonymous-and-registered-checks" title="Permanent link">&para;</a></h3>
+<p>All checks are hosted on Percona Platform. PMM Server automatically downloads them from here when the Security Threat Tool is enabled in PMM. </p>
+<p>By default, PMM has access to a set of anonymous checks, which can be downloaded even if PMM is not connected to Percona Platform. 
+As soon as you connect your PMM instance to Percona Platform, you get additional access to registered checks, which offer more advanced database health information.</p>
+<p>​To see the complete list of available checks, see the <a href="https://docs.percona.com/percona-platform/checks.html">Security Checks for PMM</a> topic in the Percona Platform documentation.  </p>
+<h2 id="how-to-enable">How to enable<a class="headerlink" href="#how-to-enable" title="Permanent link">&para;</a></h2>
+<p>By default, the Security Threat Tool (STT) is disabled. To enable it, select <i class="uil uil-cog"></i> <em>Configuration</em> → <i class="uil uil-setting"></i> <em>Settings</em> → <em>Advanced Settings</em>. (<a href="../how-to/configure.html#advanced-settings">Read more</a>).</p>
+<p>Enabling STT in the settings causes the PMM server to download STT checks from Percona Platform and run them once. This operation runs in the background, so even though the settings update finishes instantly, it might take some time for the checks to complete download and execution and the results (if any) to be visible in the <em>PMM Database Checks</em> dashboard.</p>
+<h2 id="checks-results">Checks results<a class="headerlink" href="#checks-results" title="Permanent link">&para;</a></h2>
+<p>The results are sent to PMM Server where you can review any failed checks on the <strong>Home Dashboard &gt; Failed security checks</strong> panel. The summary count of failed checks is classified as <b style="color:#e02f44;">Critical</b>, <b style="color:#e36526;">Major</b> and <b style="color:#5794f2;">Trivial</b>:</p>
+<p><div class="lightgallery"><a data-sub-html="Failed security checks panel" href="../_images/PMM_Home_Dashboard_Panels_Failed_Security_Checks.jpg"><img alt="Failed security checks panel" src="../_images/PMM_Home_Dashboard_Panels_Failed_Security_Checks.jpg" /></a></div></p>
+<p>To see more details about the available checks and any checks that failed, click the <em><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M3.85 19.95C3.75 19.95 3.65 19.9 3.6 19.85C3.45 19.7 3.45 19.45 3.6 19.3L4.2 18.7C4.35 18.55 4.6 18.55 4.75 18.7C4.9 18.85 4.9 19.1 4.75 19.25L4.15 19.85C4.05 19.9 3.95 19.95 3.85 19.95ZM11.6 23.15C11.4 23.15 11.2 23 11.2 22.75V21.95C11.2 21.75 11.35 21.55 11.6 21.55C11.8 21.55 12 21.7 12 21.95V22.75C11.95 22.95 11.8 23.15 11.6 23.15ZM22.5 12.2H21.7C21.5 12.2 21.3 12.05 21.3 11.8C21.3 11.6 21.45 11.4 21.7 11.4H22.5C22.7 11.4 22.9 11.55 22.9 11.8C22.9 12 22.75 12.2 22.5 12.2ZM1.45 12.2H0.65C0.45 12.2 0.25 12.05 0.25 11.8C0.25 11.6 0.4 11.4 0.65 11.4H1.45C1.65 11.4 1.85 11.55 1.85 11.8C1.85 12 1.65 12.2 1.45 12.2ZM1.45 16.35C1.3 16.35 1.15 16.25 1.1 16.1C1 15.9 1.1 15.7 1.3 15.6L2.05 15.3C2.25 15.2 2.45 15.3 2.55 15.5C2.65 15.7 2.55 15.9 2.35 16L1.6 16.3C1.55 16.35 1.5 16.35 1.45 16.35ZM7.35 22.3C7.3 22.3 7.25 22.3 7.2 22.25C7 22.15 6.9 21.95 7 21.75L7.3 21C7.4 20.8 7.6 20.7 7.8 20.8C8 20.9 8.1 21.1 8 21.3L7.7 22.05C7.65 22.2 7.5 22.3 7.35 22.3ZM4.1 4.75C4 4.75 3.9 4.7 3.8 4.6L3.2 4C3.05 3.85 3.05 3.6 3.2 3.45C3.35 3.3 3.6 3.3 3.75 3.45L4.35 4.05C4.5 4.2 4.5 4.45 4.35 4.6C4.3 4.7 4.2 4.75 4.1 4.75ZM19 4.75C18.9 4.75 18.8 4.7 18.7 4.65C18.55 4.5 18.55 4.25 18.7 4.1L19.3 3.5C19.45 3.35 19.7 3.35 19.85 3.5C20 3.65 20 3.9 19.85 4.05L19.25 4.65C19.2 4.7 19.1 4.75 19 4.75ZM11.55 1.65C11.35 1.65 11.15 1.45 11.15 1.25V0.4C11.15 0.2 11.35 0 11.55 0C11.75 0 11.95 0.2 11.95 0.4V1.25C11.95 1.45 11.75 1.65 11.55 1.65ZM7.55 2.4C7.4 2.4 7.25 2.3 7.2 2.15L6.9 1.35C6.8 1.15 6.9 0.9 7.1 0.85C7.3 0.75 7.55 0.85 7.6 1.05L7.9 1.85C8 2.05 7.9 2.3 7.7 2.35C7.65 2.4 7.6 2.4 7.55 2.4ZM21.35 8.2C21.2 8.2 21.05 8.1 21 7.95C20.9 7.75 21 7.5 21.2 7.45L22 7.15C22.2 7.05 22.45 7.15 22.5 7.35C22.6 7.55 22.5 7.8 22.3 7.85L21.5 8.15C21.45 8.2 21.4 8.2 21.35 8.2ZM15.65 2.45C15.6 2.45 15.55 2.45 15.5 2.4C15.3 2.3 15.2 2.1 15.3 1.9L15.65 1.1C15.75 0.9 15.95 0.8 16.15 0.9C16.35 1 16.45 1.2 16.35 1.4L16 2.2C15.95 2.35 15.8 2.45 15.65 2.45ZM1.8 8.1C1.75 8.1 1.7 8.1 1.65 8.05L0.85 7.7C0.65 7.6 0.55 7.4 0.65 7.2C0.75 7 0.95 6.9 1.15 7L1.95 7.35C2.15 7.45 2.25 7.65 2.15 7.85C2.1 8 1.95 8.1 1.8 8.1ZM14.6 8.75C13.8 7.95 12.7 7.5 11.55 7.5C10.4 7.5 9.3 7.95 8.5 8.75C6.8 10.45 6.8 13.2 8.5 14.85C9.3 15.65 10.4 16.1 11.55 16.1C12.7 16.1 13.8 15.65 14.6 14.85C15.4 14.05 15.85 12.95 15.85 11.8C15.9 10.65 15.4 9.55 14.6 8.75ZM13.75 14C13.15 14.6 12.35 14.9 11.55 14.9C10.7 14.9 9.95 14.6 9.35 14C8.15 12.8 8.15 10.8 9.35 9.6C9.65 9.3 9.95 9.1 10.35 8.95C10.45 8.9 10.6 8.9 10.7 8.95C10.8 9 10.9 9.1 10.9 9.25C10.95 9.4 11 9.55 11.1 9.65C11.4 9.95 11.9 9.95 12.15 9.65C12.25 9.55 12.3 9.45 12.35 9.3C12.4 9.2 12.45 9.1 12.55 9.05C12.65 9 12.8 9 12.9 9.05C13.2 9.2 13.5 9.4 13.75 9.65C14.95 10.8 14.95 12.8 13.75 14ZM13.2 10.15C13.1 10.05 13 9.95 12.9 9.9C12.85 10 12.75 10.1 12.7 10.15C12.1 10.75 11.1 10.75 10.5 10.15C10.4 10.05 10.3 9.95 10.25 9.85C10.1 9.95 10 10.05 9.85 10.15C8.95 11.05 8.95 12.55 9.85 13.45C10.3 13.9 10.9 14.15 11.5 14.15C12.1 14.15 12.7 13.9 13.15 13.45C14.1 12.55 14.1 11.05 13.2 10.15ZM14.6 8.75C13.8 7.95 12.7 7.5 11.55 7.5C10.4 7.5 9.3 7.95 8.5 8.75C6.8 10.45 6.8 13.2 8.5 14.85C9.3 15.65 10.4 16.1 11.55 16.1C12.7 16.1 13.8 15.65 14.6 14.85C15.4 14.05 15.85 12.95 15.85 11.8C15.9 10.65 15.4 9.55 14.6 8.75ZM13.75 14C13.15 14.6 12.35 14.9 11.55 14.9C10.7 14.9 9.95 14.6 9.35 14C8.15 12.8 8.15 10.8 9.35 9.6C9.65 9.3 9.95 9.1 10.35 8.95C10.45 8.9 10.6 8.9 10.7 8.95C10.8 9 10.9 9.1 10.9 9.25C10.95 9.4 11 9.55 11.1 9.65C11.4 9.95 11.9 9.95 12.15 9.65C12.25 9.55 12.3 9.45 12.35 9.3C12.4 9.2 12.45 9.1 12.55 9.05C12.65 9 12.8 9 12.9 9.05C13.2 9.2 13.5 9.4 13.75 9.65C14.95 10.8 14.95 12.8 13.75 14ZM13.2 10.15C13.1 10.05 13 9.95 12.9 9.9C12.85 10 12.75 10.1 12.7 10.15C12.1 10.75 11.1 10.75 10.5 10.15C10.4 10.05 10.3 9.95 10.25 9.85C10.1 9.95 10 10.05 9.85 10.15C8.95 11.05 8.95 12.55 9.85 13.45C10.3 13.9 10.9 14.15 11.5 14.15C12.1 14.15 12.7 13.9 13.15 13.45C14.1 12.55 14.1 11.05 13.2 10.15ZM17.05 6.3C15.6 4.8 13.65 4 11.55 4C9.45 4 7.5 4.8 6.05 6.3C3 9.35 3 14.3 6.05 17.35C7.5 18.85 9.5 19.65 11.55 19.65C13.1 19.65 14.6 19.2 15.85 18.35C16.25 18.05 16.65 17.75 17.05 17.35C17.45 16.95 17.75 16.55 18.05 16.15C20.1 13.05 19.7 8.9 17.05 6.3ZM15.15 15.4C14.2 16.35 12.9 16.9 11.55 16.9C10.2 16.9 8.9 16.35 7.95 15.4C5.95 13.4 5.95 10.15 7.95 8.2C8.9 7.25 10.2 6.7 11.55 6.7C12.9 6.7 14.2 7.25 15.15 8.2C16.1 9.15 16.65 10.45 16.65 11.8C16.65 13.15 16.15 14.45 15.15 15.4ZM11.55 7.5C10.4 7.5 9.3 7.95 8.5 8.75C6.8 10.45 6.8 13.2 8.5 14.85C9.3 15.65 10.4 16.1 11.55 16.1C12.7 16.1 13.8 15.65 14.6 14.85C15.4 14.05 15.85 12.95 15.85 11.8C15.85 10.65 15.4 9.55 14.6 8.75C13.8 7.95 12.7 7.5 11.55 7.5ZM13.75 14C13.15 14.6 12.35 14.9 11.55 14.9C10.7 14.9 9.95 14.6 9.35 14C8.15 12.8 8.15 10.8 9.35 9.6C9.65 9.3 9.95 9.1 10.35 8.95C10.45 8.9 10.6 8.9 10.7 8.95C10.8 9 10.9 9.1 10.9 9.25C10.95 9.4 11 9.55 11.1 9.65C11.4 9.95 11.9 9.95 12.15 9.65C12.25 9.55 12.3 9.45 12.35 9.3C12.4 9.2 12.45 9.1 12.55 9.05C12.65 9 12.8 9 12.9 9.05C13.2 9.2 13.5 9.4 13.75 9.65C14.95 10.8 14.95 12.8 13.75 14ZM12.9 9.9C12.85 10 12.75 10.1 12.7 10.15C12.1 10.75 11.1 10.75 10.5 10.15C10.4 10.05 10.3 9.95 10.25 9.85C10.1 9.95 10 10.05 9.85 10.15C8.95 11.05 8.95 12.55 9.85 13.45C10.3 13.9 10.9 14.15 11.5 14.15C12.1 14.15 12.7 13.9 13.15 13.45C14.05 12.55 14.05 11.05 13.15 10.15C13.1 10.05 13 10 12.9 9.9ZM22.85 20.1L18.45 16.9C18.4 16.95 18.35 17.05 18.25 17.1C18.2 17.15 18.15 17.2 18.1 17.3C17.95 17.5 17.75 17.7 17.6 17.9C17.4 18.1 17.2 18.25 17 18.45C16.95 18.5 16.9 18.55 16.8 18.6C16.75 18.65 16.65 18.75 16.55 18.8L19.75 23.2C20.15 23.75 20.8 24.1 21.5 24.1C22.05 24.1 22.6 23.9 23 23.45C23.45 23 23.7 22.4 23.65 21.75C23.7 21.05 23.35 20.45 22.85 20.1Z" fill="#000"/></g><defs><clipPath id="clip0"><rect width="24" height="24" fill="white"/></clipPath></defs> </svg> Security Checks</em> on the main menu. This icon is only available if you have enabled the Security Threat Tool.</p>
+<p><strong>Check results data <em>always</em> remains on the PMM Server.</strong> It is not related to anonymous data sent for Telemetry purposes.</p>
+<h2 id="change-a-checks-interval">Change a check&rsquo;s interval<a class="headerlink" href="#change-a-checks-interval" title="Permanent link">&para;</a></h2>
+<p>The checks can be executed manually or automatically. By default, PMM runs automatic checks every 24 hours. To configure this interval:</p>
 <ol>
 <li>
-<p>Log in to <a href="https://portal.percona.com">Percona Platform</a> using your Percona Account. If you are connecting via GitHub, make sure you set your email address as <strong>public</strong> in your GitHub account. If your email address is private instead, Percona Platform cannot access it to authenticate you.</p>
+<p>Click <em><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M3.85 19.95C3.75 19.95 3.65 19.9 3.6 19.85C3.45 19.7 3.45 19.45 3.6 19.3L4.2 18.7C4.35 18.55 4.6 18.55 4.75 18.7C4.9 18.85 4.9 19.1 4.75 19.25L4.15 19.85C4.05 19.9 3.95 19.95 3.85 19.95ZM11.6 23.15C11.4 23.15 11.2 23 11.2 22.75V21.95C11.2 21.75 11.35 21.55 11.6 21.55C11.8 21.55 12 21.7 12 21.95V22.75C11.95 22.95 11.8 23.15 11.6 23.15ZM22.5 12.2H21.7C21.5 12.2 21.3 12.05 21.3 11.8C21.3 11.6 21.45 11.4 21.7 11.4H22.5C22.7 11.4 22.9 11.55 22.9 11.8C22.9 12 22.75 12.2 22.5 12.2ZM1.45 12.2H0.65C0.45 12.2 0.25 12.05 0.25 11.8C0.25 11.6 0.4 11.4 0.65 11.4H1.45C1.65 11.4 1.85 11.55 1.85 11.8C1.85 12 1.65 12.2 1.45 12.2ZM1.45 16.35C1.3 16.35 1.15 16.25 1.1 16.1C1 15.9 1.1 15.7 1.3 15.6L2.05 15.3C2.25 15.2 2.45 15.3 2.55 15.5C2.65 15.7 2.55 15.9 2.35 16L1.6 16.3C1.55 16.35 1.5 16.35 1.45 16.35ZM7.35 22.3C7.3 22.3 7.25 22.3 7.2 22.25C7 22.15 6.9 21.95 7 21.75L7.3 21C7.4 20.8 7.6 20.7 7.8 20.8C8 20.9 8.1 21.1 8 21.3L7.7 22.05C7.65 22.2 7.5 22.3 7.35 22.3ZM4.1 4.75C4 4.75 3.9 4.7 3.8 4.6L3.2 4C3.05 3.85 3.05 3.6 3.2 3.45C3.35 3.3 3.6 3.3 3.75 3.45L4.35 4.05C4.5 4.2 4.5 4.45 4.35 4.6C4.3 4.7 4.2 4.75 4.1 4.75ZM19 4.75C18.9 4.75 18.8 4.7 18.7 4.65C18.55 4.5 18.55 4.25 18.7 4.1L19.3 3.5C19.45 3.35 19.7 3.35 19.85 3.5C20 3.65 20 3.9 19.85 4.05L19.25 4.65C19.2 4.7 19.1 4.75 19 4.75ZM11.55 1.65C11.35 1.65 11.15 1.45 11.15 1.25V0.4C11.15 0.2 11.35 0 11.55 0C11.75 0 11.95 0.2 11.95 0.4V1.25C11.95 1.45 11.75 1.65 11.55 1.65ZM7.55 2.4C7.4 2.4 7.25 2.3 7.2 2.15L6.9 1.35C6.8 1.15 6.9 0.9 7.1 0.85C7.3 0.75 7.55 0.85 7.6 1.05L7.9 1.85C8 2.05 7.9 2.3 7.7 2.35C7.65 2.4 7.6 2.4 7.55 2.4ZM21.35 8.2C21.2 8.2 21.05 8.1 21 7.95C20.9 7.75 21 7.5 21.2 7.45L22 7.15C22.2 7.05 22.45 7.15 22.5 7.35C22.6 7.55 22.5 7.8 22.3 7.85L21.5 8.15C21.45 8.2 21.4 8.2 21.35 8.2ZM15.65 2.45C15.6 2.45 15.55 2.45 15.5 2.4C15.3 2.3 15.2 2.1 15.3 1.9L15.65 1.1C15.75 0.9 15.95 0.8 16.15 0.9C16.35 1 16.45 1.2 16.35 1.4L16 2.2C15.95 2.35 15.8 2.45 15.65 2.45ZM1.8 8.1C1.75 8.1 1.7 8.1 1.65 8.05L0.85 7.7C0.65 7.6 0.55 7.4 0.65 7.2C0.75 7 0.95 6.9 1.15 7L1.95 7.35C2.15 7.45 2.25 7.65 2.15 7.85C2.1 8 1.95 8.1 1.8 8.1ZM14.6 8.75C13.8 7.95 12.7 7.5 11.55 7.5C10.4 7.5 9.3 7.95 8.5 8.75C6.8 10.45 6.8 13.2 8.5 14.85C9.3 15.65 10.4 16.1 11.55 16.1C12.7 16.1 13.8 15.65 14.6 14.85C15.4 14.05 15.85 12.95 15.85 11.8C15.9 10.65 15.4 9.55 14.6 8.75ZM13.75 14C13.15 14.6 12.35 14.9 11.55 14.9C10.7 14.9 9.95 14.6 9.35 14C8.15 12.8 8.15 10.8 9.35 9.6C9.65 9.3 9.95 9.1 10.35 8.95C10.45 8.9 10.6 8.9 10.7 8.95C10.8 9 10.9 9.1 10.9 9.25C10.95 9.4 11 9.55 11.1 9.65C11.4 9.95 11.9 9.95 12.15 9.65C12.25 9.55 12.3 9.45 12.35 9.3C12.4 9.2 12.45 9.1 12.55 9.05C12.65 9 12.8 9 12.9 9.05C13.2 9.2 13.5 9.4 13.75 9.65C14.95 10.8 14.95 12.8 13.75 14ZM13.2 10.15C13.1 10.05 13 9.95 12.9 9.9C12.85 10 12.75 10.1 12.7 10.15C12.1 10.75 11.1 10.75 10.5 10.15C10.4 10.05 10.3 9.95 10.25 9.85C10.1 9.95 10 10.05 9.85 10.15C8.95 11.05 8.95 12.55 9.85 13.45C10.3 13.9 10.9 14.15 11.5 14.15C12.1 14.15 12.7 13.9 13.15 13.45C14.1 12.55 14.1 11.05 13.2 10.15ZM14.6 8.75C13.8 7.95 12.7 7.5 11.55 7.5C10.4 7.5 9.3 7.95 8.5 8.75C6.8 10.45 6.8 13.2 8.5 14.85C9.3 15.65 10.4 16.1 11.55 16.1C12.7 16.1 13.8 15.65 14.6 14.85C15.4 14.05 15.85 12.95 15.85 11.8C15.9 10.65 15.4 9.55 14.6 8.75ZM13.75 14C13.15 14.6 12.35 14.9 11.55 14.9C10.7 14.9 9.95 14.6 9.35 14C8.15 12.8 8.15 10.8 9.35 9.6C9.65 9.3 9.95 9.1 10.35 8.95C10.45 8.9 10.6 8.9 10.7 8.95C10.8 9 10.9 9.1 10.9 9.25C10.95 9.4 11 9.55 11.1 9.65C11.4 9.95 11.9 9.95 12.15 9.65C12.25 9.55 12.3 9.45 12.35 9.3C12.4 9.2 12.45 9.1 12.55 9.05C12.65 9 12.8 9 12.9 9.05C13.2 9.2 13.5 9.4 13.75 9.65C14.95 10.8 14.95 12.8 13.75 14ZM13.2 10.15C13.1 10.05 13 9.95 12.9 9.9C12.85 10 12.75 10.1 12.7 10.15C12.1 10.75 11.1 10.75 10.5 10.15C10.4 10.05 10.3 9.95 10.25 9.85C10.1 9.95 10 10.05 9.85 10.15C8.95 11.05 8.95 12.55 9.85 13.45C10.3 13.9 10.9 14.15 11.5 14.15C12.1 14.15 12.7 13.9 13.15 13.45C14.1 12.55 14.1 11.05 13.2 10.15ZM17.05 6.3C15.6 4.8 13.65 4 11.55 4C9.45 4 7.5 4.8 6.05 6.3C3 9.35 3 14.3 6.05 17.35C7.5 18.85 9.5 19.65 11.55 19.65C13.1 19.65 14.6 19.2 15.85 18.35C16.25 18.05 16.65 17.75 17.05 17.35C17.45 16.95 17.75 16.55 18.05 16.15C20.1 13.05 19.7 8.9 17.05 6.3ZM15.15 15.4C14.2 16.35 12.9 16.9 11.55 16.9C10.2 16.9 8.9 16.35 7.95 15.4C5.95 13.4 5.95 10.15 7.95 8.2C8.9 7.25 10.2 6.7 11.55 6.7C12.9 6.7 14.2 7.25 15.15 8.2C16.1 9.15 16.65 10.45 16.65 11.8C16.65 13.15 16.15 14.45 15.15 15.4ZM11.55 7.5C10.4 7.5 9.3 7.95 8.5 8.75C6.8 10.45 6.8 13.2 8.5 14.85C9.3 15.65 10.4 16.1 11.55 16.1C12.7 16.1 13.8 15.65 14.6 14.85C15.4 14.05 15.85 12.95 15.85 11.8C15.85 10.65 15.4 9.55 14.6 8.75C13.8 7.95 12.7 7.5 11.55 7.5ZM13.75 14C13.15 14.6 12.35 14.9 11.55 14.9C10.7 14.9 9.95 14.6 9.35 14C8.15 12.8 8.15 10.8 9.35 9.6C9.65 9.3 9.95 9.1 10.35 8.95C10.45 8.9 10.6 8.9 10.7 8.95C10.8 9 10.9 9.1 10.9 9.25C10.95 9.4 11 9.55 11.1 9.65C11.4 9.95 11.9 9.95 12.15 9.65C12.25 9.55 12.3 9.45 12.35 9.3C12.4 9.2 12.45 9.1 12.55 9.05C12.65 9 12.8 9 12.9 9.05C13.2 9.2 13.5 9.4 13.75 9.65C14.95 10.8 14.95 12.8 13.75 14ZM12.9 9.9C12.85 10 12.75 10.1 12.7 10.15C12.1 10.75 11.1 10.75 10.5 10.15C10.4 10.05 10.3 9.95 10.25 9.85C10.1 9.95 10 10.05 9.85 10.15C8.95 11.05 8.95 12.55 9.85 13.45C10.3 13.9 10.9 14.15 11.5 14.15C12.1 14.15 12.7 13.9 13.15 13.45C14.05 12.55 14.05 11.05 13.15 10.15C13.1 10.05 13 10 12.9 9.9ZM22.85 20.1L18.45 16.9C18.4 16.95 18.35 17.05 18.25 17.1C18.2 17.15 18.15 17.2 18.1 17.3C17.95 17.5 17.75 17.7 17.6 17.9C17.4 18.1 17.2 18.25 17 18.45C16.95 18.5 16.9 18.55 16.8 18.6C16.75 18.65 16.65 18.75 16.55 18.8L19.75 23.2C20.15 23.75 20.8 24.1 21.5 24.1C22.05 24.1 22.6 23.9 23 23.45C23.45 23 23.7 22.4 23.65 21.75C23.7 21.05 23.35 20.45 22.85 20.1Z" fill="#000"/></g><defs><clipPath id="clip0"><rect width="24" height="24" fill="white"/></clipPath></defs> </svg> Security Checks</em>.</p>
 </li>
 <li>
-<p>On the <strong>Getting Started</strong> page, check that the <strong>Create organization</strong> step shows an option to view your organization.</p>
+<p>Select the <em>All Checks</em> tab.</p>
 </li>
-</ol>
-<p>Contact your account administrator or create a new organization for your Percona Account if this is the case.</p>
-<h3 id="set-the-public-address-of-your-pmm-server">Set the public address of your PMM server<a class="headerlink" href="#set-the-public-address-of-your-pmm-server" title="Permanent link">&para;</a></h3>
-<ol>
-<li>In PMM, go to <strong>Settings &gt; Advanced Settings</strong>.</li>
-<li>Enter your address/hostname or click <strong>Get from browser</strong> so that your browser automatically detects and populates this field.</li>
-<li>Save the changes.</li>
-</ol>
-<h2 id="connect-pmm-to-percona-platform_1">Connect PMM to Percona Platform<a class="headerlink" href="#connect-pmm-to-percona-platform_1" title="Permanent link">&para;</a></h2>
-<p>To connect your PMM server to Percona Platform, copy your personal access token from Platform Portal and paste it into PMM. You will find your access token in Platform Portal as part of your user profile page.</p>
-<h4 id="token-validity">Token validity<a class="headerlink" href="#token-validity" title="Permanent link">&para;</a></h4>
-<p>For security reasons, access tokens expire after 30 minutes. Make sure to paste the code before that, or generate a new one if it expires.</p>
-<p>To connect your PMM server to Percona Platform:
-1. In PMM, go to <strong>Settings &gt; Percona Platform</strong> tab to fill in the <strong>Connect PMM to Percona Portal</strong> form: <div class="lightgallery"><a data-sub-html="image" href="../_images/PMM_Settings_Percona_Platform_Login.png"><img alt="image" src="../_images/PMM_Settings_Percona_Platform_Login.png" /></a></div></p>
-<ol>
-<li>The <strong>PMM server ID</strong> field is automatically populated with the ID identified for your PMM instance. Enter the name of your PMM instance and click <strong>Get token</strong> to go to Percona Platform Portal and generate your access token.</li>
-<li>Log into Percona Platform using your Percona Account (if you don&rsquo;t have an active current session).</li>
-<li>On the <strong>Profile Settings page</strong>, copy the code from the <strong>Percona Platform Access Token</strong> field. </li>
-<li>Back into PMM, paste the Access Token into the <strong>Percona Platform Access Token</strong> field, and click  <strong>Connect</strong>.</li>
-</ol>
-<p>To confirm that you have successfully connected the server and check the list of all servers currently connected to an organization, go to <a href="https://portal.percona.com">Percona Platform</a> &gt; <strong>Dashboard</strong> tab and click <strong>View Instances</strong> next to the <strong>Connect your PMM</strong> step. </p>
-<h2 id="check-percona-portal-entitlements">Check Percona Portal entitlements<a class="headerlink" href="#check-percona-portal-entitlements" title="Permanent link">&para;</a></h2>
-<p>After connecting to the Percona Platform, PMM has access to additional alert templates,   Advisors checks, and account information. See (../how-to/account-info.md)</p>
-<h3 id="disconnect-a-pmm-instance">Disconnect a PMM instance<a class="headerlink" href="#disconnect-a-pmm-instance" title="Permanent link">&para;</a></h3>
-<p>Disconnect a PMM instance when you want to unlink it from your Percona Platform organization or stop monitoring it there. </p>
-<p>To disconnect a PMM server, go to &gt; <i class="uil uil-cog"></i> <strong>Configuration &gt; Settings &gt; Percona Platform</strong> and click <strong>Disconnect</strong>. </p>
-<p>To confirm that the server disconnected successfully, go to Percona Platform &gt;  <strong>Dashboard</strong> tab &gt; <strong>View instances</strong>. This displays the <strong>PMM instances</strong> page where you can check the list of servers currently connected to your Platform organization. </p>
-<h2 id="sign-into-pmm-with-your-percona-account">Sign into PMM with your Percona Account<a class="headerlink" href="#sign-into-pmm-with-your-percona-account" title="Permanent link">&para;</a></h2>
-<p>Once you&rsquo;ve successfully connected your PMM instance to the Percona Platform, you can also sign into PMM using your Percona Account:</p>
-<ol>
-<li>Log out of your existing PMM session.</li>
-<li>On the PMM login screen, click <em>Sign in with Percona Account</em>. 
- If you have an active Percona Account session on the same browser, PMM will log you in automatically. Otherwise, enter your Percona Account credentials to start a new session.</li>
+<li>
+<p>In the <em>Actions</em> column for a chosen check, click the <i class="uil uil-history"></i> <em>Interval</em> icon.</p>
+</li>
+<li>
+<p>Chose an interval: <em>Standard</em>, <em>Rare</em>, <em>Frequent</em>.</p>
+</li>
+<li>
+<p>Click <em>Save</em>.</p>
+</li>
 </ol>
 
   <hr>
@@ -2854,7 +3104,7 @@
   <small>
     
       Last update:
-      2022-04-14
+      2022-02-08
     
   </small>
 </div>
@@ -2871,7 +3121,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="troubleshoot.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Troubleshoot" rel="prev">
+        <a href="dbaas.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: DBaaS" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2880,20 +3130,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Troubleshoot
+              DBaaS
             </div>
           </div>
         </a>
       
       
         
-        <a href="account-info.html" class="md-footer__link md-footer__link--next" aria-label="Next: Check Percona Portal account information" rel="next">
+        <a href="../how-to/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: How to" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Check Percona Portal account information
+              How to
             </div>
           </div>
           <div class="md-footer__button md-icon">
