@@ -3087,10 +3087,10 @@ Alert templates contain general template details and an alert expression defined
     labels:
           cultom_label: demo
     annotations:
-          summary: MongoDB high memory usage ({{ $labels.service_name }})
+          summary: MongoDB high memory usage ({{ $labels.service_name }}) 
           description: |-
-             {{ $value }}% of memory (more than [[ .threshold ]]%) is used
-             by {{ $labels.service_name }} on {{ $labels.node_name }}.</p>
+             {{ $value }}% of memory (more than [[ .threshold ]]%) is used 
+             by {{ $labels.service_name }} on {{ $labels.node_name }}. </p>
 <p>```</p>
 <h2 id="test-alert-expressions">Test alert expressions<a class="headerlink" href="#test-alert-expressions" title="Permanent link">&para;</a></h2>
 <p>If you want to create custom templates, you can test the MetricsQ expressions for your custom template in the <strong>Explore</strong> section of PMM. Here you can also query any PMM internal database.</p>
