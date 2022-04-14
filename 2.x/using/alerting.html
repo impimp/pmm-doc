@@ -3086,10 +3086,10 @@ Alert templates contain general template details and an alert expression defined
 <span class="w">    </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
 <span class="w">          </span><span class="nt">cultom_label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">demo</span><span class="w"></span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MongoDB high memory usage ({{ $labels.service_name }})</span><span class="w"> </span>
+<span class="w">          </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MongoDB high memory usage ({{ $labels.service_name }})</span><span class="w"></span>
 <span class="w">          </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span><span class="w"></span>
-<span class="w">             </span><span class="no">{{ $value }}% of memory (more than [[ .threshold ]]%) is used </span><span class="w"></span>
-<span class="w">             </span><span class="no">by {{ $labels.service_name }} on {{ $labels.node_name }}. </span><span class="w"></span>
+<span class="w">            </span><span class="no">{{ $value }}% of memory (more than [[ .threshold ]]%) is used</span><span class="w"></span>
+<span class="w">            </span><span class="no">by {{ $labels.service_name }} on {{ $labels.node_name }}.</span><span class="w"></span>
 </code></pre></div>
 <h2 id="test-alert-expressions">Test alert expressions<a class="headerlink" href="#test-alert-expressions" title="Permanent link">&para;</a></h2>
 <p>If you want to create custom templates, you can test the MetricsQ expressions for your custom template in the <strong>Explore</strong> section of PMM. Here you can also query any PMM internal database.</p>
