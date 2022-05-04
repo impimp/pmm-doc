@@ -2910,8 +2910,8 @@
 <li>Support for Victoria Metrics as a data source</li>
 </ul>
 <p>In a nutshell, these are changes will allow experts to create more intelligent advisor checks so that we can continue delivering more value to your connected PMM instances.</p>
-<p>The file format in which Advisors checks are written has been updated in order to support the new functionality provided by the Advisors service in Percona Platform. </p>
-<p>This is a breaking change so it is highly recommended to upgrade your PMM to benefit from these enhancements. For more information see <a href="https://docs.percona.com/percona-monitoring-and-management/details/develop-checks.html">Develop Advisors</a>. </p>
+<p>The file format in which Advisors checks are written has been updated to support the new functionality provided by the Advisors service part of Percona Platform.</p>
+<p>This is a  breaking change, so we recommend upgrading your PMM instance to benefit from these enhancements. For more information see <a href="https://docs.percona.com/percona-monitoring-and-management/details/develop-checks.html">Develop Advisors</a>. </p>
 </li>
 </ul>
 <h3 id="ubuntu-2204-lts-support">Ubuntu 22.04 LTS support<a class="headerlink" href="#ubuntu-2204-lts-support" title="Permanent link">&para;</a></h3>
@@ -2926,7 +2926,7 @@
 <p><a href="https://jira.percona.com/browse/PMM-9849">PMM-9749</a>: Advisors: Possibility to run individual advisor checks separately</p>
 </li>
 <li>
-<p><a href="https://jira.percona.com/browse/PMM-9469">PMM-9469</a>: Advisors: Ability to have multiple queries in single check</p>
+<p><a href="https://jira.percona.com/browse/PMM-9469">PMM-9469</a>: Advisors: Ability to have multiple queries in a single check</p>
 </li>
 <li>
 <p><a href="https://jira.percona.com/browse/PMM-9468">PMM-9468</a>: Advisors: Ability to query VictoriaMetrics as a data source.</p>
@@ -2935,16 +2935,10 @@
 <h2 id="improvements">Improvements<a class="headerlink" href="#improvements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><a href="https://jira.percona.com/browse/PMM-9839">PMM-9839</a>: Advisors: Fixed severity naming inconsistency for Critical checks.</p>
-</li>
-<li>
 <p><a href="https://jira.percona.com/browse/PMM-9841">PMM-9841</a>: Advisors: Advisor checks are now enabled by default.</p>
 </li>
 <li>
-<p><a href="https://jira.percona.com/browse/PMM-8326">PMM-8326</a>: Advisors: Changed the icon for the Edit Check Rule option with a more suggestive one, that better reflects this functionality.</p>
-</li>
-<li>
-<p><a href="https://jira.percona.com/browse/PMM-9362">PMM-9362</a>: Disconnect PMM and Portal: non-portal user can not perform disconnect</p>
+<p><a href="https://jira.percona.com/browse/PMM-8326">PMM-8326</a>: Advisors: Changed the icon for the <strong>Edit Check Rule</strong> option with a more suggestive one that better reflects this functionality.</p>
 </li>
 <li>
 <p><a href="https://jira.percona.com/browse/PMM-9907">PMM-9907</a>: pmm2-client now supports Ubuntu 22.04 LTS.</p>
@@ -2959,16 +2953,13 @@
 <h2 id="bugs-fixed">Bugs Fixed<a class="headerlink" href="#bugs-fixed" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><a href="https://jira.percona.com/browse/PMM-9854">PMM-9854</a>: Advisors: In some scenarios, PMM was not displaying the full list of advisors available for instances connected to Percona Platform. This issue is now fixed.</p>
+<p><a href="https://jira.percona.com/browse/PMM-9854">PMM-9854</a>: Advisors: In some scenarios, PMM was not displaying the complete list of advisors available for instances connected to Percona Platform. This issue is now fixed.</p>
 </li>
 <li>
-<p><a href="https://jira.percona.com/browse/PMM-8326">PMM-8326</a>: Advisors: Fixed text contrast issue on the <strong>Failed Advisor Checks</strong> page that was visible when navigating the list of results while using PMM with using the Light theme. </p>
+<p><a href="https://jira.percona.com/browse/PMM-8326">PMM-8326</a>: Advisors: Fixed text contrast issue on the <strong>Failed Advisor Checks</strong> page that was visible when navigating the list of results while using PMM with the Light theme. </p>
 </li>
 <li>
 <p><a href="https://jira.percona.com/browse/PMM-9426">PMM-9426</a>: DBaaS: Fixed an issue related to K8s monitoring where the k8s monitoring failed with k8s version 1.22 and higher.</p>
-</li>
-<li>
-<p><a href="https://jira.percona.com/browse/PMM-9363">PMM-9363</a>: Disconnect PMM and Portal: Logout user who disconnects pmm</p>
 </li>
 <li>
 <p><a href="https://jira.percona.com/browse/PMM-9885">PMM-9885</a>: Dashboard: Fixed the documentation links on the Advanced settings page on the PMM dashboard.</p>
