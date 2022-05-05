@@ -12,14 +12,14 @@
         <meta name="author" content="Percona LLC">
       
       
-        <link rel="canonical" href="https://pmm-doc.onrender.com/2.x/release-notes/2.14.0.html">
+        <link rel="canonical" href="https://pmm-doc.onrender.com/2.x/release-notes/2.28.0.html">
       
       <link rel="icon" href="../_images/percona-favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>PMM 2.14.0 - Percona Monitoring and Management</title>
+        <title>PMM 2.28.0 - Percona Monitoring and Management</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#percona-monitoring-and-management-2140" class="md-skip">
+        <a href="#percona-monitoring-and-management-2280" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PMM 2.14.0
+              PMM 2.28.0
             
           </span>
         </div>
@@ -2153,11 +2153,100 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="2.28.0.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          PMM 2.28.0
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="2.28.0.html" class="md-nav__link md-nav__link--active">
         PMM 2.28.0
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-highlights" class="md-nav__link">
+    Release Highlights
+  </a>
+  
+    <nav class="md-nav" aria-label="Release Highlights">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advisors" class="md-nav__link">
+    Advisors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-2204-lts-support" class="md-nav__link">
+    Ubuntu 22.04 LTS support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components-upgrade" class="md-nav__link">
+    Components upgrade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-features" class="md-nav__link">
+    New Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improvements" class="md-nav__link">
+    Improvements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bugs-fixed" class="md-nav__link">
+    Bugs Fixed
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2363,73 +2452,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          PMM 2.14.0
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="2.14.0.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="2.14.0.html" class="md-nav__link">
         PMM 2.14.0
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#release-highlights" class="md-nav__link">
-    Release Highlights
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#new-features" class="md-nav__link">
-    New Features
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#improvements" class="md-nav__link">
-    Improvements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bugs-fixed" class="md-nav__link">
-    Bugs Fixed
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2766,6 +2793,33 @@
     Release Highlights
   </a>
   
+    <nav class="md-nav" aria-label="Release Highlights">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advisors" class="md-nav__link">
+    Advisors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-2204-lts-support" class="md-nav__link">
+    Ubuntu 22.04 LTS support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components-upgrade" class="md-nav__link">
+    Components upgrade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2801,13 +2855,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/percona/pmm-doc/edit/main/docs/release-notes/2.14.0.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/percona/pmm-doc/edit/main/docs/release-notes/2.28.0.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="percona-monitoring-and-management-2140">Percona Monitoring and Management 2.14.0<a class="headerlink" href="#percona-monitoring-and-management-2140" title="Permanent link">&para;</a></h1>
+<h1 id="percona-monitoring-and-management-2280">Percona Monitoring and Management 2.28.0<a class="headerlink" href="#percona-monitoring-and-management-2280" title="Permanent link">&para;</a></h1>
 <table class="docutils field-list" frame="void" rules="none">
   <colgroup>
     <col class="field-name">
@@ -2815,8 +2869,8 @@
   </colgroup>
   <tbody valign="top">
     <tr class="field-odd field">
-      <th class="field-name">Date:</th>
-      <td class="field-body">January 28, 2021</td>
+    <th class="field-name">Date:</th>
+    <td class="field-body">May 12, 2022</td>
     </tr>
     <tr class="field-even field">
       <th class="field-name">Installation:</th>
@@ -2826,66 +2880,102 @@
   </tbody>
 </table>
 
-<p>Percona Monitoring and Management (PMM) is a free and open-source platform for managing and monitoring MySQL, MongoDB, and PostgreSQL performance.</p>
+<p>Percona Monitoring and Management (PMM) is an open source database monitoring, management, and observability solution for MySQL, PostgreSQL and MongoDB.</p>
+<div class="admonition caution alert alert-warning">
+<p class="admonition-title">Important</p>
+<p>We recommend using the latest version of the PMM instance. This ensures that you access the latest features of the underlying components, such as VictoriaMetrics, with all the bug fixes in place.</p>
+</div>
 <h2 id="release-highlights">Release Highlights<a class="headerlink" href="#release-highlights" title="Permanent link">&para;</a></h2>
+<h3 id="advisors">Advisors<a class="headerlink" href="#advisors" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>Switch to push metrics by default</p>
-<p>In PMM 2.12.0, Percona replaced its metrics collection engine (formerly Prometheus) with VictoriaMetrics. Historically, PMM used a <em>pull</em> method with Prometheus while VictoriaMetrics can operate in either a <em>pull</em> or <em>push</em> method. When PMM 2.12.0 was released, Percona kept the default method as <em>pull</em>. Now with PMM 2.14.0, Percona is shifting the default to <em>push</em> for all newly-added instances. This <a href="https://www.percona.com/blog/2020/12/01/foiled-by-the-firewall-a-tale-of-transition-from-prometheus-to-victoriametrics/">blog post</a> describes the two methods and why <em>push</em> benefits users. Also, <a href="https://www.percona.com/blog/2020/12/16/percona-monitoring-and-management-migration-from-prometheus-to-victoriametrics-faq/">here is a post</a> by Peter Zaitzev of FAQs relating to the move to VictoriaMetrics and the push model. Documentation on the push method is <a href="https://www.percona.com/doc/percona-monitoring-and-management/2.x/details/victoria-metrics.html">here</a>.</p>
-<p><strong>Note</strong>: Installing the 2.14.0 or newer PMM server will change the default behavior on 2.12.0 and 2.13.0 clients from &ldquo;pull&rdquo; method to &ldquo;push&rdquo; for any newly added services. Existing services will remain in whatever mode they were prior to upgrade.</p>
+<p><strong>Advisor checks enabled by default</strong></p>
+<p>Starting with the previous release and continuing with this one, we have added significant improvements to the Advisors Checks functionality in performance, assessment coverage, and user experience.</p>
+<p>As a mature and generally useful feature, this option is now enabled by default for easier access to automatic checks and better insight into database health and performance, delivered by Percona Platform.</p>
+<div class="admonition note alert alert-primary">
+<p class="admonition-title">Note</p>
+<p>Upgrading to PMM will automatically enable this feature for existing PMM instances. You can disable it at any time from your PMM dashboard on the <strong>Advanced Settings</strong> page.</p>
+</div>
 </li>
 <li>
-<p>DBaaS Preview phase 1.0 (Technical  Preview)</p>
-<p>In 2.13.0 we introduced Percona&rsquo;s Database as a Service (DBaaS) which enables non-DBAs (software architects, developers, site reliability engineers, etc.) to perform typical DBA tasks to manage an organization&rsquo;s database environment via user interfaces and automation orchestration.  This release contains several enhancements and fixes, many directly from user feedback.</p>
-<p><strong>Note</strong>: This capability is feature-flagged and turned off by default. Users require a variable to be passed to PMM to expose this functionality.</p>
+<p><strong>Run individual advisor checks</strong></p>
+<p>In addition to running all available advisors at once, you now have the option to run each advisor check individually. </p>
+<p>This gives you more granular control over the checks on your connected databases. Running checks individually also means that you get the results for relevant advisors faster and that you can focus on resolving failed checks one at a time. For more information, see <a href="https://docs.percona.com/percona-monitoring-and-management/how-to/advisors.html">Working with Advisor checks</a>.</p>
 </li>
 <li>
-<p>External services presentation on node summary dashboard</p>
-<p>Improvements to the user experience for adding and viewing external services (any data that can be monitored by a Prometheus exporter such as: non-Percona supported databases like Redis, ElasticSearch, Cassandra, etc. or an organization&rsquo;s external application) on the Node Summary dashboard of PMM.</p>
+<p><strong>Enhanced Advisor checks</strong></p>
+<p>PMM 2.28 includes a new major version of Advisors that features some important enhancements. The most significant changes are:</p>
+<ul>
+<li>Support for multiple queries</li>
+<li>Support for Victoria Metrics as a data source</li>
+</ul>
+<p>In a nutshell, these changes will allow experts to create more intelligent advisor checks so that we can continue delivering more value to your connected PMM instances.</p>
+<p>The file format in which Advisors checks are written has been updated to support the new functionality provided by the Advisors service part of Percona Platform.</p>
+<p>This is a  breaking change, so we recommend upgrading your PMM instance to benefit from these enhancements. For more information, see <a href="https://docs.percona.com/percona-monitoring-and-management/details/develop-checks.html">Develop Advisors</a>. </p>
+</li>
+</ul>
+<h3 id="ubuntu-2204-lts-support">Ubuntu 22.04 LTS support<a class="headerlink" href="#ubuntu-2204-lts-support" title="Permanent link">&para;</a></h3>
+<h3 id="components-upgrade">Components upgrade<a class="headerlink" href="#components-upgrade" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>VictoriaMetrics</strong>: VictoriaMetrics has been upgraded to <a href="https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.76.1">1.76.1</a>.</li>
+<li>
+<p><strong>Node exporter</strong>: Node Exporter has now been updated to <code>1.3.1</code>.</p>
+<div class="admonition caution alert alert-warning">
+<p class="admonition-title">Important</p>
+<p>If you customized the disabled collectors, the list could change. Check the available collectors in <a href="https://github.com/percona/node_exporter/blob/main/README.md#collectors">Documentation</a>.</p>
+</div>
 </li>
 </ul>
 <h2 id="new-features">New Features<a class="headerlink" href="#new-features" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://jira.percona.com/browse/PMM-5765">PMM-5765</a>: Ability to monitor External Services for situations where PMM Client can&rsquo;t be installed &ndash; Uses a new command <code>pmm-admin add external-serverless</code>. (See <a href="../details/commands/pmm-admin.html">pmm-admin</a>.) (This is a <strong>Technical Preview</strong> feature)</li>
-<li><a href="https://jira.percona.com/browse/PMM-7015">PMM-7015</a>: DBaaS Preview: Create DB cluster with randomly-generated password</li>
-<li><a href="https://jira.percona.com/browse/PMM-7007">PMM-7007</a>: Integrated Alerting: Ability to copy (duplicate) alert rules</li>
-<li><a href="https://jira.percona.com/browse/PMM-7006">PMM-7006</a>: Integrated Alerting: Ability to delete alert rules</li>
-<li><a href="https://jira.percona.com/browse/PMM-6941">PMM-6941</a>: Integrated Alerting: Ability to delete alert rule templates</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9849">PMM-9749</a>: Advisors: Possibility to run individual advisor checks separately</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9469">PMM-9469</a>: Advisors: Ability to have multiple queries in a single check</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9468">PMM-9468</a>: Advisors: Ability to query VictoriaMetrics as a data source.</p>
+</li>
 </ul>
 <h2 id="improvements">Improvements<a class="headerlink" href="#improvements" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://jira.percona.com/browse/PMM-6985">PMM-6985</a>: DBaaS: Ability to force unregister Kubernetes cluster</li>
-<li><a href="https://jira.percona.com/browse/PMM-7145">PMM-7145</a>: &lsquo;Push&rsquo; metrics mode is default when adding services and nodes (All agents collecting data from Services and Nodes will now use PUSH model if not specified explicitly. You will still be able to use <code>--metrics-mode</code> flag to use Pull metrics if needed. All previously set up agents will keep their existing mode. To change these you need to remove and re-add them.)</li>
-<li><a href="https://jira.percona.com/browse/PMM-7282">PMM-7282</a>: Integrated Alerting: Ability to create rule without channels and filters</li>
-<li><a href="https://jira.percona.com/browse/PMM-7226">PMM-7226</a>: Integrated Alerting: Validate parameters during rule creation/update</li>
-<li><a href="https://jira.percona.com/browse/PMM-7082">PMM-7082</a>: Integrated Alerting: Severity levels are color-coded</li>
-<li><a href="https://jira.percona.com/browse/PMM-7065">PMM-7065</a>: Integrated Alerting: Show rule details for items in Alert Rules list</li>
-<li><a href="https://jira.percona.com/browse/PMM-7048">PMM-7048</a>: DBaaS: Simplify Cluster creation by moving Create Cluster button to earlier steps</li>
-<li><a href="https://jira.percona.com/browse/PMM-6993">PMM-6993</a>: Protect against possible problems with EXPLAIN of stored functions in MySQL &ndash; We are fixing possible problems caused by an attempt to analyze queries covered in <a href="https://bugs.mysql.com/bug.php?id=67632">https://bugs.mysql.com/bug.php?id=67632</a>.</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9841">PMM-9841</a>: Advisors: Advisor checks are now enabled by default.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-8326">PMM-8326</a>: Advisors: Changed the icon for the <strong>Edit Check Rule</strong> option with a more suggestive one that better reflects this functionality.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9907">PMM-9907</a>: pmm2-client now supports Ubuntu 22.04 LTS.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9780">PMM-9780</a>: VictoriaMetrics has been upgraded to 1.76.1. </p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-5871">PMM-5871</a>: Node Exporter has now been updated to 1.3.1.</p>
+</li>
 </ul>
 <h2 id="bugs-fixed">Bugs Fixed<a class="headerlink" href="#bugs-fixed" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://jira.percona.com/browse/PMM-7312">PMM-7312</a>: Error when accessing Metrics data on Dashboards for large installations</li>
-<li><a href="https://jira.percona.com/browse/PMM-7310">PMM-7310</a>: VictoriaMetrics consuming 100&rsquo;s Gb&rsquo;s of disk in <code>/tmp/searchResults</code> in PMM 2.13.0</li>
-<li><a href="https://jira.percona.com/browse/PMM-5137">PMM-5137</a>: Swagger page redirect isn&rsquo;t working</li>
-<li><a href="https://jira.percona.com/browse/PMM-7144">PMM-7144</a>: DBaaS: Creating DB cluster with same name (Thanks to Beata Handzelova for reporting this issue)</li>
-<li><a href="https://jira.percona.com/browse/PMM-7323">PMM-7323</a>: DBaaS: &lsquo;Remove DB Cluster from Kubernetes Cluster&rsquo; removes wrong one</li>
-<li><a href="https://jira.percona.com/browse/PMM-7251">PMM-7251</a>: Integrated Alerting: Error <code>Rule with ID "mysql_version" not found</code> if both Security Threat Tool and Integrated Alerting enabled</li>
-<li><a href="https://jira.percona.com/browse/PMM-7247">PMM-7247</a>: DBaaS: Disk size is always 0 for Percona XtraDB cluster</li>
-<li><a href="https://jira.percona.com/browse/PMM-7178">PMM-7178</a>: <code>pg_stat_monitor</code> integration is broken with version 0.6.0 of the plugin</li>
-<li><a href="https://jira.percona.com/browse/PMM-7169">PMM-7169</a>: Old data (from Prometheus) not deleted when Retention period expires</li>
-<li><a href="https://jira.percona.com/browse/PMM-7105">PMM-7105</a>: Query Analytics: no &lsquo;Example&rsquo; or &lsquo;Explain&rsquo; data for MariaDB</li>
-<li><a href="https://jira.percona.com/browse/PMM-7239">PMM-7239</a>: Integrated Alerting: Validate Slack channel names in Notification Channels</li>
-<li><a href="https://jira.percona.com/browse/PMM-7213">PMM-7213</a>: MySQL InnoDB Details dashboard: remove color-coding on &lsquo;Data Buffer Pool Fit&rsquo; element</li>
-<li><a href="https://jira.percona.com/browse/PMM-7167">PMM-7167</a>: Some panels not visible when using long time intervals (e.g. 30 days)</li>
-<li><a href="https://jira.percona.com/browse/PMM-7133">PMM-7133</a>: Incorrect descriptions for data links in dashboards</li>
-<li><a href="https://jira.percona.com/browse/PMM-7103">PMM-7103</a>: VictoriaMetrics build logs not deleted from PMM Server Docker image</li>
-<li><a href="https://jira.percona.com/browse/PMM-6904">PMM-6904</a>: <code>pmm-admin annotate</code> command crashes for non-generic node types</li>
-<li><a href="https://jira.percona.com/browse/PMM-6902">PMM-6902</a>: No query Examples on PostgreSQL 12 with pg_stat_monitor</li>
-<li><a href="https://jira.percona.com/browse/PMM-6838">PMM-6838</a>: ProxySQL Instance Summary dashboard: Incorrect &ldquo;Hostgroup Size&rdquo; formula</li>
-<li><a href="https://jira.percona.com/browse/PMM-6490">PMM-6490</a>: <code>rds_exporter</code> crashes when more than 100 AWS RDS instances added (Thanks to <a href="https://github.com/vlinevych">https://github.com/vlinevych</a> for fixing this)</li>
-<li><a href="https://jira.percona.com/browse/PMM-6096">PMM-6096</a>: <code>pmm-agent</code> connection checker does not check authentication for MongoDB</li>
-<li><a href="https://jira.percona.com/browse/PMM-7303">PMM-7303</a>: Disk Details, Nodes Compare dashboards: &lsquo;Disk Utilization&rsquo; description is confusing</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9854">PMM-9854</a>: Advisors: In some scenarios, PMM was not displaying the complete list of advisors available for instances connected to Percona Platform. This issue is now fixed.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-8326">PMM-8326</a>: Advisors: Fixed text contrast issue on the <strong>Failed Advisor Checks</strong> page that was visible when navigating the list of results while using PMM with the Light theme. </p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9426">PMM-9426</a>: DBaaS: Fixed an issue related to K8s monitoring where the k8s monitoring failed with k8s version 1.22 and higher.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9885">PMM-9885</a>: Dashboard: Fixed the documentation links on the Advanced settings page on the PMM dashboard.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9770">PMM-9770</a>: Fixed an issue where the query count displayed in PMM was incorrect and inconsistent.</p>
+</li>
+<li>
+<p><a href="https://jira.percona.com/browse/PMM-9828">PMM-9828</a>: Fixed an issue with the QAN dashboard navigator/explorer where if you open QAN from a dashboard and try to navigate to a different dashboard, the explorer keeps closing/refreshing, making it impossible to navigate.</p>
+</li>
 </ul>
 
   <hr>
@@ -2893,7 +2983,7 @@
   <small>
     
       Last update:
-      2021-06-25
+      2022-05-05
     
   </small>
 </div>
@@ -2910,7 +3000,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="2.15.0.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: PMM 2.15.0" rel="prev">
+        <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Release Notes" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2919,20 +3009,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              PMM 2.15.0
+              Release Notes
             </div>
           </div>
         </a>
       
       
         
-        <a href="2.13.0.html" class="md-footer__link md-footer__link--next" aria-label="Next: PMM 2.13.0" rel="next">
+        <a href="2.27.0.html" class="md-footer__link md-footer__link--next" aria-label="Next: PMM 2.27.0" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              PMM 2.13.0
+              PMM 2.27.0
             </div>
           </div>
           <div class="md-footer__button md-icon">
