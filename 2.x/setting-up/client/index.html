@@ -997,10 +997,43 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          Developing Advisors
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developing Advisors" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Developing Advisors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../details/develop-checks.html" class="md-nav__link">
-        Developing Advisors
+      <a href="../../details/develop-checks.md" class="md-nav__link">
+        None
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2096,6 +2129,73 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_9" type="checkbox" id="__nav_5_9" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../details/develop-checks/index.html">Develop checks</a>
+          
+            <label for="__nav_5_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Develop checks" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          Develop checks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/develop-checks/checks-v1.html" class="md-nav__link">
+        Version 1 checks for PMM 2.27 and older
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../details/develop-checks/checks-v2.html" class="md-nav__link">
+        Version 2 advisor checks for PMM 2.28 and newer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2150,20 +2250,6 @@
           Release Notes
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../release-notes/2.28.0.html" class="md-nav__link">
-        PMM 2.28.0
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -3149,13 +3235,13 @@ apt install -y pmm2-client
 <p>(Alternatively, copy the link and use <code>wget</code> to download it.)</p>
 <p>Here are the download page links for each supported platform.</p>
 <ul>
-<li><a href="https://www.percona.com/downloads/pmm2/2.28.0/binary/debian/stretch/">Debian 9 (Stretch)</a></li>
-<li><a href="https://www.percona.com/downloads/pmm2/2.28.0/binary/debian/buster/">Debian 10 (Buster)</a></li>
-<li><a href="https://www.percona.com/downloads/pmm2/2.28.0/binary/redhat/7/">Red Hat/CentOS/Oracle 7</a></li>
-<li><a href="https://www.percona.com/downloads/pmm2/2.28.0/binary/redhat/8/">Red Hat/CentOS/Oracle 8</a></li>
-<li><a href="https://www.percona.com/downloads/pmm2/2.28.0/binary/debian/xenial/">Ubuntu 16.04 (Xenial Xerus)</a></li>
-<li><a href="https://www.percona.com/downloads/pmm2/2.28.0/binary/debian/bionic/">Ubuntu 18.04 (Bionic Beaver)</a></li>
-<li><a href="https://www.percona.com/downloads/pmm2/2.28.0/binary/debian/focal/">Ubuntu 20.04 (Focal Fossa)</a></li>
+<li><a href="https://www.percona.com/downloads/pmm2/2.27.0/binary/debian/stretch/">Debian 9 (Stretch)</a></li>
+<li><a href="https://www.percona.com/downloads/pmm2/2.27.0/binary/debian/buster/">Debian 10 (Buster)</a></li>
+<li><a href="https://www.percona.com/downloads/pmm2/2.27.0/binary/redhat/7/">Red Hat/CentOS/Oracle 7</a></li>
+<li><a href="https://www.percona.com/downloads/pmm2/2.27.0/binary/redhat/8/">Red Hat/CentOS/Oracle 8</a></li>
+<li><a href="https://www.percona.com/downloads/pmm2/2.27.0/binary/debian/xenial/">Ubuntu 16.04 (Xenial Xerus)</a></li>
+<li><a href="https://www.percona.com/downloads/pmm2/2.27.0/binary/debian/bionic/">Ubuntu 18.04 (Bionic Beaver)</a></li>
+<li><a href="https://www.percona.com/downloads/pmm2/2.27.0/binary/debian/focal/">Ubuntu 20.04 (Focal Fossa)</a></li>
 </ul>
 <h4 id="debian-based_1">Debian-based<a class="headerlink" href="#debian-based_1" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code>dpkg -i *.deb
@@ -3167,22 +3253,22 @@ apt install -y pmm2-client
 <ol>
 <li>
 <p>Download the PMM Client package:</p>
-<div class="highlight"><pre><span></span><code>wget https://downloads.percona.com/downloads/pmm2/2.28.0/binary/tarball/pmm2-client-2.28.0.tar.gz
+<div class="highlight"><pre><span></span><code>wget https://downloads.percona.com/downloads/pmm2/2.27.0/binary/tarball/pmm2-client-2.27.0.tar.gz
 </code></pre></div>
 </li>
 <li>
 <p>Download the PMM Client package checksum file:</p>
-<div class="highlight"><pre><span></span><code>wget https://downloads.percona.com/downloads/pmm2/2.28.0/binary/tarball/pmm2-client-2.28.0.tar.gz.sha256sum
+<div class="highlight"><pre><span></span><code>wget https://downloads.percona.com/downloads/pmm2/2.27.0/binary/tarball/pmm2-client-2.27.0.tar.gz.sha256sum
 </code></pre></div>
 </li>
 <li>
 <p>Verify the download.</p>
-<div class="highlight"><pre><span></span><code>sha256sum -c pmm2-client-2.28.0.tar.gz.sha256sum
+<div class="highlight"><pre><span></span><code>sha256sum -c pmm2-client-2.27.0.tar.gz.sha256sum
 </code></pre></div>
 </li>
 <li>
 <p>Unpack the package and move into the directory.</p>
-<div class="highlight"><pre><span></span><code>tar xfz pmm2-client-2.28.0.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">cd</span> pmm2-client-2.28.0
+<div class="highlight"><pre><span></span><code>tar xfz pmm2-client-2.27.0.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">cd</span> pmm2-client-2.27.0
 </code></pre></div>
 </li>
 <li>
